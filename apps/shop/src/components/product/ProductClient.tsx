@@ -79,7 +79,7 @@ export default function ProductClient({ product }: ProductClientProps) {
     <div className="bg-white">
       {/* Breadcrumbs */}
       <div className="max-w-7xl mx-auto px-6 py-4">
-        <nav className="flex items-center gap-2 text-sm text-neutral-600 animate-on-scroll fade-in">
+        <nav className="flex items-center gap-2 text-sm text-neutral-600">
           <Link href="/" className="hover:text-neutral-900 transition">Home</Link>
           <span>/</span>
           <Link href="/" className="hover:text-neutral-900 transition">Shop</Link>

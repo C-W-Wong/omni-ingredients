@@ -31,7 +31,7 @@ export default function CartPage() {
     <div className="bg-white min-h-[60vh]">
       {/* Breadcrumbs */}
       <div className="max-w-7xl mx-auto px-6 py-4">
-        <nav className="flex items-center gap-2 text-sm text-neutral-600 animate-on-scroll fade-in">
+        <nav className="flex items-center gap-2 text-sm text-neutral-600">
           <Link href="/" className="hover:text-neutral-900 transition">Home</Link>
           <span>/</span>
           <span className="text-neutral-900">Shopping Cart</span>

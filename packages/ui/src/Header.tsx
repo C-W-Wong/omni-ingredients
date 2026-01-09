@@ -83,9 +83,9 @@ export function Header({
 
   // Navigation links based on variant
   const landingNavLinks = [
-    { href: "/about", label: "About", external: false },
+    { href: "/", label: "Home", external: false },
     { href: "/journal", label: "Journal", external: false },
-    { href: "/contact", label: "Contact", external: false },
+    { href: "/about", label: "About", external: false },
   ];
 
   const shopNavLinks = [
@@ -463,9 +463,10 @@ export function Header({
             )}
           </div>
         </div>
+      </header>
 
-        {/* Mobile drawer */}
-        {mobileMenuOpen && (
+      {/* Mobile drawer - rendered outside header to avoid stacking context issues */}
+      {mobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 z-50">
             <div
               className="absolute inset-0 bg-black/30 backdrop-blur-sm"
@@ -641,7 +642,6 @@ export function Header({
             </aside>
           </div>
         )}
-      </header>
     </>
   );
 }
