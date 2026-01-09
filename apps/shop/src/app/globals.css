@@ -1,0 +1,292 @@
+@import "tailwindcss";
+@source "../../../../packages/ui/src/**/*.tsx";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+}
+
+/* Font classes */
+.font-playfair {
+  font-family: var(--font-playfair), serif;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ========================================
+   Animation System
+   ======================================== */
+
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in {
+  transform: translateY(40px);
+  filter: blur(4px);
+}
+
+.fade-in.animate {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.slide-left {
+  transform: translateX(-60px);
+  filter: blur(3px);
+}
+
+.slide-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0px);
+}
+
+.slide-right {
+  transform: translateX(60px);
+  filter: blur(3px);
+}
+
+.slide-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0px);
+}
+
+.slide-up {
+  transform: translateY(50px);
+  filter: blur(3px);
+}
+
+.slide-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.slide-down {
+  transform: translateY(-50px);
+  filter: blur(3px);
+}
+
+.slide-down.animate {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.scale-in {
+  transform: scale(0.8);
+  filter: blur(5px);
+}
+
+.scale-in.animate {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+}
+
+.blur-slide {
+  filter: blur(6px);
+  transform: translateY(30px) scale(0.95);
+}
+
+.blur-slide.animate {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0) scale(1);
+}
+
+.text-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(2px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.text-reveal.animate {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.card-reveal {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  filter: blur(4px);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-reveal.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0px);
+}
+
+/* Stagger delays */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+.stagger-7 { transition-delay: 0.7s; }
+.stagger-8 { transition-delay: 0.8s; }
+
+/* Additional animations */
+.scale-up {
+  transform: scale(1.1);
+  filter: blur(4px);
+}
+
+.scale-up.animate {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+}
+
+.blur-in {
+  filter: blur(8px);
+  transform: scale(1.02);
+}
+
+.blur-in.animate {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1);
+}
+
+.rotate-in {
+  transform: rotate(-5deg) scale(0.9);
+  filter: blur(3px);
+}
+
+.rotate-in.animate {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+  filter: blur(0px);
+}
+
+/* Hero-specific animations */
+.hero-content {
+  opacity: 0;
+  transform: translateY(80px) scale(0.95);
+  filter: blur(6px);
+  transition: all 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-content.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0px);
+}
+
+.hero-parallax-bg {
+  will-change: transform;
+  transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.image-reveal {
+  opacity: 0;
+  transform: scale(1.1);
+  filter: blur(5px);
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.image-reveal.animate {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+@layer utilities {
+  /* Hero gradient overlay */
+  .hero-gradient-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.6) 30%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  }
+
+  /* Parallax background */
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    will-change: transform;
+  }
+
+  /* Card panel effects */
+  .card-panel {
+    transition: flex 0.5s ease;
+  }
+
+  .card-panel:hover {
+    flex: 4;
+  }
+
+  .card-image {
+    transition: all 0.5s ease;
+  }
+
+  .card-overlay {
+    transition: opacity 0.3s ease;
+  }
+
+  /* Collections dropdown */
+  .collections-dropdown {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .collections-dropdown.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  /* Toast notification */
+  .toast {
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .toast.show {
+    transform: translateX(0);
+  }
+
+  /* Cart animation */
+  @keyframes cartBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  .cart-animate {
+    animation: cartBounce 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@omm/admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "next start -p 3002",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@omm/supabase": "*",
+    "@omm/tailwind-config": "*",
+    "@omm/types": "*",
+    "@supabase/supabase-js": "^2.47.10",
+    "@tiptap/extension-image": "^2.11.2",
+    "@tiptap/extension-link": "^2.11.2",
+    "@tiptap/react": "^2.11.2",
+    "@tiptap/starter-kit": "^2.11.2",
+    "next": "^15.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^20",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "^15.1.1",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5"
+  }
+}
