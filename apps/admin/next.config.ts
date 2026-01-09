@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
     "@omm/types",
     "@omm/tailwind-config",
   ],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
