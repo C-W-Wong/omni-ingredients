@@ -3,11 +3,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.landing
+      args:
+        - NEXT_PUBLIC_LANDING_URL=https://omniingredients.com
+        - NEXT_PUBLIC_SHOP_URL=https://shop.omniingredients.com
     ports:
       - "3000:3000"
     environment:
       - NEXT_PUBLIC_SUPABASE_URL=https://apgoyyerfrrclaiydrjb.supabase.co
       - NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwZ295eWVyZnJyY2xhaXlkcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5MDM0NTUsImV4cCI6MjA4MzQ3OTQ1NX0.NeNZe1XEhykLQQxxFDtzkP0zTziFbvONAkBv5W4hhNs
+      - NEXT_PUBLIC_LANDING_URL=https://omniingredients.com
+      - NEXT_PUBLIC_SHOP_URL=https://shop.omniingredients.com
     restart: unless-stopped
 
   shop:
@@ -17,12 +22,16 @@ services:
       args:
         - NEXT_PUBLIC_SUPABASE_URL=https://apgoyyerfrrclaiydrjb.supabase.co
         - NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwZ295eWVyZnJyY2xhaXlkcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5MDM0NTUsImV4cCI6MjA4MzQ3OTQ1NX0.NeNZe1XEhykLQQxxFDtzkP0zTziFbvONAkBv5W4hhNs
+        - NEXT_PUBLIC_LANDING_URL=https://omniingredients.com
+        - NEXT_PUBLIC_SHOP_URL=https://shop.omniingredients.com
     ports:
       - "3001:3001"
     environment:
       - NEXT_PUBLIC_SUPABASE_URL=https://apgoyyerfrrclaiydrjb.supabase.co
       - NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwZ295eWVyZnJyY2xhaXlkcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5MDM0NTUsImV4cCI6MjA4MzQ3OTQ1NX0.NeNZe1XEhykLQQxxFDtzkP0zTziFbvONAkBv5W4hhNs
       - SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwZ295eWVyZnJyY2xhaXlkcmpiIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzkwMzQ1NSwiZXhwIjoyMDgzNDc5NDU1fQ.lFxZPQ9JUWJmNKM7O2t2mQKrUqFPb-b7Id1h2BXNyRA
+      - NEXT_PUBLIC_LANDING_URL=https://omniingredients.com
+      - NEXT_PUBLIC_SHOP_URL=https://shop.omniingredients.com
     restart: unless-stopped
 
   admin:
@@ -32,10 +41,14 @@ services:
       args:
         - NEXT_PUBLIC_SUPABASE_URL=https://apgoyyerfrrclaiydrjb.supabase.co
         - NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwZ295eWVyZnJyY2xhaXlkcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5MDM0NTUsImV4cCI6MjA4MzQ3OTQ1NX0.NeNZe1XEhykLQQxxFDtzkP0zTziFbvONAkBv5W4hhNs
+        - NEXT_PUBLIC_LANDING_URL=https://omniingredients.com
+        - NEXT_PUBLIC_SHOP_URL=https://shop.omniingredients.com
     ports:
       - "3002:3002"
     environment:
       - NEXT_PUBLIC_SUPABASE_URL=https://apgoyyerfrrclaiydrjb.supabase.co
       - NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwZ295eWVyZnJyY2xhaXlkcmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5MDM0NTUsImV4cCI6MjA4MzQ3OTQ1NX0.NeNZe1XEhykLQQxxFDtzkP0zTziFbvONAkBv5W4hhNs
       - SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwZ295eWVyZnJyY2xhaXlkcmpiIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzkwMzQ1NSwiZXhwIjoyMDgzNDc5NDU1fQ.lFxZPQ9JUWJmNKM7O2t2mQKrUqFPb-b7Id1h2BXNyRA
+      - NEXT_PUBLIC_LANDING_URL=https://omniingredients.com
+      - NEXT_PUBLIC_SHOP_URL=https://shop.omniingredients.com
     restart: unless-stopped
