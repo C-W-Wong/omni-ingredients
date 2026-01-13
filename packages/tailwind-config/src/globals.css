@@ -3,6 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Brand Colors */
+  --brand-primary: #df7a4c;
+  --brand-primary-hover: #c86a3f;
+  --brand-secondary: #ce8f86;
+  --brand-secondary-hover: #b87d74;
+  --brand-accent: #ffa087;
+  --brand-surface-light: #f9b9ad;
+  --brand-surface-warm: #edd8cc;
+
+  /* Warm Dark Colors */
+  --brand-dark: #2A2118;
+  --brand-dark-secondary: #3D2E28;
 }
 
 @theme inline {
@@ -10,6 +23,15 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-playfair: var(--font-playfair);
+
+  /* Brand Color Utilities */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-secondary-hover: var(--brand-secondary-hover);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-surface-light: var(--brand-surface-light);
+  --color-brand-surface-warm: var(--brand-surface-warm);
 }
 
 /* Font classes */

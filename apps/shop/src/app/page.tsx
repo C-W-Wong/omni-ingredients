@@ -49,10 +49,11 @@ export default function Home() {
             <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl tracking-tight font-semibold animate-on-scroll text-reveal stagger-2">Natural Skincare</h1>
             <p className="text-base/7 md:text-lg/8 opacity-90 mt-4 animate-on-scroll text-reveal stagger-3">Awaken your skin with gentle actives and nourishing oils. Formulated to restore barrier health and glow naturally.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-              <Link href="/shop" className="flex justify-center gap-2 items-center lg:font-semibold isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 overflow-hidden group text-lg text-neutral-900 bg-gray-50 max-w-fit border-gray-50 border-2 rounded-full py-2 px-4 shadow-xl backdrop-blur-md animate-on-scroll scale-in stagger-4">
+              <Link href="/shop" className="group inline-flex items-center gap-3 px-6 py-3.5 bg-[#df7a4c] text-white text-lg font-semibold rounded-full shadow-xl hover:bg-[#c86a3f] hover:shadow-2xl hover:scale-105 transition-all duration-300">
                 Shop Now
-                <svg className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z" className="fill-gray-800 group-hover:fill-gray-800"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
                 </svg>
               </Link>
               <Link href="/about" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/30 hover:bg-white/10 backdrop-blur transition transform hover:scale-105 animate-on-scroll slide-left stagger-5">
@@ -67,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* Trust bar */}
-      <section className="transition-colors duration-300 bg-neutral-50 border-neutral-200 border-t">
+      <section className="transition-colors duration-300 bg-[#edd8cc] border-neutral-200 border-t">
         <div className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6">
           <div className="text-center animate-on-scroll blur-slide">
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4">
@@ -186,7 +187,7 @@ export default function Home() {
                       </div>
                       <span className="text-base sm:text-lg font-semibold text-neutral-900 animate-on-scroll slide-left stagger-6">{product.price}</span>
                     </header>
-                    <div className="mt-3 sm:mt-4 flex items-center gap-1 text-amber-500 animate-on-scroll fade-in stagger-7">
+                    <div className="mt-3 sm:mt-4 flex items-center gap-1 text-[#df7a4c] animate-on-scroll fade-in stagger-7">
                       {[...Array(5)].map((_, i) => (
                         <svg key={i} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${i < product.rating ? 'fill-current' : 'opacity-40'}`}>
                           <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
@@ -219,7 +220,7 @@ export default function Home() {
                 { icon: "beaker", title: "Clinical Precision", desc: "Evidence-based concentrations." },
               ].map((item, index) => (
                 <div key={item.title} className={`animate-on-scroll card-reveal stagger-${index + 3} transition-colors duration-300 transform hover:scale-105 bg-white/50 border-neutral-300 border rounded-xl p-4 sm:p-6 shadow-sm backdrop-blur-sm`}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`w-5 h-5 sm:w-6 sm:h-6 animate-on-scroll scale-in stagger-${index + 4}`} style={{ color: 'rgb(22, 163, 74)' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`w-5 h-5 sm:w-6 sm:h-6 animate-on-scroll scale-in stagger-${index + 4}`} style={{ color: '#df7a4c' }}>
                     {item.icon === 'leaf' && <><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></>}
                     {item.icon === 'droplets' && <><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></>}
                     {item.icon === 'beaker' && <><path d="M4.5 3h15"></path><path d="M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"></path><path d="M6 14h12"></path></>}
@@ -260,7 +261,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter */}
-      <section className="bg-neutral-900 text-white transition-colors duration-300" id="contact">
+      <section className="bg-[#2A2118] text-white transition-colors duration-300" id="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
           <div className="text-center max-w-2xl mx-auto animate-on-scroll blur-slide">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight animate-on-scroll text-reveal stagger-1">Stay glowing</h2>

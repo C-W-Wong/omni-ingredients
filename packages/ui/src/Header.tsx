@@ -98,7 +98,7 @@ export function Header({
   return (
     <>
       {/* Announcement Bar */}
-      <div className="hidden sm:block bg-neutral-900 text-white text-sm transition-colors duration-300">
+      <div className="hidden sm:block bg-[#3D2E28] text-white text-sm transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
           {isLanding ? (
             <>
@@ -276,7 +276,7 @@ export function Header({
             {isLanding && (
               <a
                 href={shopUrl}
-                className="px-4 py-2 bg-orange-500 text-white rounded-full font-medium hover:bg-orange-600 transition"
+                className="px-4 py-2 bg-[#df7a4c] text-white rounded-full font-medium hover:bg-[#c86a3f] transition"
               >
                 Shop Now
               </a>
@@ -317,7 +317,7 @@ export function Header({
                       className="flex items-center gap-2 p-2 rounded-md hover:bg-neutral-100 transition-colors"
                       aria-label="Account"
                     >
-                      <div className="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-sm font-medium">
+                      <div className="w-7 h-7 rounded-full bg-[#ffa087] text-white flex items-center justify-center text-sm font-medium">
                         {displayName.charAt(0).toUpperCase()}
                       </div>
                     </button>
@@ -441,7 +441,7 @@ export function Header({
                   <path d="M16 10a4 4 0 0 1-8 0" />
                 </svg>
                 {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 text-white text-xs font-semibold rounded-full flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#ffa087] text-white text-xs font-semibold rounded-full flex items-center justify-center">
                     {cartCount > 99 ? "99+" : cartCount}
                   </span>
                 )}
@@ -539,7 +539,7 @@ export function Header({
                   {isLanding && (
                     <a
                       href={shopUrl}
-                      className="py-3 px-4 rounded-lg bg-orange-500 text-white font-medium text-center mt-2"
+                      className="py-3 px-4 rounded-lg bg-[#df7a4c] text-white font-medium text-center mt-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Shop Now

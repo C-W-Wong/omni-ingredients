@@ -181,11 +181,12 @@ export default function HomePage() {
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3">
               <a
                 href="mailto:ga@omniingredients.com"
-                className="flex justify-center gap-2 items-center lg:font-semibold isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-amber-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 overflow-hidden group text-lg text-neutral-900 bg-gray-50 max-w-fit border-gray-50 border-2 rounded-full py-2 px-4 shadow-xl backdrop-blur-md animate-on-scroll scale-in stagger-4"
+                className="group inline-flex items-center gap-3 px-6 py-3.5 bg-[#df7a4c] text-white text-lg font-semibold rounded-full shadow-xl hover:bg-[#c86a3f] hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
                 Request Quote
-                <svg className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z" className="fill-gray-800 group-hover:fill-gray-800"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
                 </svg>
               </a>
               <a
@@ -204,7 +205,7 @@ export default function HomePage() {
       </section>
 
       {/* Trust Bar - Playfair italic with floating images */}
-      <section className="transition-colors duration-300 bg-neutral-50 border-neutral-200 border-t">
+      <section className="transition-colors duration-300 bg-[#edd8cc] border-neutral-200 border-t">
         <div className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6">
           <div className="text-center animate-on-scroll blur-slide">
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4">
@@ -276,7 +277,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="animate-on-scroll slide-left">
-              <span className="text-sm uppercase tracking-widest text-amber-600 font-medium animate-on-scroll text-reveal stagger-1">About Us</span>
+              <span className="text-sm uppercase tracking-widest text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">About Us</span>
               <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl tracking-tight font-semibold font-playfair animate-on-scroll text-reveal stagger-2">
                 Connecting Global Ingredients to North American Markets
               </h2>
@@ -292,7 +293,7 @@ export default function HomePage() {
                 <ul className="space-y-3">
                   {businessScope.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-neutral-600">
-                      <svg className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-5 h-5 text-[#df7a4c] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {item}
@@ -310,7 +311,7 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-amber-500 text-white p-6 rounded-xl shadow-xl animate-on-scroll scale-in stagger-4">
+              <div className="absolute -bottom-6 -left-6 bg-[#df7a4c] text-white p-6 rounded-xl shadow-xl animate-on-scroll scale-in stagger-4">
                 <p className="text-3xl font-bold">2010</p>
                 <p className="text-sm opacity-90">Serving North America</p>
               </div>
@@ -327,28 +328,28 @@ export default function HomePage() {
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-neutral-200">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-neutral-50 rounded-xl p-4 animate-on-scroll card-reveal stagger-1">
-                    <svg className="w-8 h-8 text-amber-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-8 h-8 text-[#df7a4c] mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     <p className="font-medium text-sm">Product Specs</p>
                     <p className="text-xs text-neutral-500">Download instantly</p>
                   </div>
                   <div className="bg-neutral-50 rounded-xl p-4 animate-on-scroll card-reveal stagger-2">
-                    <svg className="w-8 h-8 text-amber-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-8 h-8 text-[#df7a4c] mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                     </svg>
                     <p className="font-medium text-sm">COA Access</p>
                     <p className="text-xs text-neutral-500">Lot-level verification</p>
                   </div>
                   <div className="bg-neutral-50 rounded-xl p-4 animate-on-scroll card-reveal stagger-3">
-                    <svg className="w-8 h-8 text-amber-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-8 h-8 text-[#df7a4c] mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                     </svg>
                     <p className="font-medium text-sm">Sample Orders</p>
                     <p className="text-xs text-neutral-500">Trial quantities</p>
                   </div>
                   <div className="bg-neutral-50 rounded-xl p-4 animate-on-scroll card-reveal stagger-4">
-                    <svg className="w-8 h-8 text-amber-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-8 h-8 text-[#df7a4c] mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <p className="font-medium text-sm">Online Ordering</p>
@@ -359,7 +360,7 @@ export default function HomePage() {
             </div>
 
             <div className="order-1 lg:order-2 animate-on-scroll slide-right">
-              <span className="text-sm uppercase tracking-widest text-amber-600 font-medium animate-on-scroll text-reveal stagger-1">B2B Platform</span>
+              <span className="text-sm uppercase tracking-widest text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">B2B Platform</span>
               <h2 className="mt-4 text-3xl sm:text-4xl tracking-tight font-semibold animate-on-scroll text-reveal stagger-2">
                 Digital Ordering & Sample Platform
               </h2>
@@ -390,7 +391,7 @@ export default function HomePage() {
 
               <a
                 href="mailto:ga@omniingredients.com"
-                className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 transition transform hover:scale-105 animate-on-scroll scale-in stagger-5"
+                className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-[#df7a4c] text-white font-medium rounded-lg hover:bg-[#df7a4c]-hover transition transform hover:scale-105 animate-on-scroll scale-in stagger-5"
               >
                 Request B2B Access
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -404,10 +405,10 @@ export default function HomePage() {
       </section>
 
       {/* Warehousing Network */}
-      <section className="bg-neutral-900 text-white py-12 sm:py-20">
+      <section className="bg-[#2A2118] text-white py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 animate-on-scroll fade-in">
-            <span className="text-sm uppercase tracking-widest text-amber-400 font-medium animate-on-scroll text-reveal stagger-1">Logistics</span>
+            <span className="text-sm uppercase tracking-widest text-[#ffa087] font-medium animate-on-scroll text-reveal stagger-1">Logistics</span>
             <h2 className="mt-4 text-3xl sm:text-4xl tracking-tight font-semibold animate-on-scroll text-reveal stagger-2">
               Nationwide Warehousing Network
             </h2>
@@ -422,13 +423,13 @@ export default function HomePage() {
                 key={location.city}
                 className={`bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition animate-on-scroll card-reveal stagger-${index + 1}`}
               >
-                <div className="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 bg-[#df7a4c]/20 rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#ffa087]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <p className="text-amber-400 text-sm font-medium">{location.region}</p>
+                <p className="text-[#ffa087] text-sm font-medium">{location.region}</p>
                 <h3 className="text-xl font-semibold mt-1">{location.city}</h3>
                 <p className="text-neutral-400 text-sm mt-3">{location.description}</p>
               </div>
@@ -444,7 +445,7 @@ export default function HomePage() {
             ].map((benefit, index) => (
               <div key={benefit.label} className={`flex items-center gap-3 animate-on-scroll fade-in stagger-${index + 1}`}>
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-[#ffa087]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
@@ -475,7 +476,7 @@ export default function HomePage() {
                 { icon: "clock", title: "Fast Quotes", desc: "24-hour turnaround on requests" },
               ].map((item, index) => (
                 <div key={item.title} className={`animate-on-scroll card-reveal stagger-${index + 3} transition-colors duration-300 transform hover:scale-105 bg-white/50 border-neutral-300 border rounded-xl p-4 sm:p-6 shadow-sm backdrop-blur-sm`}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6 text-[#df7a4c]">
                     {item.icon === 'shield' && <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></>}
                     {item.icon === 'box' && <><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></>}
                     {item.icon === 'globe' && <><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></>}
@@ -513,7 +514,7 @@ export default function HomePage() {
       <section className="bg-white py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 animate-on-scroll fade-in">
-            <span className="text-sm uppercase tracking-widest text-amber-600 font-medium animate-on-scroll text-reveal stagger-1">Standards</span>
+            <span className="text-sm uppercase tracking-widest text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">Standards</span>
             <h2 className="mt-4 text-3xl sm:text-4xl tracking-tight font-semibold animate-on-scroll text-reveal stagger-2">
               Quality & Compliance
             </h2>
@@ -528,8 +529,8 @@ export default function HomePage() {
                 key={pillar.title}
                 className={`bg-neutral-50 rounded-xl p-6 border border-neutral-200 hover:shadow-lg transition animate-on-scroll card-reveal stagger-${index + 1}`}
               >
-                <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 bg-[#edd8cc] rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#df7a4c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     {pillar.icon === 'shield' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />}
                     {pillar.icon === 'document' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />}
                     {pillar.icon === 'check' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />}
@@ -593,11 +594,11 @@ export default function HomePage() {
       <section className="bg-white py-12 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <div className="animate-on-scroll blur-slide">
-            <span className="text-sm uppercase tracking-widest text-amber-600 font-medium animate-on-scroll text-reveal stagger-1">Our Vision</span>
+            <span className="text-sm uppercase tracking-widest text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">Our Vision</span>
             <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl tracking-tight font-semibold font-playfair leading-tight animate-on-scroll text-reveal stagger-2">
               Evolving beyond traditional ingredient trading toward a{" "}
-              <span className="text-amber-600">platform-driven</span> and{" "}
-              <span className="text-amber-600">differentiated</span> ingredient model.
+              <span className="text-[#df7a4c]">platform-driven</span> and{" "}
+              <span className="text-[#df7a4c]">differentiated</span> ingredient model.
             </h2>
             <p className="mt-8 text-lg text-neutral-600 leading-relaxed animate-on-scroll text-reveal stagger-3">
               Our goal is to become a trusted ingredient partner that delivers not only products, but also reliability, expertise, and long-term value.
@@ -613,7 +614,7 @@ export default function HomePage() {
       </section>
 
       {/* Partner CTA */}
-      <section className="bg-gradient-to-br from-amber-500 to-orange-500 text-white py-12 sm:py-20">
+      <section className="bg-gradient-to-br from-[#df7a4c] to-[#ffa087] text-white py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 animate-on-scroll blur-slide">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight animate-on-scroll text-reveal stagger-1">
@@ -648,14 +649,14 @@ export default function HomePage() {
               href="mailto:ga@omniingredients.com"
               className="bg-white text-neutral-900 rounded-2xl p-8 hover:shadow-xl transition group animate-on-scroll card-reveal stagger-2"
             >
-              <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-12 h-12 bg-[#edd8cc] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                <svg className="w-6 h-6 text-[#df7a4c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2">For Brands</h3>
               <p className="text-neutral-600 text-sm">Looking for dependable ingredient solutions with transparent sourcing and technical support.</p>
-              <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-amber-600 group-hover:gap-3 transition-all">
+              <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#df7a4c] group-hover:gap-3 transition-all">
                 Request quote
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -667,7 +668,7 @@ export default function HomePage() {
       </section>
 
       {/* Newsletter Section - Fixed contrast */}
-      <section className="bg-neutral-900 text-white" id="contact">
+      <section className="bg-[#2A2118] text-white" id="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
           <div className="text-center max-w-2xl mx-auto animate-on-scroll blur-slide">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight animate-on-scroll text-reveal stagger-1">
@@ -705,7 +706,7 @@ export default function HomePage() {
               </p>
               <p className="text-sm text-neutral-300 mt-2 animate-on-scroll text-reveal stagger-7">
                 <strong className="text-white">Email:</strong>{" "}
-                <a href="mailto:ga@omniingredients.com" className="text-amber-400 hover:text-amber-300 underline">
+                <a href="mailto:ga@omniingredients.com" className="text-[#ffa087] hover:text-[#f9b9ad] underline">
                   ga@omniingredients.com
                 </a>
               </p>

@@ -127,7 +127,7 @@ export function Footer({
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 hover:bg-neutral-100 rounded-lg transition"
+                  className="p-2 hover:bg-[#edd8cc] rounded-lg transition"
                   aria-label={social.label}
                 >
                   {social.icon}
