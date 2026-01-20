@@ -1,0 +1,960 @@
+{
+  "common": {
+    "companyName": "Omni Ingredients",
+    "email": "ga@omniingredients.com",
+    "location": "Ontario, CA 91761, USA",
+    "businessHours": "Monday – Friday, 08:30 am – 05:00 pm PST",
+    "navigation": {
+      "home": "Home",
+      "solutions": "Solutions",
+      "about": "About",
+      "journal": "Journal",
+      "contact": "Contact",
+      "getQuote": "Get a Quote",
+      "search": "Search ingredients..."
+    },
+    "footer": {
+      "tagline": "Your trusted B2B partner for premium nutraceutical ingredients across North America.",
+      "products": "Products",
+      "allSolutions": "All Solutions",
+      "ingredientCategories": "Ingredient Categories",
+      "customPremix": "Custom Premix",
+      "ourServices": "Our Services",
+      "partner": "Partner",
+      "requestQuote": "Request Quote",
+      "aboutUs": "About Us",
+      "industryInsights": "Industry Insights",
+      "company": "Company",
+      "press": "Press",
+      "sustainability": "Sustainability",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "cookiePolicy": "Cookie Policy",
+      "copyright": "Omni Ingredients. All rights reserved."
+    },
+    "announcement": {
+      "landing": "Premium B2B Nutraceutical Ingredients",
+      "servingSince": "Serving North America since 2010"
+    },
+    "cta": {
+      "requestQuote": "Request a Quote",
+      "viewSolutions": "View Solutions",
+      "learnMore": "Learn More",
+      "contactUs": "Contact Us",
+      "getInTouch": "Get in Touch"
+    },
+    "languageSwitcher": {
+      "label": "Language",
+      "en": "English",
+      "es": "Español",
+      "zh": "中文"
+    }
+  },
+  "home": {
+    "hero": {
+      "tagline": "B2B Ingredient Solutions",
+      "title": "Reliable Functional Ingredients, Built for Scale",
+      "subtitle": "Your trusted partner for high-quality nutraceutical ingredients. U.S.-based operations, global sourcing expertise, and supply chain you can count on.",
+      "cta": {
+        "quote": "Request a Quote",
+        "solutions": "View Solutions"
+      }
+    },
+    "trust": {
+      "yearsExperience": "15+",
+      "yearsExperienceLabel": "Years Experience",
+      "productsDistributed": "500+",
+      "productsDistributedLabel": "Products Available",
+      "satisfiedPartners": "3",
+      "satisfiedPartnersLabel": "U.S. Warehouses",
+      "quoteResponse": "24hr",
+      "quoteResponseLabel": "Quote Response"
+    },
+    "painPoints": {
+      "tagline": "The Challenge",
+      "title": "We Understand Your Challenges",
+      "subtitle": "Sourcing ingredients internationally comes with real obstacles. We built Omni to solve them.",
+      "items": {
+        "0": {
+          "title": "Inconsistent Quality",
+          "description": "Supply uncertainty and quality variations across batches create formulation challenges and risk."
+        },
+        "1": {
+          "title": "Long Lead Times",
+          "description": "Extended timelines and customs complexity delay product launches and inventory planning."
+        },
+        "2": {
+          "title": "Fragmented Logistics",
+          "description": "Unclear responsibilities across international touchpoints lead to delays and miscommunication."
+        },
+        "3": {
+          "title": "Communication Overhead",
+          "description": "Excessive coordination costs across time zones and multiple vendors drain resources."
+        }
+      }
+    },
+    "solutions": {
+      "tagline": "Our Approach",
+      "title": "How Omni Simplifies Your Supply Chain",
+      "subtitle": "We combine international sourcing expertise with U.S.-based operations to deliver ingredients reliably, transparently, and at scale.",
+      "items": {
+        "0": {
+          "title": "U.S.-Based Operations",
+          "description": "Local warehousing and fulfillment from strategic locations across North America."
+        },
+        "1": {
+          "title": "Qualified Partnerships",
+          "description": "Long-term relationships with vetted, cGMP-compliant manufacturers."
+        },
+        "2": {
+          "title": "End-to-End Logistics",
+          "description": "Complete international trade execution from origin to your door."
+        },
+        "3": {
+          "title": "Documented Quality",
+          "description": "Traceable systems with batch-level COAs and full documentation."
+        }
+      },
+      "floatingStat": {
+        "value": "24hr",
+        "label": "Quote Response"
+      }
+    },
+    "aboutPreview": {
+      "tagline": "About Omni Ingredients",
+      "title": "Connecting Global Ingredients to North American Markets",
+      "description1": "Omni Ingredients is a U.S.-based solutions company specializing in the sourcing, distribution, and commercialization of high-quality functional ingredients for the nutraceutical, food & beverage, and health industries.",
+      "description2": "Backed by R&D capabilities from our parent group, we bring technical depth and supply chain expertise to every partnership.",
+      "cta": "Learn More About Us"
+    },
+    "categories": {
+      "tagline": "What We Offer",
+      "title": "Ingredient Categories",
+      "subtitle": "From single-ingredient sourcing to custom premix solutions, we support the full spectrum of functional nutrition.",
+      "items": {
+        "antioxidant": {
+          "title": "Antioxidant & Cellular Health",
+          "description": "Protect and rejuvenate at the cellular level"
+        },
+        "energy": {
+          "title": "Energy & Metabolic Support",
+          "description": "Fuel performance and metabolism"
+        },
+        "immune": {
+          "title": "Immune & Liver Health",
+          "description": "Support natural defense systems"
+        },
+        "beauty": {
+          "title": "Beauty-from-Within",
+          "description": "Nourish skin, hair, and nails"
+        },
+        "sports": {
+          "title": "Sports Performance",
+          "description": "Optimize athletic recovery and endurance"
+        },
+        "mood": {
+          "title": "Mood & Cognitive Support",
+          "description": "Enhance mental clarity and emotional balance"
+        }
+      },
+      "premix": {
+        "title": "Custom Premix Solutions",
+        "description": "Beyond single ingredients, we offer pre-blended formulation support for complete product development.",
+        "items": {
+          "multivitamin": "Multi-Vitamin & Mineral",
+          "plantbased": "Green & Plant-Based",
+          "sweetener": "Sweetener & Flavor"
+        }
+      },
+      "cta": "Explore All Solutions"
+    },
+    "quality": {
+      "tagline": "Standards",
+      "title": "Quality & Compliance",
+      "subtitle": "Quality and compliance are fundamental to our operations. We work closely with qualified partners to ensure all products meet U.S. regulatory standards.",
+      "pillars": {
+        "supplier": {
+          "title": "Supplier Qualification",
+          "description": "Rigorous vetting and long-term evaluation of manufacturing partners"
+        },
+        "traceability": {
+          "title": "Batch-level COA & Traceability",
+          "description": "Complete documentation management for every lot shipped"
+        },
+        "testing": {
+          "title": "Third-party Testing",
+          "description": "Independent analytical verification ensures specification compliance"
+        },
+        "regulatory": {
+          "title": "U.S. Regulatory Understanding",
+          "description": "Deep knowledge of FDA requirements and compliance pathways"
+        }
+      }
+    },
+    "customers": {
+      "tagline": "Our Customers",
+      "title": "Who We Serve",
+      "subtitle": "From emerging brands to established manufacturers, we partner with companies across the health and wellness spectrum.",
+      "types": {
+        "0": "Dietary Supplement Brands",
+        "1": "Contract Manufacturers",
+        "2": "Functional Food & Beverage",
+        "3": "Sports Nutrition Companies",
+        "4": "Private Label Producers",
+        "5": "Pharmaceutical Companies",
+        "6": "Cosmetic Formulators",
+        "7": "Pet Nutrition Brands"
+      }
+    },
+    "warehouses": {
+      "title": "Nationwide Warehousing Network",
+      "locations": {
+        "ontario": {
+          "region": "West Coast",
+          "city": "Ontario, California",
+          "description": "Distribution hub supporting imports through the Ports of Los Angeles and Long Beach"
+        },
+        "dallas": {
+          "region": "Central U.S.",
+          "city": "Dallas, Texas",
+          "description": "Central logistics hub enabling efficient nationwide ground transportation"
+        },
+        "buford": {
+          "region": "East Coast",
+          "city": "Buford, Georgia",
+          "description": "East Coast and Southeast regional distribution center"
+        }
+      }
+    },
+    "cta": {
+      "title": "Let's Discuss Your Needs",
+      "subtitle": "Whether you're a manufacturer seeking North American market access or a brand looking for reliable ingredient solutions, we're here to help.",
+      "manufacturers": {
+        "title": "For Manufacturers",
+        "description": "Seeking access to the North American market with reliable distribution and compliance support.",
+        "cta": "Get in touch"
+      },
+      "brands": {
+        "title": "For Brands",
+        "description": "Looking for dependable ingredient solutions with transparent sourcing and technical support.",
+        "cta": "Request quote"
+      },
+      "contact": {
+        "emailLabel": "Email:",
+        "hoursLabel": "Hours:",
+        "hours": "Monday – Friday, 08:30 am – 05:00 pm PST",
+        "locationLabel": "Location:",
+        "location": "Ontario, CA 91761, USA"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "About Us",
+      "title": "Omni Ingredients",
+      "description": "Your trusted B2B partner for high-quality nutraceutical ingredients. U.S.-based operations with global sourcing expertise."
+    },
+    "story": {
+      "badge": "Our Story",
+      "title": "Connecting Global Ingredients to North American Markets",
+      "description1": "Omni Ingredients is a U.S.-based ingredient solutions company specializing in the sourcing, distribution, and commercialization of high-quality functional ingredients for the nutraceutical, food & beverage, and health industries.",
+      "description2": "Built on a strong cross-border supply chain foundation, we connect global manufacturers with North American customers, providing reliable, compliant, and scalable ingredient solutions.",
+      "description3": "Our parent group brings R&D capabilities and technical depth that sets us apart from traditional trading companies. We're not just moving products – we're building partnerships that drive innovation in health and wellness.",
+      "experience": "Years Experience"
+    },
+    "values": {
+      "badge": "What We Stand For",
+      "title": "Our Values",
+      "description": "These principles guide every partnership and decision we make.",
+      "items": {
+        "reliability": {
+          "title": "Reliability",
+          "description": "Consistent supply and predictable lead times you can plan around."
+        },
+        "transparency": {
+          "title": "Transparency",
+          "description": "Clear communication, honest timelines, and complete documentation."
+        },
+        "partnership": {
+          "title": "Partnership",
+          "description": "Long-term relationships built on mutual success and trust."
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "Rigorous standards and qualified suppliers, no exceptions."
+        }
+      }
+    },
+    "whyChooseUs": {
+      "badge": "The Omni Difference",
+      "title": "Why Choose Us",
+      "description": "We combine the best of global sourcing with local service and support.",
+      "items": {
+        "usOperations": {
+          "title": "U.S.-Based Operations",
+          "description": "Local warehousing, domestic customer service, and faster response times."
+        },
+        "globalSourcing": {
+          "title": "Global Sourcing Network",
+          "description": "Established relationships with qualified manufacturers worldwide."
+        },
+        "endToEndLogistics": {
+          "title": "End-to-End Logistics",
+          "description": "We handle international trade complexities so you don't have to."
+        },
+        "technicalExpertise": {
+          "title": "Technical Expertise",
+          "description": "Formulation guidance backed by our parent group's R&D capabilities."
+        },
+        "complianceFocus": {
+          "title": "Compliance Focus",
+          "description": "Deep understanding of U.S. regulatory requirements and documentation."
+        },
+        "scalableSolutions": {
+          "title": "Scalable Solutions",
+          "description": "From samples to commercial volumes, we grow with your needs."
+        }
+      }
+    },
+    "warehouse": {
+      "badge": "Logistics",
+      "title": "Nationwide Warehousing Network",
+      "description": "Strategically positioned warehouses ensure fast delivery, stable inventory, and supply chain resilience.",
+      "locations": {
+        "ontario": {
+          "region": "West Coast",
+          "city": "Ontario, California",
+          "description": "Distribution hub supporting imports through the Ports of Los Angeles and Long Beach"
+        },
+        "dallas": {
+          "region": "Central U.S.",
+          "city": "Dallas, Texas",
+          "description": "Central logistics hub enabling efficient nationwide ground transportation"
+        },
+        "buford": {
+          "region": "East Coast",
+          "city": "Buford, Georgia",
+          "description": "East Coast and Southeast regional distribution center"
+        }
+      },
+      "benefits": {
+        "reducedTransit": "Reduced Transit Time",
+        "localInventory": "Local Inventory",
+        "reliableDelivery": "Reliable Delivery",
+        "scalableGrowth": "Scalable Growth"
+      }
+    },
+    "cta": {
+      "title": "Partner With Us",
+      "description": "Ready to discuss your ingredient needs? Get in touch with our team for competitive pricing and reliable supply.",
+      "contactUs": "Contact Us",
+      "viewSolutions": "View Solutions",
+      "businessHours": "Business Hours (PST):",
+      "location": "Location:",
+      "email": "Email:"
+    }
+  },
+  "solutions": {
+    "hero": {
+      "badge": "Our Solutions",
+      "title": "Comprehensive Ingredient Solutions",
+      "description": "From single raw materials to custom premixes, we provide the building blocks for your health and wellness products."
+    },
+    "categories": {
+      "badge": "By Function",
+      "title": "Functional Categories",
+      "description": "Our ingredients are organized by health benefit, making it easy to find the right solutions for your formulations.",
+      "requestInfo": "Request Info"
+    },
+    "ingredientTypes": {
+      "badge": "By Type",
+      "title": "Ingredient Types",
+      "description": "Browse our extensive catalog of vitamins, minerals, amino acids, botanicals, and specialty nutrients.",
+      "viewAll": "View All",
+      "vitamins": {
+        "title": "Vitamins",
+        "items": ["Vitamin A", "B-Complex", "Vitamin C", "Vitamin D3", "Vitamin E", "Vitamin K2"]
+      },
+      "minerals": {
+        "title": "Minerals",
+        "items": ["Calcium", "Magnesium", "Zinc", "Iron", "Selenium", "Chromium"]
+      },
+      "aminoAcids": {
+        "title": "Amino Acids",
+        "items": ["L-Glutamine", "L-Arginine", "L-Carnitine", "BCAAs", "Creatine", "Taurine"]
+      },
+      "botanicals": {
+        "title": "Botanical Extracts",
+        "items": ["Ashwagandha", "Turmeric", "Green Tea", "Ginseng", "Elderberry", "Milk Thistle"]
+      },
+      "specialty": {
+        "title": "Specialty Nutrients",
+        "items": ["CoQ10", "Omega-3s", "Probiotics", "Enzymes", "Collagen", "Hyaluronic Acid"]
+      }
+    },
+    "premix": {
+      "badge": "Beyond Single Ingredients",
+      "title": "Custom Premix Solutions",
+      "description": "Our premix capabilities go beyond simple blending. We work with you to develop optimized formulations that meet your specific requirements.",
+      "discussFormulation": "Discuss Your Formulation",
+      "stats": {
+        "singleIngredients": "Single Ingredients",
+        "premixBlends": "Premix Blends",
+        "documentation": "Documentation",
+        "quoteResponse": "Quote Response"
+      }
+    },
+    "services": {
+      "badge": "How We Help",
+      "title": "Our Services",
+      "description": "Beyond ingredients, we provide comprehensive support throughout your supply chain.",
+      "items": {
+        "singleIngredient": {
+          "title": "Single Ingredient Sourcing",
+          "description": "Access our extensive network of qualified manufacturers for individual raw materials."
+        },
+        "customPremix": {
+          "title": "Custom Premix Development",
+          "description": "Pre-blended formulations tailored to your product specifications and market needs."
+        },
+        "supplyChain": {
+          "title": "Supply Chain Management",
+          "description": "End-to-end logistics from international sourcing to U.S. delivery."
+        },
+        "qualityDocs": {
+          "title": "Quality Documentation",
+          "description": "Complete COAs, specifications, and regulatory documentation for every batch."
+        },
+        "technicalSupport": {
+          "title": "Technical Support",
+          "description": "Formulation guidance and application expertise from our technical team."
+        },
+        "inventoryPrograms": {
+          "title": "Inventory Programs",
+          "description": "Consignment and scheduled delivery programs for predictable supply."
+        }
+      }
+    },
+    "quality": {
+      "badge": "Quality First",
+      "title": "Our Quality Standards",
+      "description": "Every ingredient we supply meets rigorous quality and compliance standards."
+    },
+    "industries": {
+      "badge": "Our Customers",
+      "title": "Industries We Serve",
+      "description": "We work with companies of all sizes across the health and wellness industry."
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Tell us about your ingredient needs and we'll respond with a quote within 24 hours.",
+      "requestQuote": "Request a Quote",
+      "learnAboutUs": "Learn About Us",
+      "email": "Email:"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Get in Touch",
+      "title": "Contact Us",
+      "description": "Ready to discuss your ingredient needs? Our team is here to help."
+    },
+    "form": {
+      "title": "Send us a message",
+      "description": "Fill out the form below and we'll get back to you within 24-48 business hours.",
+      "fields": {
+        "fullName": "Full Name",
+        "companyName": "Company Name",
+        "businessEmail": "Business Email",
+        "phoneNumber": "Phone Number",
+        "optional": "(Optional)",
+        "inquiryType": "Inquiry Type",
+        "message": "Message",
+        "messagePlaceholder": "Tell us about your ingredient needs, quantities, and any specific requirements..."
+      },
+      "inquiryTypes": {
+        "general": "General Inquiry",
+        "quote": "Request a Quote",
+        "product": "Product Information",
+        "partnership": "Partnership Opportunities"
+      },
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": {
+        "title": "Message Sent!",
+        "description": "Thank you for contacting us. We'll respond within 24-48 business hours.",
+        "sendAnother": "Send Another Message"
+      },
+      "errors": {
+        "nameRequired": "Name is required",
+        "companyRequired": "Company name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "messageRequired": "Message is required"
+      }
+    },
+    "info": {
+      "email": "Email",
+      "location": "Location",
+      "businessHours": "Business Hours",
+      "quickResponse": {
+        "title": "Quick Response",
+        "description": "We typically respond to all inquiries within 24-48 business hours."
+      }
+    },
+    "headquarters": {
+      "title": "Our Headquarters",
+      "description": "Strategically located in Southern California, our headquarters enables efficient distribution across North America with access to major logistics corridors.",
+      "address": "Address",
+      "placeholder": "Southern California Distribution Hub"
+    },
+    "cta": {
+      "title": "Ready to Partner?",
+      "description": "Explore our extensive catalog of nutraceutical ingredients or request a custom quote for your specific needs.",
+      "viewProducts": "View Products",
+      "visitShop": "Visit Shop",
+      "tagline": "Serving North America since 2010 • 500+ Products • cGMP Compliant"
+    }
+  },
+  "legal": {
+    "lastUpdated": "Last updated: January 2025",
+    "tableOfContents": "Table of Contents",
+    "backToHome": "Back to Home",
+    "backToTop": "Back to top",
+    "terms": {
+      "badge": "Legal",
+      "title": "Terms of Service",
+      "intro": "Welcome to Omni Ingredients. These Terms of Service govern your use of our website and services. By accessing or using our services, you agree to be bound by these terms. Please read them carefully.",
+      "sections": {
+        "acceptance": {
+          "title": "Acceptance of Terms",
+          "content1": "By accessing and using the Omni Ingredients website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.",
+          "content2": "We reserve the right to modify these terms at any time. Your continued use of our services following any changes constitutes acceptance of those changes. We encourage you to review these terms periodically."
+        },
+        "useOfServices": {
+          "title": "Use of Services",
+          "intro": "You agree to use our services only for lawful purposes and in accordance with these terms. You agree not to:",
+          "items": [
+            "Use our services in any way that violates applicable laws or regulations",
+            "Engage in any conduct that restricts or inhibits anyone's use of our services",
+            "Attempt to gain unauthorized access to our systems or networks",
+            "Use any automated means to access our website without permission",
+            "Transmit any malicious code, viruses, or harmful content",
+            "Impersonate any person or entity or misrepresent your affiliation"
+          ]
+        },
+        "ordersAndPricing": {
+          "title": "Orders and Pricing",
+          "orderAcceptance": {
+            "title": "Order Acceptance",
+            "content": "All orders are subject to acceptance by Omni Ingredients. We reserve the right to refuse or cancel any order for any reason, including but not limited to product availability, errors in pricing or product information, or suspected fraud."
+          },
+          "pricing": {
+            "title": "Pricing",
+            "content": "Prices are subject to change without notice. We make every effort to ensure pricing accuracy, but errors may occur. In the event of a pricing error, we will notify you and provide the option to proceed with the corrected price or cancel the order."
+          },
+          "paymentTerms": {
+            "title": "Payment Terms",
+            "content": "Payment terms are established on a per-customer basis. Standard terms may include net 30 days for approved accounts. We reserve the right to modify payment terms at our discretion."
+          }
+        },
+        "intellectualProperty": {
+          "title": "Intellectual Property",
+          "content": "All content on this website, including but not limited to text, graphics, logos, images, and software, is the property of Omni Ingredients or its content suppliers and is protected by intellectual property laws.",
+          "items": [
+            "Reproduce, distribute, or display any content without prior written consent",
+            "Modify or create derivative works based on our content",
+            "Use our trademarks or logos without express permission",
+            "Remove any copyright or proprietary notices from our materials"
+          ]
+        },
+        "limitationOfLiability": {
+          "title": "Limitation of Liability",
+          "content1": "To the fullest extent permitted by law, Omni Ingredients shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our services.",
+          "content2": "Our total liability for any claim arising from these terms or our services shall not exceed the amount paid by you for the specific products or services giving rise to the claim.",
+          "content3": "This limitation applies regardless of the legal theory upon which the claim is based, including negligence, breach of contract, or any other theory."
+        },
+        "governingLaw": {
+          "title": "Governing Law",
+          "content1": "These Terms of Service shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law provisions.",
+          "content2": "Any dispute arising from these terms shall be resolved exclusively in the state or federal courts located in California. You consent to the personal jurisdiction of such courts."
+        },
+        "contact": {
+          "title": "Contact Information",
+          "content": "If you have any questions about these Terms of Service, please contact us:"
+        }
+      }
+    },
+    "privacy": {
+      "badge": "Legal",
+      "title": "Privacy Policy",
+      "intro": "At Omni Ingredients, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage with our services.",
+      "sections": {
+        "informationWeCollect": {
+          "title": "Information We Collect",
+          "intro": "We may collect the following types of information:",
+          "personal": {
+            "title": "Personal Information",
+            "items": [
+              "Name, email address, phone number, and company name",
+              "Business address and billing information",
+              "Information provided when you request quotes or samples",
+              "Communication records when you contact us"
+            ]
+          },
+          "automatic": {
+            "title": "Automatically Collected Information",
+            "items": [
+              "IP address and browser type",
+              "Device information and operating system",
+              "Pages visited and time spent on our website",
+              "Referring website addresses"
+            ]
+          }
+        },
+        "howWeUse": {
+          "title": "How We Use Information",
+          "intro": "We use the information we collect to:",
+          "items": [
+            "Process and fulfill your orders and requests",
+            "Respond to inquiries and provide customer support",
+            "Send relevant product information and industry updates",
+            "Improve our website and services",
+            "Comply with legal obligations",
+            "Prevent fraudulent transactions and protect our business"
+          ]
+        },
+        "informationSharing": {
+          "title": "Information Sharing",
+          "intro": "We do not sell, trade, or rent your personal information to third parties. We may share your information with:",
+          "items": [
+            "Service Providers: Third-party vendors who assist in operating our website, conducting business, or servicing you",
+            "Business Partners: Trusted partners involved in fulfilling your orders or providing services",
+            "Legal Requirements: When required by law or to protect our rights and safety",
+            "Business Transfers: In connection with any merger, acquisition, or sale of assets"
+          ]
+        },
+        "dataSecurity": {
+          "title": "Data Security",
+          "intro": "We implement appropriate technical and organizational security measures to protect your personal information, including:",
+          "items": [
+            "Encryption of sensitive data during transmission",
+            "Secure servers and firewalls",
+            "Regular security assessments and updates",
+            "Access controls limiting who can view your information"
+          ],
+          "disclaimer": "While we strive to protect your personal information, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security."
+        },
+        "yourRights": {
+          "title": "Your Rights",
+          "intro": "Depending on your location, you may have the following rights:",
+          "items": [
+            "Access: Request a copy of the personal information we hold about you",
+            "Correction: Request correction of inaccurate or incomplete information",
+            "Deletion: Request deletion of your personal information",
+            "Opt-out: Unsubscribe from marketing communications at any time",
+            "Portability: Request your data in a portable format"
+          ],
+          "exercise": "To exercise these rights, please contact us using the information below."
+        },
+        "contact": {
+          "title": "Contact Information",
+          "content": "If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:"
+        }
+      }
+    },
+    "cookies": {
+      "badge": "Legal",
+      "title": "Cookie Policy",
+      "intro": "This Cookie Policy explains how Omni Ingredients uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are, why we use them, and your rights to control our use of them.",
+      "whatAreCookies": {
+        "title": "What Are Cookies?",
+        "content1": "Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.",
+        "content2": "Cookies set by the website owner (in this case, Omni Ingredients) are called \"first-party cookies.\" Cookies set by parties other than the website owner are called \"third-party cookies.\" Third-party cookies enable third-party features or functionality to be provided on or through the website."
+      },
+      "types": {
+        "title": "Types of Cookies We Use",
+        "essential": {
+          "name": "Essential Cookies",
+          "description": "These cookies are necessary for the website to function and cannot be switched off. They are usually only set in response to actions made by you, such as setting your privacy preferences or filling in forms.",
+          "examples": ["Session cookies", "Security cookies", "Load balancing cookies"]
+        },
+        "performance": {
+          "name": "Performance Cookies",
+          "description": "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us know which pages are the most and least popular.",
+          "examples": ["Analytics cookies", "Page load time tracking", "Error monitoring"]
+        },
+        "functional": {
+          "name": "Functional Cookies",
+          "description": "These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.",
+          "examples": ["Language preferences", "Region settings", "Chat support"]
+        },
+        "marketing": {
+          "name": "Marketing Cookies",
+          "description": "These cookies may be set through our site by our advertising partners. They may be used to build a profile of your interests and show you relevant advertisements on other sites.",
+          "examples": ["Advertising cookies", "Social media cookies", "Retargeting cookies"]
+        }
+      },
+      "howToManage": {
+        "title": "How to Manage Cookies",
+        "intro": "You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences in the following ways:",
+        "browserSettings": {
+          "title": "Browser Settings",
+          "content": "Most web browsers allow you to control cookies through their settings preferences. However, if you limit the ability of websites to set cookies, you may worsen your overall user experience.",
+          "browsers": {
+            "title": "Popular browser cookie settings:",
+            "chrome": "Chrome: Settings → Privacy and security → Cookies",
+            "firefox": "Firefox: Settings → Privacy & Security → Cookies",
+            "safari": "Safari: Preferences → Privacy → Cookies",
+            "edge": "Edge: Settings → Cookies and site permissions"
+          }
+        },
+        "optOut": {
+          "title": "Opt-Out Links",
+          "content": "Some third-party services provide opt-out mechanisms. For example, you can opt out of Google Analytics by installing the Google Analytics Opt-out Browser Add-on."
+        }
+      },
+      "thirdParty": {
+        "title": "Third-Party Cookies",
+        "intro": "We may use third-party services that set cookies on our website. These services include:",
+        "items": [
+          "Google Analytics: For website traffic analysis and reporting",
+          "Social Media Platforms: For sharing functionality and embedded content",
+          "Customer Support Tools: For live chat and support features"
+        ],
+        "disclaimer": "We do not control the cookies used by these third parties. Please review their respective privacy policies for more information about their cookie practices."
+      },
+      "updates": {
+        "title": "Updates to This Policy",
+        "content": "We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Please revisit this page regularly to stay informed about our use of cookies."
+      },
+      "contact": {
+        "title": "Contact Information",
+        "content": "If you have questions about our use of cookies, please contact us:"
+      }
+    }
+  },
+  "press": {
+    "hero": {
+      "badge": "Newsroom",
+      "title": "Press & Media",
+      "description": "News, announcements, and resources for media professionals covering the nutraceutical industry."
+    },
+    "overview": {
+      "badge": "About Us",
+      "title": "Company Overview",
+      "description1": "Omni Ingredients is a U.S.-based ingredient solutions company specializing in the sourcing, distribution, and commercialization of high-quality functional ingredients for the nutraceutical, food & beverage, and health industries.",
+      "description2": "With a strong cross-border supply chain foundation and U.S.-based operations, we connect global manufacturers with North American customers, providing reliable, compliant, and scalable ingredient solutions.",
+      "description3": "Our parent group's R&D capabilities and technical expertise set us apart from traditional trading companies, enabling us to offer formulation guidance and innovative solutions to our partners."
+    },
+    "mediaContact": {
+      "title": "Media Contact",
+      "email": "Email",
+      "businessHours": "Business Hours (PST)",
+      "inquiryInfo": "For press inquiries, interview requests, or media kit access, please contact our team directly."
+    },
+    "facts": {
+      "badge": "At a Glance",
+      "title": "Company Facts",
+      "items": {
+        "experience": {
+          "stat": "15+",
+          "label": "Years Experience",
+          "description": "In the nutraceutical industry"
+        },
+        "partners": {
+          "stat": "50+",
+          "label": "Global Partners",
+          "description": "Trusted supplier network"
+        },
+        "warehouses": {
+          "stat": "3",
+          "label": "U.S. Warehouses",
+          "description": "Strategic distribution locations"
+        },
+        "skus": {
+          "stat": "500+",
+          "label": "SKUs",
+          "description": "Functional ingredients available"
+        }
+      }
+    },
+    "downloads": {
+      "badge": "Resources",
+      "title": "Media Downloads",
+      "items": {
+        "logoPack": {
+          "name": "Company Logo Pack",
+          "format": "ZIP",
+          "size": "2.4 MB"
+        },
+        "mediaKit": {
+          "name": "Media Kit",
+          "format": "PDF",
+          "size": "1.8 MB"
+        },
+        "factSheet": {
+          "name": "Company Fact Sheet",
+          "format": "PDF",
+          "size": "450 KB"
+        }
+      },
+      "contactForMore": "Contact us for high-resolution images and additional materials."
+    },
+    "news": {
+      "badge": "Latest Updates",
+      "title": "Recent News"
+    },
+    "cta": {
+      "title": "Get in Touch",
+      "description": "Have questions or need additional information? Our team is ready to assist with your media inquiries.",
+      "contactMedia": "Contact Media Relations",
+      "aboutOmni": "About Omni Ingredients"
+    }
+  },
+  "sustainability": {
+    "hero": {
+      "badge": "Our Commitment",
+      "title": "Sustainability",
+      "description": "Building a responsible supply chain that benefits people, communities, and the planet while delivering exceptional quality."
+    },
+    "mission": {
+      "title": "Our Sustainability Mission",
+      "description": "At Omni Ingredients, we believe that sustainable business practices and quality ingredients go hand in hand. We are committed to building transparent, ethical supply chains that create value for all stakeholders while minimizing environmental impact."
+    },
+    "pillars": {
+      "badge": "Our Approach",
+      "title": "Four Pillars of Sustainability",
+      "items": {
+        "responsibleSourcing": {
+          "title": "Responsible Sourcing",
+          "description": "We partner with suppliers who share our commitment to ethical practices, ensuring ingredients are sourced responsibly and sustainably.",
+          "points": [
+            "Audited supplier partnerships",
+            "Ethical labor practices verification",
+            "Sustainable harvesting methods",
+            "Origin transparency and traceability"
+          ]
+        },
+        "supplyChainTransparency": {
+          "title": "Supply Chain Transparency",
+          "description": "Complete visibility into our supply chain, from raw material origins to final delivery, ensuring accountability at every step.",
+          "points": [
+            "End-to-end traceability",
+            "Regular third-party audits",
+            "Comprehensive documentation",
+            "Real-time tracking capabilities"
+          ]
+        },
+        "environmentalPractices": {
+          "title": "Environmental Practices",
+          "description": "Minimizing our environmental footprint through efficient operations, reduced waste, and sustainable packaging solutions.",
+          "points": [
+            "Carbon footprint reduction",
+            "Waste minimization programs",
+            "Energy-efficient warehousing",
+            "Sustainable packaging options"
+          ]
+        },
+        "communityImpact": {
+          "title": "Community Impact",
+          "description": "Supporting the communities where we operate and source ingredients, creating positive social and economic impact.",
+          "points": [
+            "Local community support",
+            "Fair trade partnerships",
+            "Educational initiatives",
+            "Economic empowerment programs"
+          ]
+        }
+      }
+    },
+    "commitments": {
+      "badge": "Our Commitment",
+      "title": "Measurable Impact",
+      "items": {
+        "supplierAudits": {
+          "stat": "100%",
+          "label": "Supplier Audits",
+          "description": "All key suppliers undergo regular compliance audits"
+        },
+        "globalPartners": {
+          "stat": "50+",
+          "label": "Global Partners",
+          "description": "Vetted suppliers committed to sustainability"
+        },
+        "zeroTolerance": {
+          "stat": "0",
+          "label": "Tolerance Policy",
+          "description": "Zero tolerance for unethical sourcing practices"
+        }
+      }
+    },
+    "future": {
+      "badge": "The Future",
+      "title": "Looking Ahead",
+      "description": "Sustainability is a journey, not a destination. We continuously evaluate and improve our practices, setting ambitious goals for carbon reduction, waste elimination, and community impact. Our commitment to transparency means we'll share our progress openly with our partners and stakeholders.",
+      "initiatives": {
+        "carbonNeutrality": {
+          "title": "Carbon Neutrality",
+          "description": "Working toward carbon-neutral operations across our supply chain"
+        },
+        "packagingInnovation": {
+          "title": "Packaging Innovation",
+          "description": "Developing sustainable packaging solutions with reduced environmental impact"
+        },
+        "supplierDevelopment": {
+          "title": "Supplier Development",
+          "description": "Partnering with suppliers to improve their sustainability practices"
+        },
+        "circularEconomy": {
+          "title": "Circular Economy",
+          "description": "Exploring closed-loop systems for waste reduction and resource recovery"
+        }
+      }
+    },
+    "cta": {
+      "title": "Partner With Purpose",
+      "description": "Join us in building a more sustainable future for the ingredients industry. We're always looking for partners who share our values.",
+      "getInTouch": "Get in Touch",
+      "learnAboutUs": "Learn About Us"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "Omni Ingredients | Premium Nutraceutical Ingredients",
+      "description": "Your trusted B2B partner for high-quality vitamins, minerals, amino acids, and specialty nutrients. cGMP compliant manufacturing."
+    },
+    "about": {
+      "title": "About Us | Omni Ingredients",
+      "description": "Learn about Omni Ingredients - your trusted B2B partner for high-quality nutraceutical ingredients with U.S.-based operations and global sourcing expertise."
+    },
+    "solutions": {
+      "title": "Solutions | Omni Ingredients",
+      "description": "Comprehensive ingredient solutions from single raw materials to custom premixes for the health and wellness industry."
+    },
+    "contact": {
+      "title": "Contact Us | Omni Ingredients",
+      "description": "Get in touch with Omni Ingredients for your nutraceutical ingredient needs. Request a quote or inquire about our services."
+    },
+    "terms": {
+      "title": "Terms of Service | Omni Ingredients",
+      "description": "Terms of Service for Omni Ingredients website and services."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Omni Ingredients",
+      "description": "Privacy Policy for Omni Ingredients - how we collect, use, and protect your information."
+    },
+    "cookies": {
+      "title": "Cookie Policy | Omni Ingredients",
+      "description": "Cookie Policy for Omni Ingredients - how we use cookies and your choices."
+    },
+    "press": {
+      "title": "Press & Media | Omni Ingredients",
+      "description": "News, announcements, and resources for media professionals covering the nutraceutical industry."
+    },
+    "sustainability": {
+      "title": "Sustainability | Omni Ingredients",
+      "description": "Our commitment to building a responsible supply chain that benefits people, communities, and the planet."
+    }
+  }
+}

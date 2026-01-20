@@ -1,0 +1,960 @@
+{
+  "common": {
+    "companyName": "Omni Ingredients",
+    "email": "ga@omniingredients.com",
+    "location": "美国加利福尼亚州安大略市 91761",
+    "businessHours": "周一至周五，上午 08:30 - 下午 05:00（太平洋时间）",
+    "navigation": {
+      "home": "首页",
+      "solutions": "解决方案",
+      "about": "关于我们",
+      "journal": "行业资讯",
+      "contact": "联系我们",
+      "getQuote": "获取报价",
+      "search": "搜索原料..."
+    },
+    "footer": {
+      "tagline": "您值得信赖的北美优质营养品原料B2B合作伙伴。",
+      "products": "产品",
+      "allSolutions": "所有解决方案",
+      "ingredientCategories": "原料类别",
+      "customPremix": "定制预混料",
+      "ourServices": "我们的服务",
+      "partner": "合作",
+      "requestQuote": "请求报价",
+      "aboutUs": "关于我们",
+      "industryInsights": "行业洞察",
+      "company": "公司",
+      "press": "新闻媒体",
+      "sustainability": "可持续发展",
+      "privacyPolicy": "隐私政策",
+      "termsOfService": "服务条款",
+      "cookiePolicy": "Cookie政策",
+      "copyright": "Omni Ingredients。保留所有权利。"
+    },
+    "announcement": {
+      "landing": "优质B2B营养品原料",
+      "servingSince": "自2010年起服务北美市场"
+    },
+    "cta": {
+      "requestQuote": "请求报价",
+      "viewSolutions": "查看解决方案",
+      "learnMore": "了解更多",
+      "contactUs": "联系我们",
+      "getInTouch": "取得联系"
+    },
+    "languageSwitcher": {
+      "label": "语言",
+      "en": "English",
+      "es": "Español",
+      "zh": "中文"
+    }
+  },
+  "home": {
+    "hero": {
+      "tagline": "B2B原料解决方案",
+      "title": "可靠的功能性原料，为规模化而构建",
+      "subtitle": "您值得信赖的高品质营养品原料合作伙伴。美国本土运营，全球采购专业知识，可靠的供应链。",
+      "cta": {
+        "quote": "请求报价",
+        "solutions": "查看解决方案"
+      }
+    },
+    "trust": {
+      "yearsExperience": "15+",
+      "yearsExperienceLabel": "年经验",
+      "productsDistributed": "500+",
+      "productsDistributedLabel": "可用产品",
+      "satisfiedPartners": "3",
+      "satisfiedPartnersLabel": "美国仓库",
+      "quoteResponse": "24小时",
+      "quoteResponseLabel": "报价响应"
+    },
+    "painPoints": {
+      "tagline": "挑战",
+      "title": "我们理解您的挑战",
+      "subtitle": "国际原料采购面临着真实的障碍。我们创建Omni就是为了解决这些问题。",
+      "items": {
+        "0": {
+          "title": "质量不稳定",
+          "description": "供应不确定性和批次间的质量差异给配方带来挑战和风险。"
+        },
+        "1": {
+          "title": "交期过长",
+          "description": "延长的时间线和海关复杂性延迟了产品发布和库存规划。"
+        },
+        "2": {
+          "title": "物流分散",
+          "description": "国际各环节责任不清导致延误和沟通不畅。"
+        },
+        "3": {
+          "title": "沟通成本高",
+          "description": "跨时区和多供应商的过度协调成本消耗资源。"
+        }
+      }
+    },
+    "solutions": {
+      "tagline": "我们的方法",
+      "title": "Omni如何简化您的供应链",
+      "subtitle": "我们将国际采购专业知识与美国本土运营相结合，可靠、透明、大规模地交付原料。",
+      "items": {
+        "0": {
+          "title": "美国本土运营",
+          "description": "从北美战略位置进行本地仓储和履约。"
+        },
+        "1": {
+          "title": "合格的合作伙伴关系",
+          "description": "与经过验证的cGMP合规制造商建立长期关系。"
+        },
+        "2": {
+          "title": "端到端物流",
+          "description": "从原产地到您门口的完整国际贸易执行。"
+        },
+        "3": {
+          "title": "文档化质量",
+          "description": "可追溯系统，具有批次级COA和完整文档。"
+        }
+      },
+      "floatingStat": {
+        "value": "24小时",
+        "label": "报价响应"
+      }
+    },
+    "aboutPreview": {
+      "tagline": "关于 Omni Ingredients",
+      "title": "连接全球原料与北美市场",
+      "description1": "Omni Ingredients是一家总部位于美国的解决方案公司，专注于为营养品、食品饮料和健康行业采购、分销和商业化高品质功能性原料。",
+      "description2": "在母公司集团研发能力的支持下，我们为每一次合作带来技术深度和供应链专业知识。",
+      "cta": "了解更多关于我们"
+    },
+    "categories": {
+      "tagline": "我们的产品",
+      "title": "原料类别",
+      "subtitle": "从单一原料采购到定制预混料解决方案，我们支持功能性营养的全方位需求。",
+      "items": {
+        "antioxidant": {
+          "title": "抗氧化与细胞健康",
+          "description": "在细胞层面保护和恢复活力"
+        },
+        "energy": {
+          "title": "能量与代谢支持",
+          "description": "提升性能和新陈代谢"
+        },
+        "immune": {
+          "title": "免疫与肝脏健康",
+          "description": "支持自然防御系统"
+        },
+        "beauty": {
+          "title": "内在美",
+          "description": "滋养皮肤、头发和指甲"
+        },
+        "sports": {
+          "title": "运动表现",
+          "description": "优化运动恢复和耐力"
+        },
+        "mood": {
+          "title": "情绪与认知支持",
+          "description": "增强思维清晰度和情绪平衡"
+        }
+      },
+      "premix": {
+        "title": "定制预混料解决方案",
+        "description": "除了单一原料，我们还为完整的产品开发提供预混配方支持。",
+        "items": {
+          "multivitamin": "复合维生素与矿物质",
+          "plantbased": "绿色植物基",
+          "sweetener": "甜味剂与香精"
+        }
+      },
+      "cta": "探索所有解决方案"
+    },
+    "quality": {
+      "tagline": "标准",
+      "title": "质量与合规",
+      "subtitle": "质量和合规是我们运营的基础。我们与合格的合作伙伴紧密合作，确保所有产品符合美国监管标准。",
+      "pillars": {
+        "supplier": {
+          "title": "供应商资质",
+          "description": "对制造合作伙伴进行严格审核和长期评估"
+        },
+        "traceability": {
+          "title": "批次级COA与可追溯性",
+          "description": "每批发货的完整文档管理"
+        },
+        "testing": {
+          "title": "第三方检测",
+          "description": "独立分析验证确保规格合规"
+        },
+        "regulatory": {
+          "title": "美国法规理解",
+          "description": "深入了解FDA要求和合规途径"
+        }
+      }
+    },
+    "customers": {
+      "tagline": "我们的客户",
+      "title": "我们服务的对象",
+      "subtitle": "从新兴品牌到成熟制造商，我们与健康和保健领域的各类公司合作。",
+      "types": {
+        "0": "膳食补充剂品牌",
+        "1": "合同制造商",
+        "2": "功能性食品饮料",
+        "3": "运动营养公司",
+        "4": "自有品牌生产商",
+        "5": "制药公司",
+        "6": "化妆品配方师",
+        "7": "宠物营养品牌"
+      }
+    },
+    "warehouses": {
+      "title": "全国仓储网络",
+      "locations": {
+        "ontario": {
+          "region": "西海岸",
+          "city": "加利福尼亚州安大略",
+          "description": "支持通过洛杉矶和长滩港口进口的配送中心"
+        },
+        "dallas": {
+          "region": "美国中部",
+          "city": "德克萨斯州达拉斯",
+          "description": "中央物流枢纽，实现高效的全国陆运"
+        },
+        "buford": {
+          "region": "东海岸",
+          "city": "佐治亚州比福德",
+          "description": "东海岸和东南区域配送中心"
+        }
+      }
+    },
+    "cta": {
+      "title": "让我们讨论您的需求",
+      "subtitle": "无论您是寻求进入北美市场的制造商，还是寻找可靠原料解决方案的品牌，我们随时为您提供帮助。",
+      "manufacturers": {
+        "title": "面向制造商",
+        "description": "寻求进入北美市场，提供可靠的分销和合规支持。",
+        "cta": "取得联系"
+      },
+      "brands": {
+        "title": "面向品牌",
+        "description": "寻找具有透明采购和技术支持的可靠原料解决方案。",
+        "cta": "请求报价"
+      },
+      "contact": {
+        "emailLabel": "邮箱：",
+        "hoursLabel": "营业时间：",
+        "hours": "周一至周五，上午8:30 - 下午5:00 太平洋时间",
+        "locationLabel": "地址：",
+        "location": "美国加利福尼亚州安大略市 91761"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "关于我们",
+      "title": "Omni Ingredients",
+      "description": "您值得信赖的高品质营养品原料B2B合作伙伴。美国本土运营，全球采购专业知识。"
+    },
+    "story": {
+      "badge": "我们的故事",
+      "title": "连接全球原料与北美市场",
+      "description1": "Omni Ingredients是一家总部位于美国的原料解决方案公司，专注于为营养品、食品饮料和健康行业采购、分销和商业化高品质功能性原料。",
+      "description2": "建立在强大的跨境供应链基础上，我们将全球制造商与北美客户连接起来，提供可靠、合规和可扩展的原料解决方案。",
+      "description3": "我们的母公司集团带来了研发能力和技术深度，使我们与传统贸易公司区别开来。我们不仅仅是在移动产品——我们正在建立推动健康和保健创新的合作伙伴关系。",
+      "experience": "年经验"
+    },
+    "values": {
+      "badge": "我们的立场",
+      "title": "我们的价值观",
+      "description": "这些原则指导我们做出的每一个合作决定。",
+      "items": {
+        "reliability": {
+          "title": "可靠性",
+          "description": "稳定的供应和可预测的交期，让您可以有效规划。"
+        },
+        "transparency": {
+          "title": "透明度",
+          "description": "清晰的沟通、诚实的时间表和完整的文档。"
+        },
+        "partnership": {
+          "title": "合作伙伴关系",
+          "description": "建立在共同成功和信任基础上的长期关系。"
+        },
+        "quality": {
+          "title": "质量",
+          "description": "严格的标准和合格的供应商，没有例外。"
+        }
+      }
+    },
+    "whyChooseUs": {
+      "badge": "Omni的不同之处",
+      "title": "为什么选择我们",
+      "description": "我们将全球采购的优势与本地服务和支持相结合。",
+      "items": {
+        "usOperations": {
+          "title": "美国本土运营",
+          "description": "本地仓储、国内客户服务和更快的响应时间。"
+        },
+        "globalSourcing": {
+          "title": "全球采购网络",
+          "description": "与全球合格制造商建立的关系。"
+        },
+        "endToEndLogistics": {
+          "title": "端到端物流",
+          "description": "我们处理国际贸易的复杂性，让您无后顾之忧。"
+        },
+        "technicalExpertise": {
+          "title": "技术专长",
+          "description": "由母公司集团研发能力支持的配方指导。"
+        },
+        "complianceFocus": {
+          "title": "合规重点",
+          "description": "深入了解美国监管要求和文档。"
+        },
+        "scalableSolutions": {
+          "title": "可扩展解决方案",
+          "description": "从样品到商业量，我们与您的需求一起成长。"
+        }
+      }
+    },
+    "warehouse": {
+      "badge": "物流",
+      "title": "全国仓储网络",
+      "description": "战略定位的仓库确保快速交付、稳定库存和供应链弹性。",
+      "locations": {
+        "ontario": {
+          "region": "西海岸",
+          "city": "加利福尼亚州安大略",
+          "description": "支持通过洛杉矶和长滩港口进口的配送中心"
+        },
+        "dallas": {
+          "region": "美国中部",
+          "city": "德克萨斯州达拉斯",
+          "description": "中央物流枢纽，实现高效的全国陆运"
+        },
+        "buford": {
+          "region": "东海岸",
+          "city": "佐治亚州比福德",
+          "description": "东海岸和东南区域配送中心"
+        }
+      },
+      "benefits": {
+        "reducedTransit": "缩短运输时间",
+        "localInventory": "本地库存",
+        "reliableDelivery": "可靠交付",
+        "scalableGrowth": "可扩展增长"
+      }
+    },
+    "cta": {
+      "title": "与我们合作",
+      "description": "准备好讨论您的原料需求了吗？与我们的团队联系，获取有竞争力的价格和可靠的供应。",
+      "contactUs": "联系我们",
+      "viewSolutions": "查看解决方案",
+      "businessHours": "营业时间（太平洋时间）：",
+      "location": "地址：",
+      "email": "邮箱："
+    }
+  },
+  "solutions": {
+    "hero": {
+      "badge": "我们的解决方案",
+      "title": "全面的原料解决方案",
+      "description": "从单一原材料到定制预混料，我们为您的健康和保健产品提供基础原料。"
+    },
+    "categories": {
+      "badge": "按功能",
+      "title": "功能类别",
+      "description": "我们的原料按健康益处组织，便于您找到适合配方的解决方案。",
+      "requestInfo": "请求信息"
+    },
+    "ingredientTypes": {
+      "badge": "按类型",
+      "title": "原料类型",
+      "description": "浏览我们广泛的维生素、矿物质、氨基酸、植物提取物和特殊营养素目录。",
+      "viewAll": "查看全部",
+      "vitamins": {
+        "title": "维生素",
+        "items": ["维生素A", "B族复合维生素", "维生素C", "维生素D3", "维生素E", "维生素K2"]
+      },
+      "minerals": {
+        "title": "矿物质",
+        "items": ["钙", "镁", "锌", "铁", "硒", "铬"]
+      },
+      "aminoAcids": {
+        "title": "氨基酸",
+        "items": ["L-谷氨酰胺", "L-精氨酸", "L-肉碱", "支链氨基酸", "肌酸", "牛磺酸"]
+      },
+      "botanicals": {
+        "title": "植物提取物",
+        "items": ["南非醉茄", "姜黄", "绿茶", "人参", "接骨木", "水飞蓟"]
+      },
+      "specialty": {
+        "title": "特殊营养素",
+        "items": ["辅酶Q10", "Omega-3", "益生菌", "酶", "胶原蛋白", "透明质酸"]
+      }
+    },
+    "premix": {
+      "badge": "超越单一原料",
+      "title": "定制预混料解决方案",
+      "description": "我们的预混能力不仅仅是简单的混合。我们与您合作开发满足您特定要求的优化配方。",
+      "discussFormulation": "讨论您的配方",
+      "stats": {
+        "singleIngredients": "单一原料",
+        "premixBlends": "预混配方",
+        "documentation": "文档",
+        "quoteResponse": "报价响应"
+      }
+    },
+    "services": {
+      "badge": "我们如何帮助",
+      "title": "我们的服务",
+      "description": "除了原料，我们在整个供应链中提供全面支持。",
+      "items": {
+        "singleIngredient": {
+          "title": "单一原料采购",
+          "description": "访问我们广泛的合格制造商网络，获取单一原材料。"
+        },
+        "customPremix": {
+          "title": "定制预混料开发",
+          "description": "根据您的产品规格和市场需求定制的预混配方。"
+        },
+        "supplyChain": {
+          "title": "供应链管理",
+          "description": "从国际采购到美国交付的端到端物流。"
+        },
+        "qualityDocs": {
+          "title": "质量文档",
+          "description": "每批次完整的COA、规格和监管文档。"
+        },
+        "technicalSupport": {
+          "title": "技术支持",
+          "description": "我们技术团队提供的配方指导和应用专业知识。"
+        },
+        "inventoryPrograms": {
+          "title": "库存计划",
+          "description": "寄售和定期交付计划，确保可预测的供应。"
+        }
+      }
+    },
+    "quality": {
+      "badge": "质量第一",
+      "title": "我们的质量标准",
+      "description": "我们供应的每一种原料都符合严格的质量和合规标准。"
+    },
+    "industries": {
+      "badge": "我们的客户",
+      "title": "我们服务的行业",
+      "description": "我们与健康和保健行业各种规模的公司合作。"
+    },
+    "cta": {
+      "title": "准备好开始了吗？",
+      "description": "告诉我们您的原料需求，我们将在24小时内回复报价。",
+      "requestQuote": "请求报价",
+      "learnAboutUs": "了解我们",
+      "email": "邮箱："
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "取得联系",
+      "title": "联系我们",
+      "description": "准备好讨论您的原料需求了吗？我们的团队随时为您提供帮助。"
+    },
+    "form": {
+      "title": "给我们发送消息",
+      "description": "填写下面的表格，我们将在24-48个工作小时内回复您。",
+      "fields": {
+        "fullName": "姓名",
+        "companyName": "公司名称",
+        "businessEmail": "商务邮箱",
+        "phoneNumber": "电话号码",
+        "optional": "（可选）",
+        "inquiryType": "咨询类型",
+        "message": "留言",
+        "messagePlaceholder": "告诉我们您的原料需求、数量和任何特定要求..."
+      },
+      "inquiryTypes": {
+        "general": "一般咨询",
+        "quote": "请求报价",
+        "product": "产品信息",
+        "partnership": "合作机会"
+      },
+      "submit": "发送消息",
+      "sending": "发送中...",
+      "success": {
+        "title": "消息已发送！",
+        "description": "感谢您联系我们。我们将在24-48个工作小时内回复。",
+        "sendAnother": "发送另一条消息"
+      },
+      "errors": {
+        "nameRequired": "请输入姓名",
+        "companyRequired": "请输入公司名称",
+        "emailRequired": "请输入邮箱",
+        "emailInvalid": "请输入有效的邮箱地址",
+        "messageRequired": "请输入留言内容"
+      }
+    },
+    "info": {
+      "email": "邮箱",
+      "location": "地址",
+      "businessHours": "营业时间",
+      "quickResponse": {
+        "title": "快速响应",
+        "description": "我们通常在24-48个工作小时内回复所有咨询。"
+      }
+    },
+    "headquarters": {
+      "title": "我们的总部",
+      "description": "我们的总部位于南加州战略位置，可以高效地在北美分销，并可访问主要物流走廊。",
+      "address": "地址",
+      "placeholder": "南加州配送中心"
+    },
+    "cta": {
+      "title": "准备合作了吗？",
+      "description": "探索我们广泛的营养品原料目录，或为您的特定需求请求定制报价。",
+      "viewProducts": "查看产品",
+      "visitShop": "访问商店",
+      "tagline": "自2010年起服务北美 • 500+产品 • cGMP合规"
+    }
+  },
+  "legal": {
+    "lastUpdated": "最后更新：2025年1月",
+    "tableOfContents": "目录",
+    "backToHome": "返回首页",
+    "backToTop": "返回顶部",
+    "terms": {
+      "badge": "法律",
+      "title": "服务条款",
+      "intro": "欢迎访问 Omni Ingredients。这些服务条款管理您对我们网站和服务的使用。访问或使用我们的服务即表示您同意受这些条款的约束。请仔细阅读。",
+      "sections": {
+        "acceptance": {
+          "title": "接受条款",
+          "content1": "通过访问和使用 Omni Ingredients 网站和服务，您确认您已阅读、理解并同意受这些服务条款的约束。如果您不同意这些条款，请不要使用我们的服务。",
+          "content2": "我们保留随时修改这些条款的权利。您在任何更改后继续使用我们的服务即表示接受这些更改。我们建议您定期查看这些条款。"
+        },
+        "useOfServices": {
+          "title": "服务使用",
+          "intro": "您同意仅将我们的服务用于合法目的并遵守这些条款。您同意不：",
+          "items": [
+            "以任何违反适用法律或法规的方式使用我们的服务",
+            "从事任何限制或禁止他人使用我们服务的行为",
+            "试图未经授权访问我们的系统或网络",
+            "未经许可使用任何自动化方式访问我们的网站",
+            "传输任何恶意代码、病毒或有害内容",
+            "冒充任何个人或实体或虚假陈述您的身份"
+          ]
+        },
+        "ordersAndPricing": {
+          "title": "订单和定价",
+          "orderAcceptance": {
+            "title": "订单接受",
+            "content": "所有订单均需经 Omni Ingredients 接受。我们保留以任何理由拒绝或取消任何订单的权利，包括但不限于产品可用性、定价或产品信息错误或涉嫌欺诈。"
+          },
+          "pricing": {
+            "title": "定价",
+            "content": "价格如有变更，恕不另行通知。我们尽一切努力确保定价准确，但可能会出现错误。如出现定价错误，我们将通知您并提供按更正价格继续或取消订单的选项。"
+          },
+          "paymentTerms": {
+            "title": "付款条款",
+            "content": "付款条款按客户逐一确定。标准条款可能包括已批准账户的净30天。我们保留自行修改付款条款的权利。"
+          }
+        },
+        "intellectualProperty": {
+          "title": "知识产权",
+          "content": "本网站上的所有内容，包括但不限于文本、图形、标志、图像和软件，均为 Omni Ingredients 或其内容供应商的财产，受知识产权法保护。",
+          "items": [
+            "未经事先书面同意，复制、分发或展示任何内容",
+            "基于我们的内容修改或创建衍生作品",
+            "未经明确许可使用我们的商标或标志",
+            "从我们的材料中删除任何版权或专有声明"
+          ]
+        },
+        "limitationOfLiability": {
+          "title": "责任限制",
+          "content1": "在法律允许的最大范围内，Omni Ingredients 不对因您使用我们服务而引起的或与之相关的任何间接、附带、特殊、后果性或惩罚性损害承担责任。",
+          "content2": "我们对因这些条款或我们的服务引起的任何索赔的总责任不超过您为引起索赔的特定产品或服务支付的金额。",
+          "content3": "无论索赔所依据的法律理论如何，包括疏忽、违约或任何其他理论，本限制均适用。"
+        },
+        "governingLaw": {
+          "title": "适用法律",
+          "content1": "这些服务条款应受美国加利福尼亚州法律管辖并据此解释，不考虑其法律冲突条款。",
+          "content2": "因这些条款引起的任何争议应专门在加利福尼亚州的州或联邦法院解决。您同意这些法院的属人管辖权。"
+        },
+        "contact": {
+          "title": "联系信息",
+          "content": "如果您对这些服务条款有任何疑问，请联系我们："
+        }
+      }
+    },
+    "privacy": {
+      "badge": "法律",
+      "title": "隐私政策",
+      "intro": "在 Omni Ingredients，我们致力于保护您的隐私并确保您个人信息的安全。本隐私政策解释了当您访问我们的网站或使用我们的服务时，我们如何收集、使用、披露和保护您的信息。",
+      "sections": {
+        "informationWeCollect": {
+          "title": "我们收集的信息",
+          "intro": "我们可能收集以下类型的信息：",
+          "personal": {
+            "title": "个人信息",
+            "items": [
+              "姓名、电子邮件地址、电话号码和公司名称",
+              "商务地址和账单信息",
+              "您请求报价或样品时提供的信息",
+              "您联系我们时的通信记录"
+            ]
+          },
+          "automatic": {
+            "title": "自动收集的信息",
+            "items": [
+              "IP地址和浏览器类型",
+              "设备信息和操作系统",
+              "访问的页面和在我们网站上的停留时间",
+              "引用网站地址"
+            ]
+          }
+        },
+        "howWeUse": {
+          "title": "我们如何使用信息",
+          "intro": "我们使用收集的信息来：",
+          "items": [
+            "处理和履行您的订单和请求",
+            "回复查询并提供客户支持",
+            "发送相关的产品信息和行业更新",
+            "改进我们的网站和服务",
+            "遵守法律义务",
+            "防止欺诈交易并保护我们的业务"
+          ]
+        },
+        "informationSharing": {
+          "title": "信息共享",
+          "intro": "我们不会向第三方出售、交易或出租您的个人信息。我们可能与以下方共享您的信息：",
+          "items": [
+            "服务提供商：协助运营我们网站、开展业务或为您提供服务的第三方供应商",
+            "业务合作伙伴：参与履行您订单或提供服务的可信合作伙伴",
+            "法律要求：当法律要求或为保护我们的权利和安全时",
+            "业务转让：与任何合并、收购或资产出售相关"
+          ]
+        },
+        "dataSecurity": {
+          "title": "数据安全",
+          "intro": "我们实施适当的技术和组织安全措施来保护您的个人信息，包括：",
+          "items": [
+            "传输过程中对敏感数据的加密",
+            "安全服务器和防火墙",
+            "定期安全评估和更新",
+            "限制谁可以查看您信息的访问控制"
+          ],
+          "disclaimer": "虽然我们努力保护您的个人信息，但互联网上的传输方式不是100%安全的。我们无法保证绝对安全。"
+        },
+        "yourRights": {
+          "title": "您的权利",
+          "intro": "根据您的位置，您可能拥有以下权利：",
+          "items": [
+            "访问：请求获取我们持有的关于您的个人信息副本",
+            "更正：请求更正不准确或不完整的信息",
+            "删除：请求删除您的个人信息",
+            "退出：随时取消订阅营销通信",
+            "可携带性：以可移植格式请求您的数据"
+          ],
+          "exercise": "要行使这些权利，请使用以下信息联系我们。"
+        },
+        "contact": {
+          "title": "联系信息",
+          "content": "如果您对本隐私政策有疑问或希望行使您的权利，请联系我们："
+        }
+      }
+    },
+    "cookies": {
+      "badge": "法律",
+      "title": "Cookie政策",
+      "intro": "本Cookie政策解释了 Omni Ingredients 如何使用Cookie和类似技术在您访问我们网站时识别您。它解释了这些技术是什么、我们为什么使用它们以及您控制我们使用它们的权利。",
+      "whatAreCookies": {
+        "title": "什么是Cookie？",
+        "content1": "Cookie是在您访问网站时放置在您的计算机或移动设备上的小数据文件。网站所有者广泛使用Cookie使其网站正常工作或更有效地工作，以及提供报告信息。",
+        "content2": "由网站所有者（在本例中为 Omni Ingredients）设置的Cookie称为「第一方Cookie」。由网站所有者以外的方设置的Cookie称为「第三方Cookie」。第三方Cookie使第三方功能可以在网站上或通过网站提供。"
+      },
+      "types": {
+        "title": "我们使用的Cookie类型",
+        "essential": {
+          "name": "必要Cookie",
+          "description": "这些Cookie是网站正常运行所必需的，无法关闭。它们通常仅在响应您所做的操作时设置，例如设置您的隐私偏好或填写表单。",
+          "examples": ["会话Cookie", "安全Cookie", "负载均衡Cookie"]
+        },
+        "performance": {
+          "name": "性能Cookie",
+          "description": "这些Cookie允许我们计算访问量和流量来源，以便我们可以衡量和改进我们网站的性能。它们帮助我们了解哪些页面最受欢迎和最不受欢迎。",
+          "examples": ["分析Cookie", "页面加载时间跟踪", "错误监控"]
+        },
+        "functional": {
+          "name": "功能Cookie",
+          "description": "这些Cookie使网站能够提供增强的功能和个性化。它们可能由我们或我们添加到页面的第三方提供商设置。",
+          "examples": ["语言偏好", "地区设置", "聊天支持"]
+        },
+        "marketing": {
+          "name": "营销Cookie",
+          "description": "这些Cookie可能由我们的广告合作伙伴通过我们的网站设置。它们可用于建立您的兴趣档案并在其他网站上向您展示相关广告。",
+          "examples": ["广告Cookie", "社交媒体Cookie", "再营销Cookie"]
+        }
+      },
+      "howToManage": {
+        "title": "如何管理Cookie",
+        "intro": "您有权决定是否接受或拒绝Cookie。您可以通过以下方式行使您的Cookie偏好：",
+        "browserSettings": {
+          "title": "浏览器设置",
+          "content": "大多数网络浏览器允许您通过其设置偏好来控制Cookie。但是，如果您限制网站设置Cookie的能力，您可能会降低整体用户体验。",
+          "browsers": {
+            "title": "常用浏览器Cookie设置：",
+            "chrome": "Chrome：设置 → 隐私和安全 → Cookie",
+            "firefox": "Firefox：设置 → 隐私与安全 → Cookie",
+            "safari": "Safari：偏好设置 → 隐私 → Cookie",
+            "edge": "Edge：设置 → Cookie和站点权限"
+          }
+        },
+        "optOut": {
+          "title": "退出链接",
+          "content": "一些第三方服务提供退出机制。例如，您可以通过安装Google Analytics选择退出浏览器插件来选择退出Google Analytics。"
+        }
+      },
+      "thirdParty": {
+        "title": "第三方Cookie",
+        "intro": "我们可能使用在我们网站上设置Cookie的第三方服务。这些服务包括：",
+        "items": [
+          "Google Analytics：用于网站流量分析和报告",
+          "社交媒体平台：用于分享功能和嵌入式内容",
+          "客户支持工具：用于实时聊天和支持功能"
+        ],
+        "disclaimer": "我们不控制这些第三方使用的Cookie。请查阅其各自的隐私政策以获取有关其Cookie做法的更多信息。"
+      },
+      "updates": {
+        "title": "本政策的更新",
+        "content": "我们可能会不时更新本Cookie政策，以反映我们做法的变化或其他运营、法律或监管原因。请定期访问此页面以了解我们对Cookie的使用。"
+      },
+      "contact": {
+        "title": "联系信息",
+        "content": "如果您对我们使用Cookie有疑问，请联系我们："
+      }
+    }
+  },
+  "press": {
+    "hero": {
+      "badge": "新闻室",
+      "title": "新闻与媒体",
+      "description": "为报道营养品行业的媒体专业人士提供的新闻、公告和资源。"
+    },
+    "overview": {
+      "badge": "关于我们",
+      "title": "公司概况",
+      "description1": "Omni Ingredients是一家总部位于美国的原料解决方案公司，专注于为营养品、食品饮料和健康行业采购、分销和商业化高品质功能性原料。",
+      "description2": "凭借强大的跨境供应链基础和美国本土运营，我们将全球制造商与北美客户连接起来，提供可靠、合规和可扩展的原料解决方案。",
+      "description3": "我们母公司集团的研发能力和技术专长使我们与传统贸易公司区别开来，使我们能够为合作伙伴提供配方指导和创新解决方案。"
+    },
+    "mediaContact": {
+      "title": "媒体联系",
+      "email": "邮箱",
+      "businessHours": "营业时间（太平洋时间）",
+      "inquiryInfo": "如需新闻查询、采访请求或媒体资料包访问，请直接联系我们的团队。"
+    },
+    "facts": {
+      "badge": "一览",
+      "title": "公司数据",
+      "items": {
+        "experience": {
+          "stat": "15+",
+          "label": "年经验",
+          "description": "在营养品行业"
+        },
+        "partners": {
+          "stat": "50+",
+          "label": "全球合作伙伴",
+          "description": "可信赖的供应商网络"
+        },
+        "warehouses": {
+          "stat": "3",
+          "label": "美国仓库",
+          "description": "战略配送位置"
+        },
+        "skus": {
+          "stat": "500+",
+          "label": "SKU",
+          "description": "可用功能性原料"
+        }
+      }
+    },
+    "downloads": {
+      "badge": "资源",
+      "title": "媒体下载",
+      "items": {
+        "logoPack": {
+          "name": "公司标志包",
+          "format": "ZIP",
+          "size": "2.4 MB"
+        },
+        "mediaKit": {
+          "name": "媒体资料包",
+          "format": "PDF",
+          "size": "1.8 MB"
+        },
+        "factSheet": {
+          "name": "公司简介",
+          "format": "PDF",
+          "size": "450 KB"
+        }
+      },
+      "contactForMore": "如需高分辨率图片和其他材料，请联系我们。"
+    },
+    "news": {
+      "badge": "最新动态",
+      "title": "近期新闻"
+    },
+    "cta": {
+      "title": "取得联系",
+      "description": "有问题或需要更多信息？我们的团队随时为您的媒体查询提供帮助。",
+      "contactMedia": "联系媒体关系",
+      "aboutOmni": "关于 Omni Ingredients"
+    }
+  },
+  "sustainability": {
+    "hero": {
+      "badge": "我们的承诺",
+      "title": "可持续发展",
+      "description": "构建一个有益于人类、社区和地球的负责任供应链，同时提供卓越品质。"
+    },
+    "mission": {
+      "title": "我们的可持续发展使命",
+      "description": "在 Omni Ingredients，我们相信可持续的商业实践与优质原料相辅相成。我们致力于建立透明、道德的供应链，为所有利益相关者创造价值，同时最大限度地减少环境影响。"
+    },
+    "pillars": {
+      "badge": "我们的方法",
+      "title": "可持续发展四大支柱",
+      "items": {
+        "responsibleSourcing": {
+          "title": "负责任采购",
+          "description": "我们与分享我们道德实践承诺的供应商合作，确保原料以负责任和可持续的方式采购。",
+          "points": [
+            "经审计的供应商合作伙伴关系",
+            "道德劳动实践验证",
+            "可持续的收获方法",
+            "产地透明和可追溯性"
+          ]
+        },
+        "supplyChainTransparency": {
+          "title": "供应链透明",
+          "description": "从原材料来源到最终交付，我们供应链的完全可见性，确保每一步的问责制。",
+          "points": [
+            "端到端可追溯性",
+            "定期第三方审计",
+            "全面的文档",
+            "实时跟踪能力"
+          ]
+        },
+        "environmentalPractices": {
+          "title": "环境实践",
+          "description": "通过高效运营、减少废物和可持续包装解决方案，最大限度地减少我们的环境足迹。",
+          "points": [
+            "碳足迹减少",
+            "废物最小化计划",
+            "节能仓储",
+            "可持续包装选项"
+          ]
+        },
+        "communityImpact": {
+          "title": "社区影响",
+          "description": "支持我们运营和采购原料的社区，创造积极的社会和经济影响。",
+          "points": [
+            "当地社区支持",
+            "公平贸易合作伙伴关系",
+            "教育倡议",
+            "经济赋权计划"
+          ]
+        }
+      }
+    },
+    "commitments": {
+      "badge": "我们的承诺",
+      "title": "可衡量的影响",
+      "items": {
+        "supplierAudits": {
+          "stat": "100%",
+          "label": "供应商审计",
+          "description": "所有主要供应商定期接受合规审计"
+        },
+        "globalPartners": {
+          "stat": "50+",
+          "label": "全球合作伙伴",
+          "description": "致力于可持续发展的经验证供应商"
+        },
+        "zeroTolerance": {
+          "stat": "0",
+          "label": "容忍政策",
+          "description": "对不道德采购做法零容忍"
+        }
+      }
+    },
+    "future": {
+      "badge": "未来",
+      "title": "展望未来",
+      "description": "可持续发展是一段旅程，而不是终点。我们不断评估和改进我们的做法，为碳减排、废物消除和社区影响设定雄心勃勃的目标。我们对透明度的承诺意味着我们将与合作伙伴和利益相关者公开分享我们的进展。",
+      "initiatives": {
+        "carbonNeutrality": {
+          "title": "碳中和",
+          "description": "努力实现整个供应链的碳中和运营"
+        },
+        "packagingInnovation": {
+          "title": "包装创新",
+          "description": "开发减少环境影响的可持续包装解决方案"
+        },
+        "supplierDevelopment": {
+          "title": "供应商发展",
+          "description": "与供应商合作改善其可持续发展实践"
+        },
+        "circularEconomy": {
+          "title": "循环经济",
+          "description": "探索用于废物减少和资源回收的闭环系统"
+        }
+      }
+    },
+    "cta": {
+      "title": "有目的地合作",
+      "description": "加入我们，为原料行业建设更可持续的未来。我们一直在寻找分享我们价值观的合作伙伴。",
+      "getInTouch": "取得联系",
+      "learnAboutUs": "了解我们"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "Omni Ingredients | 优质营养品原料",
+      "description": "您值得信赖的高品质维生素、矿物质、氨基酸和特殊营养素B2B合作伙伴。cGMP合规制造。"
+    },
+    "about": {
+      "title": "关于我们 | Omni Ingredients",
+      "description": "了解 Omni Ingredients - 您值得信赖的高品质营养品原料B2B合作伙伴，拥有美国本土运营和全球采购专业知识。"
+    },
+    "solutions": {
+      "title": "解决方案 | Omni Ingredients",
+      "description": "从单一原材料到定制预混料的全面原料解决方案，服务于健康和保健行业。"
+    },
+    "contact": {
+      "title": "联系我们 | Omni Ingredients",
+      "description": "联系 Omni Ingredients 满足您的营养品原料需求。请求报价或咨询我们的服务。"
+    },
+    "terms": {
+      "title": "服务条款 | Omni Ingredients",
+      "description": "Omni Ingredients 网站和服务的服务条款。"
+    },
+    "privacy": {
+      "title": "隐私政策 | Omni Ingredients",
+      "description": "Omni Ingredients 隐私政策 - 我们如何收集、使用和保护您的信息。"
+    },
+    "cookies": {
+      "title": "Cookie政策 | Omni Ingredients",
+      "description": "Omni Ingredients Cookie政策 - 我们如何使用Cookie及您的选择。"
+    },
+    "press": {
+      "title": "新闻与媒体 | Omni Ingredients",
+      "description": "为报道营养品行业的媒体专业人士提供的新闻、公告和资源。"
+    },
+    "sustainability": {
+      "title": "可持续发展 | Omni Ingredients",
+      "description": "我们致力于构建一个有益于人类、社区和地球的负责任供应链。"
+    }
+  }
+}

@@ -34,6 +34,24 @@ export interface HeaderProps {
   onSignOut?: () => void;
   shopUrl?: string;
   landingUrl?: string;
+  locale?: string;
+  languageSwitcher?: React.ReactNode;
+  mobileLanguageSwitcher?: React.ReactNode;
+  translations?: {
+    navigation?: {
+      home?: string;
+      solutions?: string;
+      about?: string;
+      journal?: string;
+      contact?: string;
+      getQuote?: string;
+      search?: string;
+    };
+    announcement?: {
+      line1?: string;
+      line2?: string;
+    };
+  };
 }
 
 export function Header({
@@ -44,6 +62,10 @@ export function Header({
   onSignOut,
   shopUrl = "http://localhost:3001",
   landingUrl = "http://localhost:3000",
+  locale,
+  languageSwitcher,
+  mobileLanguageSwitcher,
+  translations,
 }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [collectionsOpen, setCollectionsOpen] = useState(false);
@@ -82,16 +104,20 @@ export function Header({
     "Account";
 
   // Navigation links based on variant
+  const t = translations?.navigation;
+  // Prefix paths with locale for landing variant
+  const localePath = (path: string) => locale ? `/${locale}${path === "/" ? "" : path}` : path;
+
   const landingNavLinks = [
-    { href: "/", label: "Home", external: false },
-    { href: "/solutions", label: "Solutions", external: false },
-    { href: "/about", label: "About", external: false },
-    { href: "/journal", label: "Journal", external: false },
+    { href: localePath("/"), label: t?.home || "Home", external: false },
+    { href: localePath("/solutions"), label: t?.solutions || "Solutions", external: false },
+    { href: localePath("/about"), label: t?.about || "About", external: false },
+    { href: localePath("/journal"), label: t?.journal || "Journal", external: false },
   ];
 
   const shopNavLinks = [
-    { href: `${landingUrl}/about`, label: "About", external: true },
-    { href: `${landingUrl}/journal`, label: "Journal", external: true },
+    { href: `${landingUrl}/about`, label: t?.about || "About", external: true },
+    { href: `${landingUrl}/journal`, label: t?.journal || "Journal", external: true },
   ];
 
   const navLinks = isLanding ? landingNavLinks : shopNavLinks;
@@ -103,8 +129,8 @@ export function Header({
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
           {isLanding ? (
             <>
-              <p className="opacity-90">Premium B2B Nutraceutical Ingredients</p>
-              <p className="opacity-90">Serving North America since 2010</p>
+              <p className="opacity-90">{translations?.announcement?.line1 || "Premium B2B Nutraceutical Ingredients"}</p>
+              <p className="opacity-90">{translations?.announcement?.line2 || "Serving North America since 2010"}</p>
             </>
           ) : (
             <>
@@ -142,7 +168,7 @@ export function Header({
                 <path d="M4 19h16" />
               </svg>
             </button>
-            <Link href={isLanding ? "/" : landingUrl} className="flex items-center gap-2">
+            <Link href={isLanding ? localePath("/") : landingUrl} className="flex items-center gap-2">
               <Image
                 src="/favicon/favicon-96x96.png"
                 alt="Omni Ingredients logo"
@@ -279,9 +305,12 @@ export function Header({
                 href="mailto:ga@omniingredients.com"
                 className="px-4 py-2 bg-[#df7a4c] text-white rounded-full font-medium hover:bg-[#c86a3f] transition"
               >
-                Get a Quote
+                {t?.getQuote || "Get a Quote"}
               </a>
             )}
+
+            {/* Language Switcher */}
+            {languageSwitcher}
           </nav>
 
           {/* Right: Action buttons */}
@@ -452,14 +481,14 @@ export function Header({
             {/* Contact button - Landing variant only (desktop) */}
             {isLanding && (
               <Link
-                href="/contact"
+                href={localePath("/contact")}
                 className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                Contact
+                {t?.contact || "Contact"}
               </Link>
             )}
           </div>
@@ -543,7 +572,7 @@ export function Header({
                       className="py-3 px-4 rounded-lg bg-[#df7a4c] text-white font-medium text-center mt-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Get a Quote
+                      {t?.getQuote || "Get a Quote"}
                     </a>
                   )}
 
@@ -617,11 +646,18 @@ export function Header({
                 )}
               </nav>
 
+              {/* Language Switcher in mobile menu */}
+              {(mobileLanguageSwitcher || languageSwitcher) && (
+                <div className="px-4 sm:px-6 py-4 border-t border-neutral-200">
+                  {mobileLanguageSwitcher || languageSwitcher}
+                </div>
+              )}
+
               {/* Search in mobile menu */}
               <div className="p-4 sm:p-6 border-t border-neutral-200">
                 <button className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-neutral-200 hover:bg-neutral-50 transition-colors">
                   <span className="text-neutral-600">
-                    {isLanding ? "Search ingredients..." : "Search products..."}
+                    {t?.search || (isLanding ? "Search ingredients..." : "Search products...")}
                   </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

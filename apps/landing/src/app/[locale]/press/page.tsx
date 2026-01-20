@@ -115,7 +115,7 @@ export default function PressPage() {
                   With a strong cross-border supply chain foundation and U.S.-based operations, we connect global manufacturers with North American customers, providing reliable, compliant, and scalable ingredient solutions.
                 </p>
                 <p>
-                  Our parent group's R&D capabilities and technical expertise set us apart from traditional trading companies, enabling us to offer formulation guidance and innovative solutions to our partners.
+                  Our parent group&apos;s R&amp;D capabilities and technical expertise set us apart from traditional trading companies, enabling us to offer formulation guidance and innovative solutions to our partners.
                 </p>
               </div>
             </div>

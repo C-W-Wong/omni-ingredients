@@ -90,18 +90,76 @@ export interface FooterProps {
   variant?: "landing" | "shop";
   shopUrl?: string;
   landingUrl?: string;
+  locale?: string;
+  translations?: {
+    tagline?: string;
+    products?: string;
+    partner?: string;
+    company?: string;
+    copyright?: string;
+    productLinks?: {
+      allSolutions?: string;
+      ingredientCategories?: string;
+      customPremix?: string;
+      ourServices?: string;
+    };
+    supportLinks?: {
+      requestQuote?: string;
+      aboutUs?: string;
+      industryInsights?: string;
+      contact?: string;
+    };
+    companyLinks?: {
+      aboutUs?: string;
+      press?: string;
+      sustainability?: string;
+    };
+    legalLinks?: {
+      privacyPolicy?: string;
+      termsOfService?: string;
+      cookiePolicy?: string;
+    };
+  };
 }
 
 export function Footer({
   variant = "shop",
   shopUrl = "http://localhost:3001",
   landingUrl = "http://localhost:3000",
+  locale,
+  translations,
 }: FooterProps) {
   const currentYear = new Date().getFullYear();
   const isLanding = variant === "landing";
+  const t = translations;
 
-  const productLinks = isLanding ? landingProductLinks : shopLinks;
-  const supportLinks = isLanding ? landingSupportLinks : shopSupportLinks;
+  // Prefix paths with locale for landing variant
+  const localePath = (path: string) => locale ? `/${locale}${path === "/" ? "" : path}` : path;
+
+  // Landing (B2B) footer links with translations
+  const translatedLandingProductLinks = [
+    { href: localePath("/solutions"), label: t?.productLinks?.allSolutions || "All Solutions" },
+    { href: localePath("/solutions") + "#categories", label: t?.productLinks?.ingredientCategories || "Ingredient Categories" },
+    { href: localePath("/solutions") + "#premix", label: t?.productLinks?.customPremix || "Custom Premix" },
+    { href: localePath("/solutions") + "#services", label: t?.productLinks?.ourServices || "Our Services" },
+  ];
+
+  const translatedLandingSupportLinks = [
+    { href: "mailto:ga@omniingredients.com", label: t?.supportLinks?.requestQuote || "Request Quote" },
+    { href: localePath("/about"), label: t?.supportLinks?.aboutUs || "About Us" },
+    { href: localePath("/journal"), label: t?.supportLinks?.industryInsights || "Industry Insights" },
+    { href: localePath("/contact"), label: t?.supportLinks?.contact || "Contact" },
+  ];
+
+  const translatedCompanyLinks = [
+    { href: localePath("/about"), label: t?.companyLinks?.aboutUs || "About Us" },
+    { href: localePath("/press"), label: t?.companyLinks?.press || "Press" },
+    { href: localePath("/sustainability"), label: t?.companyLinks?.sustainability || "Sustainability" },
+  ];
+
+  const productLinks = isLanding ? translatedLandingProductLinks : shopLinks;
+  const supportLinks = isLanding ? translatedLandingSupportLinks : shopSupportLinks;
+  const currentCompanyLinks = isLanding ? translatedCompanyLinks : companyLinks;
 
   return (
     <footer className="bg-white border-t border-neutral-200 transition-colors duration-300">
@@ -109,14 +167,14 @@ export function Footer({
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2 sm:col-span-2 md:col-span-1">
-            <Link href={isLanding ? "/" : landingUrl} className="inline-block">
+            <Link href={isLanding ? localePath("/") : landingUrl} className="inline-block">
               <h3 className="text-lg font-semibold tracking-tight mb-4">
                 Omni Ingredients
               </h3>
             </Link>
             <p className="text-sm text-neutral-600 mb-6 max-w-xs">
               {isLanding
-                ? "Your trusted B2B partner for premium nutraceutical ingredients across North America."
+                ? (t?.tagline || "Your trusted B2B partner for premium nutraceutical ingredients across North America.")
                 : "Natural skincare crafted with clinically proven botanicals."}
             </p>
             <div className="flex gap-2">
@@ -138,7 +196,7 @@ export function Footer({
           {/* Products / Shop */}
           <div>
             <h4 className="font-semibold mb-4">
-              {isLanding ? "Products" : "Shop"}
+              {isLanding ? (t?.products || "Products") : "Shop"}
             </h4>
             <ul className="space-y-2.5 text-sm">
               {productLinks.map((link) => (
@@ -166,7 +224,7 @@ export function Footer({
           {/* Support */}
           <div>
             <h4 className="font-semibold mb-4">
-              {isLanding ? "Partner" : "Support"}
+              {isLanding ? (t?.partner || "Partner") : "Support"}
             </h4>
             <ul className="space-y-2.5 text-sm">
               {supportLinks.map((link) => (
@@ -193,9 +251,9 @@ export function Footer({
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold mb-4">Company</h4>
+            <h4 className="font-semibold mb-4">{t?.company || "Company"}</h4>
             <ul className="space-y-2.5 text-sm">
-              {companyLinks.map((link) => (
+              {currentCompanyLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -212,26 +270,26 @@ export function Footer({
         {/* Bottom bar */}
         <div className="border-t border-neutral-200 mt-10 sm:mt-12 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-neutral-600 text-center sm:text-left">
-            &copy; {currentYear} Omni Ingredients. All rights reserved.
+            &copy; {currentYear} Omni Ingredients. {t?.copyright || "All rights reserved."}
           </p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <Link
-              href="/privacy"
+              href={isLanding ? localePath("/privacy") : "/privacy"}
               className="text-sm text-neutral-600 hover:text-neutral-900 transition"
             >
-              Privacy Policy
+              {t?.legalLinks?.privacyPolicy || "Privacy Policy"}
             </Link>
             <Link
-              href="/terms"
+              href={isLanding ? localePath("/terms") : "/terms"}
               className="text-sm text-neutral-600 hover:text-neutral-900 transition"
             >
-              Terms of Service
+              {t?.legalLinks?.termsOfService || "Terms of Service"}
             </Link>
             <Link
-              href="/cookies"
+              href={isLanding ? localePath("/cookies") : "/cookies"}
               className="text-sm text-neutral-600 hover:text-neutral-900 transition"
             >
-              Cookie Policy
+              {t?.legalLinks?.cookiePolicy || "Cookie Policy"}
             </Link>
           </div>
         </div>

@@ -256,7 +256,7 @@ export default function SustainabilityPage() {
               Looking Ahead
             </h2>
             <p className="mt-6 text-lg text-neutral-600 leading-relaxed animate-on-scroll text-reveal stagger-3">
-              Sustainability is a journey, not a destination. We continuously evaluate and improve our practices, setting ambitious goals for carbon reduction, waste elimination, and community impact. Our commitment to transparency means we'll share our progress openly with our partners and stakeholders.
+              Sustainability is a journey, not a destination. We continuously evaluate and improve our practices, setting ambitious goals for carbon reduction, waste elimination, and community impact. Our commitment to transparency means we&apos;ll share our progress openly with our partners and stakeholders.
             </p>
           </div>
 
@@ -288,7 +288,7 @@ export default function SustainabilityPage() {
             Partner With Purpose
           </h2>
           <p className="mt-4 text-lg opacity-90 max-w-2xl mx-auto animate-on-scroll text-reveal stagger-2">
-            Join us in building a more sustainable future for the ingredients industry. We're always looking for partners who share our values.
+            Join us in building a more sustainable future for the ingredients industry. We&apos;re always looking for partners who share our values.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll scale-in stagger-3">

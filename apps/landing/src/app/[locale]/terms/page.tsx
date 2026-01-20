@@ -110,7 +110,7 @@ export default function TermsOfServicePage() {
               <p className="mb-4">You agree to use our services only for lawful purposes and in accordance with these terms. You agree not to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Use our services in any way that violates applicable laws or regulations</li>
-                <li>Engage in any conduct that restricts or inhibits anyone's use of our services</li>
+                <li>Engage in any conduct that restricts or inhibits anyone&apos;s use of our services</li>
                 <li>Attempt to gain unauthorized access to our systems or networks</li>
                 <li>Use any automated means to access our website without permission</li>
                 <li>Transmit any malicious code, viruses, or harmful content</li>

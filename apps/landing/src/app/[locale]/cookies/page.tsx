@@ -90,7 +90,7 @@ export default function CookiePolicyPage() {
                 Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.
               </p>
               <p>
-                Cookies set by the website owner (in this case, Omni Ingredients) are called "first-party cookies." Cookies set by parties other than the website owner are called "third-party cookies." Third-party cookies enable third-party features or functionality to be provided on or through the website.
+                Cookies set by the website owner (in this case, Omni Ingredients) are called &quot;first-party cookies.&quot; Cookies set by parties other than the website owner are called &quot;third-party cookies.&quot; Third-party cookies enable third-party features or functionality to be provided on or through the website.
               </p>
             </div>
           </div>
