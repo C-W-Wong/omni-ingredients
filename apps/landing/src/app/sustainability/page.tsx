@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
 const pillars = [
@@ -98,7 +98,7 @@ const CheckIcon = () => (
   </svg>
 );
 
-const iconMap: { [key: string]: () => JSX.Element } = {
+const iconMap: { [key: string]: () => React.ReactNode } = {
   leaf: LeafIcon,
   link: LinkIcon,
   globe: GlobeIcon,
