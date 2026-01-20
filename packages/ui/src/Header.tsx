@@ -84,8 +84,9 @@ export function Header({
   // Navigation links based on variant
   const landingNavLinks = [
     { href: "/", label: "Home", external: false },
-    { href: "/journal", label: "Journal", external: false },
+    { href: "/solutions", label: "Solutions", external: false },
     { href: "/about", label: "About", external: false },
+    { href: "/journal", label: "Journal", external: false },
   ];
 
   const shopNavLinks = [
@@ -272,13 +273,13 @@ export function Header({
               )
             )}
 
-            {/* Shop CTA button for landing variant */}
+            {/* Contact CTA button for landing variant */}
             {isLanding && (
               <a
-                href={shopUrl}
+                href="mailto:ga@omniingredients.com"
                 className="px-4 py-2 bg-[#df7a4c] text-white rounded-full font-medium hover:bg-[#c86a3f] transition"
               >
-                Shop Now
+                Get a Quote
               </a>
             )}
           </nav>
@@ -535,14 +536,14 @@ export function Header({
                     )
                   )}
 
-                  {/* Shop CTA for landing mobile */}
+                  {/* Contact CTA for landing mobile */}
                   {isLanding && (
                     <a
-                      href={shopUrl}
+                      href="mailto:ga@omniingredients.com"
                       className="py-3 px-4 rounded-lg bg-[#df7a4c] text-white font-medium text-center mt-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Shop Now
+                      Get a Quote
                     </a>
                   )}
 

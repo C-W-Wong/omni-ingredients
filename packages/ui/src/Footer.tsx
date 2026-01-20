@@ -19,22 +19,21 @@ const shopSupportLinks = [
 
 // Landing (B2B) footer links
 const landingProductLinks = [
-  { href: "/shop?category=vitamins", label: "Vitamins" },
-  { href: "/shop?category=minerals", label: "Minerals" },
-  { href: "/shop?category=amino-acids", label: "Amino Acids" },
-  { href: "/shop?category=botanicals", label: "Botanicals" },
+  { href: "/solutions", label: "All Solutions" },
+  { href: "/solutions#categories", label: "Ingredient Categories" },
+  { href: "/solutions#premix", label: "Custom Premix" },
+  { href: "/solutions#services", label: "Our Services" },
 ];
 
 const landingSupportLinks = [
   { href: "mailto:ga@omniingredients.com", label: "Request Quote" },
-  { href: "/about", label: "Partner With Us" },
+  { href: "/about", label: "About Us" },
   { href: "/journal", label: "Industry Insights" },
-  { href: "#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const companyLinks = [
   { href: "/about", label: "About Us" },
-  { href: "/careers", label: "Careers" },
   { href: "/press", label: "Press" },
   { href: "/sustainability", label: "Sustainability" },
 ];
