@@ -16,21 +16,31 @@
     "footer": {
       "tagline": "您值得信赖的北美优质营养品原料B2B合作伙伴。",
       "products": "产品",
-      "allSolutions": "所有解决方案",
-      "ingredientCategories": "原料类别",
-      "customPremix": "定制预混料",
-      "ourServices": "我们的服务",
       "partner": "合作",
-      "requestQuote": "请求报价",
-      "aboutUs": "关于我们",
-      "industryInsights": "行业洞察",
       "company": "公司",
-      "press": "新闻媒体",
-      "sustainability": "可持续发展",
-      "privacyPolicy": "隐私政策",
-      "termsOfService": "服务条款",
-      "cookiePolicy": "Cookie政策",
-      "copyright": "Omni Ingredients。保留所有权利。"
+      "copyright": "保留所有权利。",
+      "productLinks": {
+        "allSolutions": "所有解决方案",
+        "ingredientCategories": "原料类别",
+        "customPremix": "定制预混料",
+        "ourServices": "我们的服务"
+      },
+      "supportLinks": {
+        "requestQuote": "请求报价",
+        "aboutUs": "关于我们",
+        "industryInsights": "行业洞察",
+        "contact": "联系我们"
+      },
+      "companyLinks": {
+        "aboutUs": "关于我们",
+        "press": "新闻媒体",
+        "sustainability": "可持续发展"
+      },
+      "legalLinks": {
+        "privacyPolicy": "隐私政策",
+        "termsOfService": "服务条款",
+        "cookiePolicy": "Cookie政策"
+      }
     },
     "announcement": {
       "landing": "优质B2B营养品原料",
@@ -803,7 +813,21 @@
     },
     "news": {
       "badge": "最新动态",
-      "title": "近期新闻"
+      "title": "近期新闻",
+      "items": {
+        "warehouse-expansion": {
+          "title": "Omni Ingredients 扩展美国仓库网络",
+          "excerpt": "新泽西州新分销中心增强东海岸配送能力。"
+        },
+        "botanical-partnership": {
+          "title": "合作公告：优质植物提取物",
+          "excerpt": "高品质植物原料北美独家分销协议。"
+        },
+        "sustainability-launch": {
+          "title": "可持续发展计划启动",
+          "excerpt": "承诺在2030年实现碳中和运营，全面改善供应链。"
+        }
+      }
     },
     "cta": {
       "title": "取得联系",

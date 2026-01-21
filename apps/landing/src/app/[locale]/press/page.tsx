@@ -1,30 +1,24 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-const companyFacts = [
-  { stat: "15+", label: "Years Experience", description: "In the nutraceutical industry" },
-  { stat: "50+", label: "Global Partners", description: "Trusted supplier network" },
-  { stat: "3", label: "U.S. Warehouses", description: "Strategic distribution locations" },
-  { stat: "500+", label: "SKUs", description: "Functional ingredients available" },
-];
+const factKeys = ["experience", "partners", "warehouses", "skus"] as const;
+const downloadKeys = ["logoPack", "mediaKit", "factSheet"] as const;
 
 const recentNews = [
   {
+    id: "warehouse-expansion",
     date: "January 2025",
-    title: "Omni Ingredients Expands U.S. Warehouse Network",
-    excerpt: "New distribution center in New Jersey enhances East Coast delivery capabilities.",
   },
   {
+    id: "botanical-partnership",
     date: "December 2024",
-    title: "Partnership Announcement: Premium Botanical Extracts",
-    excerpt: "Exclusive North American distribution agreement for high-quality botanical ingredients.",
   },
   {
+    id: "sustainability-launch",
     date: "November 2024",
-    title: "Sustainability Initiative Launch",
-    excerpt: "Commitment to carbon-neutral operations by 2030 with comprehensive supply chain improvements.",
   },
 ];
 
@@ -53,6 +47,9 @@ const CalendarIcon = () => (
 );
 
 export default function PressPage() {
+  const t = useTranslations("press");
+  const tCommon = useTranslations("common");
+
   useEffect(() => {
     const timer = setTimeout(() => {
       const observer = new IntersectionObserver(
@@ -85,13 +82,13 @@ export default function PressPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-sm sm:text-base uppercase tracking-[0.2em] text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">
-            Newsroom
+            {t("hero.badge")}
           </p>
           <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl tracking-tight font-playfair leading-[1.1] animate-on-scroll text-reveal stagger-2">
-            Press & Media
+            {t("hero.title")}
           </h1>
           <p className="text-neutral-600 mt-6 text-lg max-w-2xl mx-auto animate-on-scroll text-reveal stagger-3">
-            News, announcements, and resources for media professionals covering the nutraceutical industry.
+            {t("hero.description")}
           </p>
         </div>
       </section>
@@ -102,36 +99,30 @@ export default function PressPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <span className="text-sm uppercase tracking-widest text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">
-                About Us
+                {t("overview.badge")}
               </span>
               <h2 className="mt-4 text-3xl sm:text-4xl tracking-tight font-playfair animate-on-scroll text-reveal stagger-2">
-                Company Overview
+                {t("overview.title")}
               </h2>
               <div className="mt-6 space-y-4 text-neutral-600 animate-on-scroll fade-in stagger-3">
-                <p>
-                  Omni Ingredients is a U.S.-based ingredient solutions company specializing in the sourcing, distribution, and commercialization of high-quality functional ingredients for the nutraceutical, food & beverage, and health industries.
-                </p>
-                <p>
-                  With a strong cross-border supply chain foundation and U.S.-based operations, we connect global manufacturers with North American customers, providing reliable, compliant, and scalable ingredient solutions.
-                </p>
-                <p>
-                  Our parent group&apos;s R&amp;D capabilities and technical expertise set us apart from traditional trading companies, enabling us to offer formulation guidance and innovative solutions to our partners.
-                </p>
+                <p>{t("overview.description1")}</p>
+                <p>{t("overview.description2")}</p>
+                <p>{t("overview.description3")}</p>
               </div>
             </div>
 
             {/* Media Contact Card */}
             <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-8 animate-on-scroll slide-left stagger-2">
-              <h3 className="text-xl font-semibold text-[#2A2118] mb-6">Media Contact</h3>
+              <h3 className="text-xl font-semibold text-[#2A2118] mb-6">{t("mediaContact.title")}</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#edd8cc] rounded-lg flex items-center justify-center text-[#df7a4c]">
                     <MailIcon />
                   </div>
                   <div>
-                    <p className="text-sm text-neutral-500">Email</p>
-                    <a href="mailto:ga@omniingredients.com" className="text-[#df7a4c] hover:underline font-medium">
-                      ga@omniingredients.com
+                    <p className="text-sm text-neutral-500">{t("mediaContact.email")}</p>
+                    <a href={`mailto:${tCommon("email")}`} className="text-[#df7a4c] hover:underline font-medium">
+                      {tCommon("email")}
                     </a>
                   </div>
                 </div>
@@ -140,14 +131,14 @@ export default function PressPage() {
                     <PhoneIcon />
                   </div>
                   <div>
-                    <p className="text-sm text-neutral-500">Business Hours (EST)</p>
-                    <p className="font-medium text-[#2A2118]">Monday – Friday, 08:30 am – 05:00 pm</p>
+                    <p className="text-sm text-neutral-500">{t("mediaContact.businessHours")}</p>
+                    <p className="font-medium text-[#2A2118]">{tCommon("businessHours")}</p>
                   </div>
                 </div>
               </div>
               <div className="mt-6 pt-6 border-t border-neutral-200">
                 <p className="text-sm text-neutral-600">
-                  For press inquiries, interview requests, or media kit access, please contact our team directly.
+                  {t("mediaContact.inquiryInfo")}
                 </p>
               </div>
             </div>
@@ -163,24 +154,28 @@ export default function PressPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-sm uppercase tracking-widest text-[#ffa087] font-medium animate-on-scroll text-reveal stagger-1">
-              At a Glance
+              {t("facts.badge")}
             </span>
             <h2 className="mt-4 text-3xl sm:text-4xl tracking-tight font-playfair text-white animate-on-scroll text-reveal stagger-2">
-              Company Facts
+              {t("facts.title")}
             </h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyFacts.map((fact, index) => (
+            {factKeys.map((key, index) => (
               <div
-                key={fact.label}
+                key={key}
                 className={`text-center animate-on-scroll fade-in stagger-${index + 1}`}
               >
                 <p className="text-4xl sm:text-5xl font-playfair font-bold text-[#df7a4c]">
-                  {fact.stat}
+                  {t(`facts.items.${key}.stat`)}
                 </p>
-                <p className="text-lg font-semibold text-white mt-2">{fact.label}</p>
-                <p className="text-neutral-400 mt-1 text-sm">{fact.description}</p>
+                <p className="text-lg font-semibold text-white mt-2">
+                  {t(`facts.items.${key}.label`)}
+                </p>
+                <p className="text-neutral-400 mt-1 text-sm">
+                  {t(`facts.items.${key}.description`)}
+                </p>
               </div>
             ))}
           </div>
@@ -192,21 +187,17 @@ export default function PressPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-sm uppercase tracking-widest text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">
-              Resources
+              {t("downloads.badge")}
             </span>
             <h2 className="mt-4 text-3xl sm:text-4xl tracking-tight font-playfair animate-on-scroll text-reveal stagger-2">
-              Media Downloads
+              {t("downloads.title")}
             </h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[
-              { name: "Company Logo Pack", format: "ZIP", size: "2.4 MB" },
-              { name: "Media Kit", format: "PDF", size: "1.8 MB" },
-              { name: "Company Fact Sheet", format: "PDF", size: "450 KB" },
-            ].map((item, index) => (
+            {downloadKeys.map((key, index) => (
               <div
-                key={item.name}
+                key={key}
                 className={`bg-neutral-50 border border-neutral-200 rounded-xl p-6 hover:shadow-lg transition group cursor-pointer animate-on-scroll card-reveal stagger-${index + 1}`}
               >
                 <div className="flex items-start justify-between">
@@ -214,17 +205,21 @@ export default function PressPage() {
                     <DownloadIcon />
                   </div>
                   <span className="text-xs bg-neutral-200 text-neutral-600 px-2 py-1 rounded">
-                    {item.format}
+                    {t(`downloads.items.${key}.format`)}
                   </span>
                 </div>
-                <h3 className="mt-4 font-semibold text-[#2A2118]">{item.name}</h3>
-                <p className="text-sm text-neutral-500 mt-1">{item.size}</p>
+                <h3 className="mt-4 font-semibold text-[#2A2118]">
+                  {t(`downloads.items.${key}.name`)}
+                </h3>
+                <p className="text-sm text-neutral-500 mt-1">
+                  {t(`downloads.items.${key}.size`)}
+                </p>
               </div>
             ))}
           </div>
 
           <p className="text-center text-sm text-neutral-500 mt-8 animate-on-scroll fade-in stagger-4">
-            Contact us for high-resolution images and additional materials.
+            {t("downloads.contactForMore")}
           </p>
         </div>
       </section>
@@ -236,17 +231,17 @@ export default function PressPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-sm uppercase tracking-widest text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">
-              Latest Updates
+              {t("news.badge")}
             </span>
             <h2 className="mt-4 text-3xl sm:text-4xl tracking-tight font-playfair animate-on-scroll text-reveal stagger-2">
-              Recent News
+              {t("news.title")}
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {recentNews.map((news, index) => (
               <article
-                key={news.title}
+                key={news.id}
                 className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition animate-on-scroll card-reveal stagger-${index + 1}`}
               >
                 <div className="flex items-center gap-2 text-sm text-neutral-500 mb-3">
@@ -254,9 +249,11 @@ export default function PressPage() {
                   <time>{news.date}</time>
                 </div>
                 <h3 className="font-semibold text-[#2A2118] text-lg leading-snug">
-                  {news.title}
+                  {t(`news.items.${news.id}.title`)}
                 </h3>
-                <p className="text-neutral-600 text-sm mt-3">{news.excerpt}</p>
+                <p className="text-neutral-600 text-sm mt-3">
+                  {t(`news.items.${news.id}.excerpt`)}
+                </p>
               </article>
             ))}
           </div>
@@ -269,24 +266,24 @@ export default function PressPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-semibold tracking-tight animate-on-scroll text-reveal stagger-1">
-            Get in Touch
+            {t("cta.title")}
           </h2>
           <p className="mt-4 text-lg opacity-90 max-w-2xl mx-auto animate-on-scroll text-reveal stagger-2">
-            Have questions or need additional information? Our team is ready to assist with your media inquiries.
+            {t("cta.description")}
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll scale-in stagger-3">
             <a
-              href="mailto:ga@omniingredients.com"
+              href={`mailto:${tCommon("email")}`}
               className="px-8 py-4 bg-white text-[#df7a4c] font-semibold rounded-full hover:shadow-xl transition transform hover:scale-105"
             >
-              Contact Media Relations
+              {t("cta.contactMedia")}
             </a>
             <Link
               href="/about"
               className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full border border-white/30 hover:bg-white/20 transition transform hover:scale-105"
             >
-              About Omni Ingredients
+              {t("cta.aboutOmni")}
             </Link>
           </div>
         </div>

@@ -16,21 +16,31 @@
     "footer": {
       "tagline": "Su socio B2B de confianza para ingredientes nutracéuticos premium en América del Norte.",
       "products": "Productos",
-      "allSolutions": "Todas las Soluciones",
-      "ingredientCategories": "Categorías de Ingredientes",
-      "customPremix": "Premezclas Personalizadas",
-      "ourServices": "Nuestros Servicios",
       "partner": "Asociarse",
-      "requestQuote": "Solicitar Cotización",
-      "aboutUs": "Sobre Nosotros",
-      "industryInsights": "Perspectivas de la Industria",
       "company": "Empresa",
-      "press": "Prensa",
-      "sustainability": "Sostenibilidad",
-      "privacyPolicy": "Política de Privacidad",
-      "termsOfService": "Términos de Servicio",
-      "cookiePolicy": "Política de Cookies",
-      "copyright": "Omni Ingredients. Todos los derechos reservados."
+      "copyright": "Todos los derechos reservados.",
+      "productLinks": {
+        "allSolutions": "Todas las Soluciones",
+        "ingredientCategories": "Categorías de Ingredientes",
+        "customPremix": "Premezclas Personalizadas",
+        "ourServices": "Nuestros Servicios"
+      },
+      "supportLinks": {
+        "requestQuote": "Solicitar Cotización",
+        "aboutUs": "Sobre Nosotros",
+        "industryInsights": "Perspectivas de la Industria",
+        "contact": "Contacto"
+      },
+      "companyLinks": {
+        "aboutUs": "Sobre Nosotros",
+        "press": "Prensa",
+        "sustainability": "Sostenibilidad"
+      },
+      "legalLinks": {
+        "privacyPolicy": "Política de Privacidad",
+        "termsOfService": "Términos de Servicio",
+        "cookiePolicy": "Política de Cookies"
+      }
     },
     "announcement": {
       "landing": "Ingredientes Nutracéuticos B2B Premium",
@@ -803,7 +813,21 @@
     },
     "news": {
       "badge": "Últimas Actualizaciones",
-      "title": "Noticias Recientes"
+      "title": "Noticias Recientes",
+      "items": {
+        "warehouse-expansion": {
+          "title": "Omni Ingredients Expande Red de Almacenes en EE.UU.",
+          "excerpt": "Nuevo centro de distribución en Nueva Jersey mejora las capacidades de entrega en la Costa Este."
+        },
+        "botanical-partnership": {
+          "title": "Anuncio de Asociación: Extractos Botánicos Premium",
+          "excerpt": "Acuerdo exclusivo de distribución en América del Norte para ingredientes botánicos de alta calidad."
+        },
+        "sustainability-launch": {
+          "title": "Lanzamiento de Iniciativa de Sostenibilidad",
+          "excerpt": "Compromiso con operaciones neutras en carbono para 2030 con mejoras integrales en la cadena de suministro."
+        }
+      }
     },
     "cta": {
       "title": "Póngase en Contacto",

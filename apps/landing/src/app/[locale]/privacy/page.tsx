@@ -1,18 +1,16 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-const sections = [
-  { id: "information-we-collect", title: "Information We Collect" },
-  { id: "how-we-use-information", title: "How We Use Information" },
-  { id: "information-sharing", title: "Information Sharing" },
-  { id: "data-security", title: "Data Security" },
-  { id: "your-rights", title: "Your Rights" },
-  { id: "contact", title: "Contact Information" },
-];
+const sectionKeys = ["informationWeCollect", "howWeUse", "informationSharing", "dataSecurity", "yourRights", "contact"] as const;
 
 export default function PrivacyPolicyPage() {
+  const t = useTranslations("legal.privacy");
+  const tLegal = useTranslations("legal");
+  const tCommon = useTranslations("common");
+
   useEffect(() => {
     const timer = setTimeout(() => {
       const observer = new IntersectionObserver(
@@ -45,13 +43,13 @@ export default function PrivacyPolicyPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-sm sm:text-base uppercase tracking-[0.2em] text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">
-            Legal
+            {t("badge")}
           </p>
           <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl tracking-tight font-playfair leading-[1.1] animate-on-scroll text-reveal stagger-2">
-            Privacy Policy
+            {t("title")}
           </h1>
           <p className="text-neutral-600 mt-6 animate-on-scroll text-reveal stagger-3">
-            Last updated: January 2025
+            {tLegal("lastUpdated")}
           </p>
         </div>
       </section>
@@ -61,16 +59,16 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Table of Contents */}
           <div className="mb-12 p-6 bg-neutral-50 rounded-2xl border border-neutral-200 animate-on-scroll fade-in stagger-1">
-            <h2 className="text-lg font-semibold mb-4">Table of Contents</h2>
+            <h2 className="text-lg font-semibold mb-4">{tLegal("tableOfContents")}</h2>
             <nav>
               <ul className="space-y-2">
-                {sections.map((section, index) => (
-                  <li key={section.id}>
+                {sectionKeys.map((key, index) => (
+                  <li key={key}>
                     <a
-                      href={`#${section.id}`}
+                      href={`#${key}`}
                       className="text-neutral-600 hover:text-[#df7a4c] transition text-sm"
                     >
-                      {index + 1}. {section.title}
+                      {index + 1}. {t(`sections.${key}.title`)}
                     </a>
                   </li>
                 ))}
@@ -81,127 +79,112 @@ export default function PrivacyPolicyPage() {
           {/* Introduction */}
           <div className="prose prose-neutral max-w-none animate-on-scroll fade-in stagger-2">
             <p className="text-lg text-neutral-600 leading-relaxed">
-              At Omni Ingredients, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage with our services.
+              {t("intro")}
             </p>
           </div>
 
-          {/* Section 1 */}
-          <div id="information-we-collect" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-3">
+          {/* Section 1 - Information We Collect */}
+          <div id="informationWeCollect" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-3">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              1. Information We Collect
+              1. {t("sections.informationWeCollect.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p className="mb-4">We may collect the following types of information:</p>
-              <h3 className="text-lg font-semibold text-[#2A2118] mt-6 mb-3">Personal Information</h3>
+              <p className="mb-4">{t("sections.informationWeCollect.intro")}</p>
+              <h3 className="text-lg font-semibold text-[#2A2118] mt-6 mb-3">
+                {t("sections.informationWeCollect.personal.title")}
+              </h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Name, email address, phone number, and company name</li>
-                <li>Business address and billing information</li>
-                <li>Information provided when you request quotes or samples</li>
-                <li>Communication records when you contact us</li>
+                {[0, 1, 2, 3].map((i) => (
+                  <li key={i}>{t(`sections.informationWeCollect.personal.items.${i}`)}</li>
+                ))}
               </ul>
-              <h3 className="text-lg font-semibold text-[#2A2118] mt-6 mb-3">Automatically Collected Information</h3>
+              <h3 className="text-lg font-semibold text-[#2A2118] mt-6 mb-3">
+                {t("sections.informationWeCollect.automatic.title")}
+              </h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li>IP address and browser type</li>
-                <li>Device information and operating system</li>
-                <li>Pages visited and time spent on our website</li>
-                <li>Referring website addresses</li>
+                {[0, 1, 2, 3].map((i) => (
+                  <li key={i}>{t(`sections.informationWeCollect.automatic.items.${i}`)}</li>
+                ))}
               </ul>
             </div>
           </div>
 
-          {/* Section 2 */}
-          <div id="how-we-use-information" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-4">
+          {/* Section 2 - How We Use Information */}
+          <div id="howWeUse" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-4">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              2. How We Use Information
+              2. {t("sections.howWeUse.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p className="mb-4">We use the information we collect to:</p>
+              <p className="mb-4">{t("sections.howWeUse.intro")}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Process and fulfill your orders and requests</li>
-                <li>Respond to inquiries and provide customer support</li>
-                <li>Send relevant product information and industry updates</li>
-                <li>Improve our website and services</li>
-                <li>Comply with legal obligations</li>
-                <li>Prevent fraudulent transactions and protect our business</li>
+                {[0, 1, 2, 3, 4, 5].map((i) => (
+                  <li key={i}>{t(`sections.howWeUse.items.${i}`)}</li>
+                ))}
               </ul>
             </div>
           </div>
 
-          {/* Section 3 */}
-          <div id="information-sharing" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-5">
+          {/* Section 3 - Information Sharing */}
+          <div id="informationSharing" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-5">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              3. Information Sharing
+              3. {t("sections.informationSharing.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p className="mb-4">
-                We do not sell, trade, or rent your personal information to third parties. We may share your information with:
-              </p>
+              <p className="mb-4">{t("sections.informationSharing.intro")}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Service Providers:</strong> Third-party vendors who assist in operating our website, conducting business, or servicing you</li>
-                <li><strong>Business Partners:</strong> Trusted partners involved in fulfilling your orders or providing services</li>
-                <li><strong>Legal Requirements:</strong> When required by law or to protect our rights and safety</li>
-                <li><strong>Business Transfers:</strong> In connection with any merger, acquisition, or sale of assets</li>
+                {[0, 1, 2, 3].map((i) => (
+                  <li key={i}>{t(`sections.informationSharing.items.${i}`)}</li>
+                ))}
               </ul>
             </div>
           </div>
 
-          {/* Section 4 */}
-          <div id="data-security" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-6">
+          {/* Section 4 - Data Security */}
+          <div id="dataSecurity" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-6">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              4. Data Security
+              4. {t("sections.dataSecurity.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p className="mb-4">
-                We implement appropriate technical and organizational security measures to protect your personal information, including:
-              </p>
+              <p className="mb-4">{t("sections.dataSecurity.intro")}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Encryption of sensitive data during transmission</li>
-                <li>Secure servers and firewalls</li>
-                <li>Regular security assessments and updates</li>
-                <li>Access controls limiting who can view your information</li>
+                {[0, 1, 2, 3].map((i) => (
+                  <li key={i}>{t(`sections.dataSecurity.items.${i}`)}</li>
+                ))}
               </ul>
-              <p className="mt-4">
-                While we strive to protect your personal information, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.
-              </p>
+              <p className="mt-4">{t("sections.dataSecurity.disclaimer")}</p>
             </div>
           </div>
 
-          {/* Section 5 */}
-          <div id="your-rights" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-7">
+          {/* Section 5 - Your Rights */}
+          <div id="yourRights" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-7">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              5. Your Rights
+              5. {t("sections.yourRights.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p className="mb-4">Depending on your location, you may have the following rights:</p>
+              <p className="mb-4">{t("sections.yourRights.intro")}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
-                <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
-                <li><strong>Deletion:</strong> Request deletion of your personal information</li>
-                <li><strong>Opt-out:</strong> Unsubscribe from marketing communications at any time</li>
-                <li><strong>Portability:</strong> Request your data in a portable format</li>
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <li key={i}>{t(`sections.yourRights.items.${i}`)}</li>
+                ))}
               </ul>
-              <p className="mt-4">
-                To exercise these rights, please contact us using the information below.
-              </p>
+              <p className="mt-4">{t("sections.yourRights.exercise")}</p>
             </div>
           </div>
 
-          {/* Section 6 */}
+          {/* Section 6 - Contact */}
           <div id="contact" className="mt-12 scroll-mt-24 animate-on-scroll fade-in stagger-8">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              6. Contact Information
+              6. {t("sections.contact.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p className="mb-4">
-                If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:
-              </p>
+              <p className="mb-4">{t("sections.contact.content")}</p>
               <div className="bg-neutral-50 p-6 rounded-xl border border-neutral-200 mt-4">
-                <p className="font-semibold text-[#2A2118]">Omni Ingredients</p>
-                <p className="mt-2">Ontario, CA 91761, USA</p>
+                <p className="font-semibold text-[#2A2118]">{tCommon("companyName")}</p>
+                <p className="mt-2">{tCommon("location")}</p>
                 <p className="mt-1">
                   Email:{" "}
-                  <a href="mailto:ga@omniingredients.com" className="text-[#df7a4c] hover:underline">
-                    ga@omniingredients.com
+                  <a href={`mailto:${tCommon("email")}`} className="text-[#df7a4c] hover:underline">
+                    {tCommon("email")}
                   </a>
                 </p>
               </div>
@@ -214,13 +197,13 @@ export default function PrivacyPolicyPage() {
               href="/"
               className="text-[#df7a4c] hover:underline font-medium"
             >
-              &larr; Back to Home
+              &larr; {tLegal("backToHome")}
             </Link>
             <a
               href="#"
               className="text-neutral-500 hover:text-neutral-700 text-sm"
             >
-              Back to top &uarr;
+              {tLegal("backToTop")} &uarr;
             </a>
           </div>
         </div>

@@ -13,6 +13,7 @@
     "@omm/tailwind-config": "*",
     "@omm/types": "*",
     "@omm/ui": "*",
+    "@tailwindcss/typography": "^0.5.19",
     "next": "^15.1.1",
     "next-intl": "^4.7.0",
     "react": "^19.0.0",

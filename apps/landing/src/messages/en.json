@@ -16,21 +16,31 @@
     "footer": {
       "tagline": "Your trusted B2B partner for premium nutraceutical ingredients across North America.",
       "products": "Products",
-      "allSolutions": "All Solutions",
-      "ingredientCategories": "Ingredient Categories",
-      "customPremix": "Custom Premix",
-      "ourServices": "Our Services",
       "partner": "Partner",
-      "requestQuote": "Request Quote",
-      "aboutUs": "About Us",
-      "industryInsights": "Industry Insights",
       "company": "Company",
-      "press": "Press",
-      "sustainability": "Sustainability",
-      "privacyPolicy": "Privacy Policy",
-      "termsOfService": "Terms of Service",
-      "cookiePolicy": "Cookie Policy",
-      "copyright": "Omni Ingredients. All rights reserved."
+      "copyright": "All rights reserved.",
+      "productLinks": {
+        "allSolutions": "All Solutions",
+        "ingredientCategories": "Ingredient Categories",
+        "customPremix": "Custom Premix",
+        "ourServices": "Our Services"
+      },
+      "supportLinks": {
+        "requestQuote": "Request Quote",
+        "aboutUs": "About Us",
+        "industryInsights": "Industry Insights",
+        "contact": "Contact"
+      },
+      "companyLinks": {
+        "aboutUs": "About Us",
+        "press": "Press",
+        "sustainability": "Sustainability"
+      },
+      "legalLinks": {
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "cookiePolicy": "Cookie Policy"
+      }
     },
     "announcement": {
       "landing": "Premium B2B Nutraceutical Ingredients",
@@ -803,7 +813,21 @@
     },
     "news": {
       "badge": "Latest Updates",
-      "title": "Recent News"
+      "title": "Recent News",
+      "items": {
+        "warehouse-expansion": {
+          "title": "Omni Ingredients Expands U.S. Warehouse Network",
+          "excerpt": "New distribution center in New Jersey enhances East Coast delivery capabilities."
+        },
+        "botanical-partnership": {
+          "title": "Partnership Announcement: Premium Botanical Extracts",
+          "excerpt": "Exclusive North American distribution agreement for high-quality botanical ingredients."
+        },
+        "sustainability-launch": {
+          "title": "Sustainability Initiative Launch",
+          "excerpt": "Commitment to carbon-neutral operations by 2030 with comprehensive supply chain improvements."
+        }
+      }
     },
     "cta": {
       "title": "Get in Touch",

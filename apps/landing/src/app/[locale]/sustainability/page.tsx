@@ -1,72 +1,13 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-const pillars = [
-  {
-    title: "Responsible Sourcing",
-    description: "We partner with suppliers who share our commitment to ethical practices, ensuring ingredients are sourced responsibly and sustainably.",
-    icon: "leaf",
-    points: [
-      "Audited supplier partnerships",
-      "Ethical labor practices verification",
-      "Sustainable harvesting methods",
-      "Origin transparency and traceability",
-    ],
-  },
-  {
-    title: "Supply Chain Transparency",
-    description: "Complete visibility into our supply chain, from raw material origins to final delivery, ensuring accountability at every step.",
-    icon: "link",
-    points: [
-      "End-to-end traceability",
-      "Regular third-party audits",
-      "Comprehensive documentation",
-      "Real-time tracking capabilities",
-    ],
-  },
-  {
-    title: "Environmental Practices",
-    description: "Minimizing our environmental footprint through efficient operations, reduced waste, and sustainable packaging solutions.",
-    icon: "globe",
-    points: [
-      "Carbon footprint reduction",
-      "Waste minimization programs",
-      "Energy-efficient warehousing",
-      "Sustainable packaging options",
-    ],
-  },
-  {
-    title: "Community Impact",
-    description: "Supporting the communities where we operate and source ingredients, creating positive social and economic impact.",
-    icon: "heart",
-    points: [
-      "Local community support",
-      "Fair trade partnerships",
-      "Educational initiatives",
-      "Economic empowerment programs",
-    ],
-  },
-];
-
-const commitments = [
-  {
-    stat: "100%",
-    label: "Supplier Audits",
-    description: "All key suppliers undergo regular compliance audits",
-  },
-  {
-    stat: "50+",
-    label: "Global Partners",
-    description: "Vetted suppliers committed to sustainability",
-  },
-  {
-    stat: "0",
-    label: "Tolerance Policy",
-    description: "Zero tolerance for unethical sourcing practices",
-  },
-];
+const pillarKeys = ["responsibleSourcing", "supplyChainTransparency", "environmentalPractices", "communityImpact"] as const;
+const pillarIcons = ["leaf", "link", "globe", "heart"] as const;
+const commitmentKeys = ["supplierAudits", "globalPartners", "zeroTolerance"] as const;
+const initiativeKeys = ["carbonNeutrality", "packagingInnovation", "supplierDevelopment", "circularEconomy"] as const;
 
 const LeafIcon = () => (
   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,7 +39,7 @@ const CheckIcon = () => (
   </svg>
 );
 
-const iconMap: { [key: string]: () => React.ReactNode } = {
+const iconComponents: { [key: string]: () => React.ReactNode } = {
   leaf: LeafIcon,
   link: LinkIcon,
   globe: GlobeIcon,
@@ -106,6 +47,8 @@ const iconMap: { [key: string]: () => React.ReactNode } = {
 };
 
 export default function SustainabilityPage() {
+  const t = useTranslations("sustainability");
+
   useEffect(() => {
     const timer = setTimeout(() => {
       const observer = new IntersectionObserver(
@@ -141,13 +84,13 @@ export default function SustainabilityPage() {
         <div className="relative z-10 flex h-full max-w-7xl mx-auto px-4 sm:px-6 items-center">
           <div className="max-w-3xl text-white">
             <p className="text-sm sm:text-base uppercase tracking-[0.2em] text-[#ffa087] font-medium animate-on-scroll text-reveal stagger-1">
-              Our Commitment
+              {t("hero.badge")}
             </p>
             <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl tracking-tight font-playfair leading-[1.1] animate-on-scroll text-reveal stagger-2">
-              Sustainability
+              {t("hero.title")}
             </h1>
             <p className="text-base sm:text-lg md:text-xl opacity-90 mt-6 max-w-2xl leading-relaxed animate-on-scroll text-reveal stagger-3">
-              Building a responsible supply chain that benefits people, communities, and the planet while delivering exceptional quality.
+              {t("hero.description")}
             </p>
           </div>
         </div>
@@ -159,10 +102,10 @@ export default function SustainabilityPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-playfair animate-on-scroll text-reveal stagger-1">
-            Our Sustainability Mission
+            {t("mission.title")}
           </h2>
           <p className="mt-6 text-lg text-neutral-600 leading-relaxed animate-on-scroll text-reveal stagger-2">
-            At Omni Ingredients, we believe that sustainable business practices and quality ingredients go hand in hand. We are committed to building transparent, ethical supply chains that create value for all stakeholders while minimizing environmental impact.
+            {t("mission.description")}
           </p>
         </div>
       </section>
@@ -172,35 +115,39 @@ export default function SustainabilityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16">
             <span className="text-sm uppercase tracking-widest text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">
-              Our Approach
+              {t("pillars.badge")}
             </span>
             <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl tracking-tight font-playfair animate-on-scroll text-reveal stagger-2">
-              Four Pillars of Sustainability
+              {t("pillars.title")}
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {pillars.map((pillar, index) => {
-              const IconComponent = iconMap[pillar.icon];
+            {pillarKeys.map((key, index) => {
+              const IconComponent = iconComponents[pillarIcons[index]];
               return (
                 <div
-                  key={pillar.title}
+                  key={key}
                   className={`bg-neutral-50 border border-neutral-200 rounded-2xl p-8 hover:shadow-lg transition animate-on-scroll card-reveal stagger-${index + 1}`}
                 >
                   <div className="w-16 h-16 bg-[#edd8cc] rounded-2xl flex items-center justify-center mb-6 text-[#df7a4c]">
                     <IconComponent />
                   </div>
                   <h3 className="text-xl font-semibold text-[#2A2118] mb-3">
-                    {pillar.title}
+                    {t(`pillars.items.${key}.title`)}
                   </h3>
-                  <p className="text-neutral-600 mb-6">{pillar.description}</p>
+                  <p className="text-neutral-600 mb-6">
+                    {t(`pillars.items.${key}.description`)}
+                  </p>
                   <ul className="space-y-3">
-                    {pillar.points.map((point) => (
-                      <li key={point} className="flex items-start gap-3">
+                    {[0, 1, 2, 3].map((pointIndex) => (
+                      <li key={pointIndex} className="flex items-start gap-3">
                         <span className="w-5 h-5 bg-[#df7a4c]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-[#df7a4c]">
                           <CheckIcon />
                         </span>
-                        <span className="text-sm text-neutral-600">{point}</span>
+                        <span className="text-sm text-neutral-600">
+                          {t(`pillars.items.${key}.points.${pointIndex}`)}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -219,24 +166,28 @@ export default function SustainabilityPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16">
             <span className="text-sm uppercase tracking-widest text-[#ffa087] font-medium animate-on-scroll text-reveal stagger-1">
-              Our Commitment
+              {t("commitments.badge")}
             </span>
             <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl tracking-tight font-playfair text-white animate-on-scroll text-reveal stagger-2">
-              Measurable Impact
+              {t("commitments.title")}
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {commitments.map((item, index) => (
+            {commitmentKeys.map((key, index) => (
               <div
-                key={item.label}
+                key={key}
                 className={`text-center animate-on-scroll fade-in stagger-${index + 1}`}
               >
                 <p className="text-5xl sm:text-6xl font-playfair font-bold text-[#df7a4c]">
-                  {item.stat}
+                  {t(`commitments.items.${key}.stat`)}
                 </p>
-                <p className="text-xl font-semibold text-white mt-2">{item.label}</p>
-                <p className="text-neutral-400 mt-2 text-sm">{item.description}</p>
+                <p className="text-xl font-semibold text-white mt-2">
+                  {t(`commitments.items.${key}.label`)}
+                </p>
+                <p className="text-neutral-400 mt-2 text-sm">
+                  {t(`commitments.items.${key}.description`)}
+                </p>
               </div>
             ))}
           </div>
@@ -250,29 +201,28 @@ export default function SustainabilityPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center">
             <span className="text-sm uppercase tracking-widest text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">
-              The Future
+              {t("future.badge")}
             </span>
             <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl tracking-tight font-playfair animate-on-scroll text-reveal stagger-2">
-              Looking Ahead
+              {t("future.title")}
             </h2>
             <p className="mt-6 text-lg text-neutral-600 leading-relaxed animate-on-scroll text-reveal stagger-3">
-              Sustainability is a journey, not a destination. We continuously evaluate and improve our practices, setting ambitious goals for carbon reduction, waste elimination, and community impact. Our commitment to transparency means we&apos;ll share our progress openly with our partners and stakeholders.
+              {t("future.description")}
             </p>
           </div>
 
           <div className="mt-12 grid sm:grid-cols-2 gap-6">
-            {[
-              { title: "Carbon Neutrality", desc: "Working toward carbon-neutral operations across our supply chain" },
-              { title: "Packaging Innovation", desc: "Developing sustainable packaging solutions with reduced environmental impact" },
-              { title: "Supplier Development", desc: "Partnering with suppliers to improve their sustainability practices" },
-              { title: "Circular Economy", desc: "Exploring closed-loop systems for waste reduction and resource recovery" },
-            ].map((item, index) => (
+            {initiativeKeys.map((key, index) => (
               <div
-                key={item.title}
+                key={key}
                 className={`bg-white/80 backdrop-blur rounded-xl p-6 animate-on-scroll card-reveal stagger-${index + 1}`}
               >
-                <h3 className="font-semibold text-[#2A2118] mb-2">{item.title}</h3>
-                <p className="text-sm text-neutral-600">{item.desc}</p>
+                <h3 className="font-semibold text-[#2A2118] mb-2">
+                  {t(`future.initiatives.${key}.title`)}
+                </h3>
+                <p className="text-sm text-neutral-600">
+                  {t(`future.initiatives.${key}.description`)}
+                </p>
               </div>
             ))}
           </div>
@@ -285,10 +235,10 @@ export default function SustainabilityPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-semibold tracking-tight animate-on-scroll text-reveal stagger-1">
-            Partner With Purpose
+            {t("cta.title")}
           </h2>
           <p className="mt-4 text-lg opacity-90 max-w-2xl mx-auto animate-on-scroll text-reveal stagger-2">
-            Join us in building a more sustainable future for the ingredients industry. We&apos;re always looking for partners who share our values.
+            {t("cta.description")}
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll scale-in stagger-3">
@@ -296,13 +246,13 @@ export default function SustainabilityPage() {
               href="mailto:ga@omniingredients.com"
               className="px-8 py-4 bg-white text-[#df7a4c] font-semibold rounded-full hover:shadow-xl transition transform hover:scale-105"
             >
-              Get in Touch
+              {t("cta.getInTouch")}
             </a>
             <Link
               href="/about"
               className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full border border-white/30 hover:bg-white/20 transition transform hover:scale-105"
             >
-              Learn About Us
+              {t("cta.learnAboutUs")}
             </Link>
           </div>
         </div>

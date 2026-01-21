@@ -182,7 +182,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 flex h-full max-w-7xl mx-auto px-4 sm:px-6 items-end pb-16 sm:pb-24">
-          <div className="max-w-3xl text-white hero-content">
+          <div className="max-w-3xl text-white hero-content hero-text-shadow">
             <p className="text-sm sm:text-base uppercase tracking-[0.2em] text-[#ffa087] font-medium animate-on-scroll text-reveal stagger-1">
               {t("hero.tagline")}
             </p>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import type { BlogPost } from "@omm/types";
 
 interface JournalPostClientProps {
@@ -80,13 +80,7 @@ export default function JournalPostClient({ post, relatedPosts }: JournalPostCli
 
         {/* Article Content */}
         <div
-          className="prose prose-lg max-w-none animate-on-scroll slide-up stagger-3
-            prose-headings:font-playfair prose-headings:tracking-tight prose-headings:font-semibold
-            prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
-            prose-p:text-neutral-600 prose-p:leading-relaxed
-            prose-li:text-neutral-600
-            prose-strong:text-neutral-900
-            prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline"
+          className="prose prose-lg max-w-none animate-on-scroll slide-up stagger-3 prose-headings:font-playfair prose-headings:tracking-tight prose-headings:font-semibold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-p:text-neutral-600 prose-p:leading-relaxed prose-li:text-neutral-600 prose-strong:text-neutral-900 prose-a:text-[#df7a4c] prose-a:no-underline hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 

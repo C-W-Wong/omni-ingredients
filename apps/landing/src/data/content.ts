@@ -59,27 +59,27 @@ export const solutions = [
 export const categories = [
   {
     id: "antioxidant",
-    image: "/assets/Antioxidant&CellularHealth.png",
+    image: "/assets/antioxidant-cellular-health.png",
   },
   {
     id: "energy",
-    image: "/assets/Energy & Metabolic Support.png",
+    image: "/assets/energy-metabolic-support.png",
   },
   {
     id: "immune",
-    image: "/assets/Immune & Liver Health.png",
+    image: "/assets/immune-liver-health.png",
   },
   {
     id: "beauty",
-    image: "/assets/Beauty-from-Within Nourish skin, hair, and nails.png",
+    image: "/assets/beauty-from-within.png",
   },
   {
     id: "sports",
-    image: "/assets/Sports Performance .png",
+    image: "/assets/sports-performance.png",
   },
   {
     id: "mood",
-    image: "/assets/Mood & Cognitive Support.png",
+    image: "/assets/mood-cognitive-support.png",
   },
 ];
 
@@ -129,8 +129,8 @@ export const trustStats = [
 export const heroImages = {
   main: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1920&q=80",
   warehouse: "/assets/omni-warehouse.png",
-  lab: "/assets/Quality & Compliance.png",
+  lab: "/assets/quality-compliance.png",
   logistics: "/assets/omni-warehouse.png",
-  ingredients: "/assets/Comprehensive Ingredient Solutions.png",
+  ingredients: "/assets/comprehensive-ingredient-solutions.png",
   team: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80",
 };

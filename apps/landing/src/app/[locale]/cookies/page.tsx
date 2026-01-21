@@ -1,32 +1,16 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-const cookieTypes = [
-  {
-    name: "Essential Cookies",
-    description: "These cookies are necessary for the website to function and cannot be switched off. They are usually only set in response to actions made by you, such as setting your privacy preferences or filling in forms.",
-    examples: ["Session cookies", "Security cookies", "Load balancing cookies"],
-  },
-  {
-    name: "Performance Cookies",
-    description: "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us know which pages are the most and least popular.",
-    examples: ["Analytics cookies", "Page load time tracking", "Error monitoring"],
-  },
-  {
-    name: "Functional Cookies",
-    description: "These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.",
-    examples: ["Language preferences", "Region settings", "Chat support"],
-  },
-  {
-    name: "Marketing Cookies",
-    description: "These cookies may be set through our site by our advertising partners. They may be used to build a profile of your interests and show you relevant advertisements on other sites.",
-    examples: ["Advertising cookies", "Social media cookies", "Retargeting cookies"],
-  },
-];
+const cookieTypeKeys = ["essential", "performance", "functional", "marketing"] as const;
 
 export default function CookiePolicyPage() {
+  const t = useTranslations("legal.cookies");
+  const tLegal = useTranslations("legal");
+  const tCommon = useTranslations("common");
+
   useEffect(() => {
     const timer = setTimeout(() => {
       const observer = new IntersectionObserver(
@@ -59,13 +43,13 @@ export default function CookiePolicyPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-sm sm:text-base uppercase tracking-[0.2em] text-[#df7a4c] font-medium animate-on-scroll text-reveal stagger-1">
-            Legal
+            {t("badge")}
           </p>
           <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl tracking-tight font-playfair leading-[1.1] animate-on-scroll text-reveal stagger-2">
-            Cookie Policy
+            {t("title")}
           </h1>
           <p className="text-neutral-600 mt-6 animate-on-scroll text-reveal stagger-3">
-            Last updated: January 2025
+            {tLegal("lastUpdated")}
           </p>
         </div>
       </section>
@@ -76,47 +60,43 @@ export default function CookiePolicyPage() {
           {/* Introduction */}
           <div className="prose prose-neutral max-w-none animate-on-scroll fade-in stagger-1">
             <p className="text-lg text-neutral-600 leading-relaxed">
-              This Cookie Policy explains how Omni Ingredients uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are, why we use them, and your rights to control our use of them.
+              {t("intro")}
             </p>
           </div>
 
           {/* What Are Cookies */}
           <div className="mt-12 animate-on-scroll fade-in stagger-2">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              What Are Cookies?
+              {t("whatAreCookies.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p className="mb-4">
-                Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.
-              </p>
-              <p>
-                Cookies set by the website owner (in this case, Omni Ingredients) are called &quot;first-party cookies.&quot; Cookies set by parties other than the website owner are called &quot;third-party cookies.&quot; Third-party cookies enable third-party features or functionality to be provided on or through the website.
-              </p>
+              <p className="mb-4">{t("whatAreCookies.content1")}</p>
+              <p>{t("whatAreCookies.content2")}</p>
             </div>
           </div>
 
           {/* Types of Cookies */}
           <div className="mt-12 animate-on-scroll fade-in stagger-3">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-6">
-              Types of Cookies We Use
+              {t("types.title")}
             </h2>
             <div className="grid gap-6">
-              {cookieTypes.map((cookie, index) => (
+              {cookieTypeKeys.map((key, index) => (
                 <div
-                  key={cookie.name}
+                  key={key}
                   className={`bg-neutral-50 rounded-2xl p-6 border border-neutral-200 animate-on-scroll card-reveal stagger-${index + 1}`}
                 >
                   <h3 className="text-lg font-semibold text-[#2A2118] mb-3">
-                    {cookie.name}
+                    {t(`types.${key}.name`)}
                   </h3>
-                  <p className="text-neutral-600 mb-4">{cookie.description}</p>
+                  <p className="text-neutral-600 mb-4">{t(`types.${key}.description`)}</p>
                   <div className="flex flex-wrap gap-2">
-                    {cookie.examples.map((example) => (
+                    {[0, 1, 2].map((i) => (
                       <span
-                        key={example}
+                        key={i}
                         className="text-xs bg-[#edd8cc] text-[#2A2118] px-3 py-1 rounded-full"
                       >
-                        {example}
+                        {t(`types.${key}.examples.${i}`)}
                       </span>
                     ))}
                   </div>
@@ -128,88 +108,80 @@ export default function CookiePolicyPage() {
           {/* How to Manage Cookies */}
           <div className="mt-12 animate-on-scroll fade-in stagger-4">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              How to Manage Cookies
+              {t("howToManage.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p className="mb-4">
-                You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences in the following ways:
-              </p>
-              <h3 className="text-lg font-semibold text-[#2A2118] mt-6 mb-3">Browser Settings</h3>
-              <p className="mb-4">
-                Most web browsers allow you to control cookies through their settings preferences. However, if you limit the ability of websites to set cookies, you may worsen your overall user experience.
-              </p>
+              <p className="mb-4">{t("howToManage.intro")}</p>
+              <h3 className="text-lg font-semibold text-[#2A2118] mt-6 mb-3">
+                {t("howToManage.browserSettings.title")}
+              </h3>
+              <p className="mb-4">{t("howToManage.browserSettings.content")}</p>
               <div className="bg-neutral-50 p-6 rounded-xl border border-neutral-200 mt-4">
-                <p className="font-medium text-[#2A2118] mb-3">Popular browser cookie settings:</p>
+                <p className="font-medium text-[#2A2118] mb-3">
+                  {t("howToManage.browserSettings.browsers.title")}
+                </p>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <strong>Chrome:</strong> Settings → Privacy and security → Cookies
+                    <strong>Chrome:</strong> {t("howToManage.browserSettings.browsers.chrome").replace("Chrome: ", "")}
                   </li>
                   <li>
-                    <strong>Firefox:</strong> Settings → Privacy & Security → Cookies
+                    <strong>Firefox:</strong> {t("howToManage.browserSettings.browsers.firefox").replace("Firefox: ", "")}
                   </li>
                   <li>
-                    <strong>Safari:</strong> Preferences → Privacy → Cookies
+                    <strong>Safari:</strong> {t("howToManage.browserSettings.browsers.safari").replace("Safari: ", "")}
                   </li>
                   <li>
-                    <strong>Edge:</strong> Settings → Cookies and site permissions
+                    <strong>Edge:</strong> {t("howToManage.browserSettings.browsers.edge").replace("Edge: ", "")}
                   </li>
                 </ul>
               </div>
-              <h3 className="text-lg font-semibold text-[#2A2118] mt-6 mb-3">Opt-Out Links</h3>
-              <p>
-                Some third-party services provide opt-out mechanisms. For example, you can opt out of Google Analytics by installing the Google Analytics Opt-out Browser Add-on.
-              </p>
+              <h3 className="text-lg font-semibold text-[#2A2118] mt-6 mb-3">
+                {t("howToManage.optOut.title")}
+              </h3>
+              <p>{t("howToManage.optOut.content")}</p>
             </div>
           </div>
 
           {/* Third-Party Cookies */}
           <div className="mt-12 animate-on-scroll fade-in stagger-5">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              Third-Party Cookies
+              {t("thirdParty.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p className="mb-4">
-                We may use third-party services that set cookies on our website. These services include:
-              </p>
+              <p className="mb-4">{t("thirdParty.intro")}</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Google Analytics:</strong> For website traffic analysis and reporting</li>
-                <li><strong>Social Media Platforms:</strong> For sharing functionality and embedded content</li>
-                <li><strong>Customer Support Tools:</strong> For live chat and support features</li>
+                {[0, 1, 2].map((i) => (
+                  <li key={i}>{t(`thirdParty.items.${i}`)}</li>
+                ))}
               </ul>
-              <p className="mt-4">
-                We do not control the cookies used by these third parties. Please review their respective privacy policies for more information about their cookie practices.
-              </p>
+              <p className="mt-4">{t("thirdParty.disclaimer")}</p>
             </div>
           </div>
 
           {/* Updates */}
           <div className="mt-12 animate-on-scroll fade-in stagger-6">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              Updates to This Policy
+              {t("updates.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p>
-                We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Please revisit this page regularly to stay informed about our use of cookies.
-              </p>
+              <p>{t("updates.content")}</p>
             </div>
           </div>
 
           {/* Contact */}
           <div className="mt-12 animate-on-scroll fade-in stagger-7">
             <h2 className="text-2xl font-playfair font-semibold text-[#2A2118] mb-4">
-              Contact Information
+              {t("contact.title")}
             </h2>
             <div className="prose prose-neutral max-w-none text-neutral-600">
-              <p className="mb-4">
-                If you have questions about our use of cookies, please contact us:
-              </p>
+              <p className="mb-4">{t("contact.content")}</p>
               <div className="bg-neutral-50 p-6 rounded-xl border border-neutral-200 mt-4">
-                <p className="font-semibold text-[#2A2118]">Omni Ingredients</p>
-                <p className="mt-2">Ontario, CA 91761, USA</p>
+                <p className="font-semibold text-[#2A2118]">{tCommon("companyName")}</p>
+                <p className="mt-2">{tCommon("location")}</p>
                 <p className="mt-1">
                   Email:{" "}
-                  <a href="mailto:ga@omniingredients.com" className="text-[#df7a4c] hover:underline">
-                    ga@omniingredients.com
+                  <a href={`mailto:${tCommon("email")}`} className="text-[#df7a4c] hover:underline">
+                    {tCommon("email")}
                   </a>
                 </p>
               </div>
@@ -222,13 +194,13 @@ export default function CookiePolicyPage() {
               href="/"
               className="text-[#df7a4c] hover:underline font-medium"
             >
-              &larr; Back to Home
+              &larr; {tLegal("backToHome")}
             </Link>
             <a
               href="#"
               className="text-neutral-500 hover:text-neutral-700 text-sm"
             >
-              Back to top &uarr;
+              {tLegal("backToTop")} &uarr;
             </a>
           </div>
         </div>
