@@ -8,5 +8,11 @@ export const config = {
   // - API routes
   // - Next.js internals (_next)
   // - Static files (favicon, assets, etc.)
-  matcher: ["/((?!api|_next|favicon|assets|.*\\..*).*)"],
+  matcher: [
+    // Match root path
+    "/",
+    // Match all paths except static files and API
+    "/(en|es|zh)/:path*",
+    "/((?!api|_next|favicon|assets|.*\\..*).*)"
+  ],
 };
