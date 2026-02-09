@@ -295,7 +295,7 @@ export default function AboutPage() {
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll scale-in stagger-3">
             <a
-              href="mailto:ga@omniingredients.com"
+              href="mailto:info@omniingredients.com"
               className="px-8 py-4 bg-white text-[#df7a4c] font-semibold rounded-full hover:shadow-xl transition transform hover:scale-105"
             >
               {t("cta.contactUs")}
@@ -317,8 +317,8 @@ export default function AboutPage() {
             </p>
             <p className="text-sm opacity-80 mt-2 animate-on-scroll text-reveal stagger-6">
               <strong className="text-white">{t("cta.email")}</strong>{" "}
-              <a href="mailto:ga@omniingredients.com" className="hover:text-white underline">
-                ga@omniingredients.com
+              <a href="mailto:info@omniingredients.com" className="hover:text-white underline">
+                info@omniingredients.com
               </a>
             </p>
           </div>

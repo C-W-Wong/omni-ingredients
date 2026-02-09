@@ -26,7 +26,7 @@ const landingProductLinks = [
 ];
 
 const landingSupportLinks = [
-  { href: "mailto:ga@omniingredients.com", label: "Request Quote" },
+  { href: "mailto:info@omniingredients.com", label: "Request Quote" },
   { href: "/about", label: "About Us" },
   { href: "/journal", label: "Industry Insights" },
   { href: "/contact", label: "Contact" },
@@ -145,7 +145,7 @@ export function Footer({
   ];
 
   const translatedLandingSupportLinks = [
-    { href: "mailto:ga@omniingredients.com", label: t?.supportLinks?.requestQuote || "Request Quote" },
+    { href: "mailto:info@omniingredients.com", label: t?.supportLinks?.requestQuote || "Request Quote" },
     { href: localePath("/about"), label: t?.supportLinks?.aboutUs || "About Us" },
     { href: localePath("/journal"), label: t?.supportLinks?.industryInsights || "Industry Insights" },
     { href: localePath("/contact"), label: t?.supportLinks?.contact || "Contact" },

@@ -420,10 +420,10 @@ export default function ContactPage() {
               </div>
               <h3 className="font-semibold text-neutral-900 mb-1">Email</h3>
               <a
-                href="mailto:ga@omniingredients.com"
+                href="mailto:info@omniingredients.com"
                 className="text-orange-600 hover:text-orange-700 transition"
               >
-                ga@omniingredients.com
+                info@omniingredients.com
               </a>
             </div>
 
@@ -558,10 +558,10 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium text-neutral-900">Email</p>
                     <a
-                      href="mailto:ga@omniingredients.com"
+                      href="mailto:info@omniingredients.com"
                       className="text-orange-600 hover:text-orange-700 transition"
                     >
-                      ga@omniingredients.com
+                      info@omniingredients.com
                     </a>
                   </div>
                 </div>

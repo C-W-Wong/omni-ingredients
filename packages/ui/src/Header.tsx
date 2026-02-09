@@ -302,7 +302,7 @@ export function Header({
             {/* Contact CTA button for landing variant */}
             {isLanding && (
               <a
-                href="mailto:ga@omniingredients.com"
+                href="mailto:info@omniingredients.com"
                 className="px-4 py-2 bg-[#df7a4c] text-white rounded-full font-medium hover:bg-[#c86a3f] transition"
               >
                 {t?.getQuote || "Get a Quote"}
@@ -568,7 +568,7 @@ export function Header({
                   {/* Contact CTA for landing mobile */}
                   {isLanding && (
                     <a
-                      href="mailto:ga@omniingredients.com"
+                      href="mailto:info@omniingredients.com"
                       className="py-3 px-4 rounded-lg bg-[#df7a4c] text-white font-medium text-center mt-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >

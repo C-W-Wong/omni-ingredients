@@ -285,7 +285,7 @@ export default function Home() {
                 <strong>Location:</strong> Ontario, CA 91761, USA
               </p>
               <p className="text-sm opacity-80 mt-2 animate-on-scroll text-reveal stagger-8">
-                <strong>Email:</strong> <a href="mailto:ga@omniingredients.com" className="hover:opacity-100 underline">ga@omniingredients.com</a>
+                <strong>Email:</strong> <a href="mailto:info@omniingredients.com" className="hover:opacity-100 underline">info@omniingredients.com</a>
               </p>
             </div>
           </div>

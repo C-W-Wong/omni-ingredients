@@ -133,7 +133,7 @@ export default function SolutionsPage() {
                   </h3>
                   <p className="text-white/80 text-sm mt-2">{tHome(`categories.items.${category.id}.description`)}</p>
                   <a
-                    href="mailto:ga@omniingredients.com"
+                    href="mailto:info@omniingredients.com"
                     className="mt-4 inline-flex items-center gap-2 text-[#ffa087] text-sm font-medium group-hover:gap-3 transition-all"
                   >
                     {t("categories.requestInfo")}
@@ -181,7 +181,7 @@ export default function SolutionsPage() {
                   ))}
                 </ul>
                 <a
-                  href="mailto:ga@omniingredients.com"
+                  href="mailto:info@omniingredients.com"
                   className="mt-4 inline-flex items-center gap-1 text-[#df7a4c] text-sm font-medium hover:gap-2 transition-all"
                 >
                   {t("ingredientTypes.viewAll")}
@@ -236,7 +236,7 @@ export default function SolutionsPage() {
               </div>
 
               <a
-                href="mailto:ga@omniingredients.com"
+                href="mailto:info@omniingredients.com"
                 className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-[#df7a4c] text-white font-medium rounded-lg hover:bg-[#c86a3f] transition animate-on-scroll scale-in stagger-7"
               >
                 {t("premix.discussFormulation")}
@@ -418,7 +418,7 @@ export default function SolutionsPage() {
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll scale-in stagger-3">
             <a
-              href="mailto:ga@omniingredients.com"
+              href="mailto:info@omniingredients.com"
               className="px-8 py-4 bg-white text-[#df7a4c] font-semibold rounded-full hover:shadow-xl transition transform hover:scale-105"
             >
               {t("cta.requestQuote")}
@@ -433,8 +433,8 @@ export default function SolutionsPage() {
 
           <p className="mt-8 text-white/80 text-sm animate-on-scroll fade-in stagger-4">
             <strong className="text-white">{t("cta.email")}</strong>{" "}
-            <a href="mailto:ga@omniingredients.com" className="hover:text-white underline">
-              ga@omniingredients.com
+            <a href="mailto:info@omniingredients.com" className="hover:text-white underline">
+              info@omniingredients.com
             </a>
           </p>
         </div>

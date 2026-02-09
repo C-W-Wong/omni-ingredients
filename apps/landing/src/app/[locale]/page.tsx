@@ -194,7 +194,7 @@ export default function HomePage() {
             </p>
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <a
-                href="mailto:ga@omniingredients.com"
+                href="mailto:info@omniingredients.com"
                 className="group inline-flex items-center gap-3 px-7 py-4 bg-[#df7a4c] text-white text-base sm:text-lg font-semibold rounded-full shadow-xl hover:bg-[#c86a3f] hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-on-scroll slide-left stagger-4"
               >
                 {t("hero.cta.quote")}
@@ -688,7 +688,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <a
-              href="mailto:ga@omniingredients.com"
+              href="mailto:info@omniingredients.com"
               className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition group animate-on-scroll card-reveal stagger-1"
             >
               <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
@@ -717,7 +717,7 @@ export default function HomePage() {
             </a>
 
             <a
-              href="mailto:ga@omniingredients.com"
+              href="mailto:info@omniingredients.com"
               className="bg-white text-[#2A2118] rounded-2xl p-8 hover:shadow-xl transition group animate-on-scroll card-reveal stagger-2"
             >
               <div className="w-12 h-12 bg-[#edd8cc] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
@@ -751,10 +751,10 @@ export default function HomePage() {
             <p>
               <strong className="text-white">{t("cta.contact.emailLabel")}</strong>{" "}
               <a
-                href="mailto:ga@omniingredients.com"
+                href="mailto:info@omniingredients.com"
                 className="hover:text-white underline"
               >
-                ga@omniingredients.com
+                info@omniingredients.com
               </a>
             </p>
             <p>

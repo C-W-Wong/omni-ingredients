@@ -243,7 +243,7 @@ export default function SustainabilityPage() {
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll scale-in stagger-3">
             <a
-              href="mailto:ga@omniingredients.com"
+              href="mailto:info@omniingredients.com"
               className="px-8 py-4 bg-white text-[#df7a4c] font-semibold rounded-full hover:shadow-xl transition transform hover:scale-105"
             >
               {t("cta.getInTouch")}
