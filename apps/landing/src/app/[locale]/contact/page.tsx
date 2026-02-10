@@ -2,8 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
+  const t = useTranslations("contact");
+
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -46,18 +49,18 @@ export default function ContactPage() {
     const newErrors: Record<string, string> = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
+      newErrors.name = t("form.errors.nameRequired");
     }
     if (!formData.company.trim()) {
-      newErrors.company = "Company name is required";
+      newErrors.company = t("form.errors.companyRequired");
     }
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = t("form.errors.emailRequired");
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email";
+      newErrors.email = t("form.errors.emailInvalid");
     }
     if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
+      newErrors.message = t("form.errors.messageRequired");
     }
 
     setErrors(newErrors);
@@ -89,7 +92,7 @@ export default function ContactPage() {
       const data = await res.json();
 
       if (!res.ok || !data.success) {
-        setSubmitError(data.error || "Something went wrong. Please try again.");
+        setSubmitError(data.error || t("form.errors.submitFailed"));
         setIsSubmitting(false);
         return;
       }
@@ -97,7 +100,7 @@ export default function ContactPage() {
       setIsSubmitting(false);
       setIsSubmitted(true);
     } catch {
-      setSubmitError("Something went wrong. Please try again.");
+      setSubmitError(t("form.errors.submitFailed"));
       setIsSubmitting(false);
     }
   };
@@ -130,10 +133,10 @@ export default function ContactPage() {
   };
 
   const inquiryTypes = [
-    { value: "general", label: "General Inquiry" },
-    { value: "quote", label: "Request a Quote" },
-    { value: "product", label: "Product Information" },
-    { value: "partnership", label: "Partnership Opportunities" },
+    { value: "general", label: t("form.inquiryTypes.general") },
+    { value: "quote", label: t("form.inquiryTypes.quote") },
+    { value: "product", label: t("form.inquiryTypes.product") },
+    { value: "partnership", label: t("form.inquiryTypes.partnership") },
   ];
 
   return (
@@ -147,13 +150,13 @@ export default function ContactPage() {
         <div className="relative z-10 flex h-full max-w-7xl mx-auto px-6 items-center">
           <div className="max-w-2xl text-white">
             <p className="text-sm/6 uppercase tracking-widest opacity-80 animate-on-scroll text-reveal stagger-1">
-              Get in Touch
+              {t("hero.badge")}
             </p>
             <h1 className="mt-3 text-5xl md:text-6xl tracking-tight font-semibold animate-on-scroll text-reveal stagger-2">
-              Contact Us
+              {t("hero.title")}
             </h1>
             <p className="text-lg/8 opacity-90 mt-4 animate-on-scroll text-reveal stagger-3">
-              Ready to discuss your ingredient needs? Our team is here to help.
+              {t("hero.description")}
             </p>
           </div>
         </div>
@@ -166,11 +169,10 @@ export default function ContactPage() {
           <div className="lg:col-span-3">
             <div className="animate-on-scroll card-reveal stagger-1">
               <h2 className="text-2xl md:text-3xl tracking-tight font-semibold mb-2">
-                Send us a message
+                {t("form.title")}
               </h2>
               <p className="text-neutral-600 mb-8">
-                Fill out the form below and we&apos;ll get back to you within
-                24-48 business hours.
+                {t("form.description")}
               </p>
 
               {isSubmitted ? (
@@ -193,17 +195,16 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-semibold text-green-900 mb-2">
-                    Message Sent!
+                    {t("form.success.title")}
                   </h3>
                   <p className="text-green-700 mb-6">
-                    Thank you for contacting us. We&apos;ll respond within 24-48
-                    business hours.
+                    {t("form.success.description")}
                   </p>
                   <button
                     onClick={resetForm}
                     className="px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition"
                   >
-                    Send Another Message
+                    {t("form.success.sendAnother")}
                   </button>
                 </div>
               ) : (
@@ -221,7 +222,7 @@ export default function ContactPage() {
                         htmlFor="name"
                         className="block text-sm font-medium text-neutral-700 mb-2"
                       >
-                        Full Name <span className="text-red-500">*</span>
+                        {t("form.fields.fullName")} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
@@ -249,7 +250,7 @@ export default function ContactPage() {
                         htmlFor="company"
                         className="block text-sm font-medium text-neutral-700 mb-2"
                       >
-                        Company Name <span className="text-red-500">*</span>
+                        {t("form.fields.companyName")} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
@@ -279,7 +280,7 @@ export default function ContactPage() {
                         htmlFor="email"
                         className="block text-sm font-medium text-neutral-700 mb-2"
                       >
-                        Business Email <span className="text-red-500">*</span>
+                        {t("form.fields.businessEmail")} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="email"
@@ -307,8 +308,8 @@ export default function ContactPage() {
                         htmlFor="phone"
                         className="block text-sm font-medium text-neutral-700 mb-2"
                       >
-                        Phone Number{" "}
-                        <span className="text-neutral-400">(Optional)</span>
+                        {t("form.fields.phoneNumber")}{" "}
+                        <span className="text-neutral-400">{t("form.fields.optional")}</span>
                       </label>
                       <input
                         type="tel"
@@ -328,7 +329,7 @@ export default function ContactPage() {
                       htmlFor="inquiryType"
                       className="block text-sm font-medium text-neutral-700 mb-2"
                     >
-                      Inquiry Type
+                      {t("form.fields.inquiryType")}
                     </label>
                     <select
                       id="inquiryType"
@@ -351,7 +352,7 @@ export default function ContactPage() {
                       htmlFor="message"
                       className="block text-sm font-medium text-neutral-700 mb-2"
                     >
-                      Message <span className="text-red-500">*</span>
+                      {t("form.fields.message")} <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -359,7 +360,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={5}
-                      placeholder="Tell us about your ingredient needs, quantities, and any specific requirements..."
+                      placeholder={t("form.fields.messagePlaceholder")}
                       className={`w-full px-4 py-3 rounded-lg bg-white border ${
                         errors.message
                           ? "border-red-500 focus:ring-red-500"
@@ -401,11 +402,11 @@ export default function ContactPage() {
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                           ></path>
                         </svg>
-                        Sending...
+                        {t("form.sending")}
                       </>
                     ) : (
                       <>
-                        Send Message
+                        {t("form.submit")}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="20"
@@ -449,7 +450,7 @@ export default function ContactPage() {
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-neutral-900 mb-1">Email</h3>
+              <h3 className="font-semibold text-neutral-900 mb-1">{t("info.email")}</h3>
               <a
                 href="mailto:info@omniingredients.com"
                 className="text-orange-600 hover:text-orange-700 transition"
@@ -477,7 +478,7 @@ export default function ContactPage() {
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-neutral-900 mb-1">Location</h3>
+              <h3 className="font-semibold text-neutral-900 mb-1">{t("info.location")}</h3>
               <p className="text-neutral-600">2121 Maple Privado</p>
               <p className="text-neutral-600">Ontario, CA 91761, USA</p>
             </div>
@@ -502,7 +503,7 @@ export default function ContactPage() {
                 </svg>
               </div>
               <h3 className="font-semibold text-neutral-900 mb-1">
-                Business Hours
+                {t("info.businessHours")}
               </h3>
               <p className="text-neutral-600">Monday – Friday</p>
               <p className="text-neutral-600">08:30 am – 05:00 pm (EST)</p>
@@ -525,10 +526,9 @@ export default function ContactPage() {
                   <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
                 </svg>
               </div>
-              <h3 className="font-semibold mb-1">Quick Response</h3>
+              <h3 className="font-semibold mb-1">{t("info.quickResponse.title")}</h3>
               <p className="text-white/90">
-                We typically respond to all inquiries within 24-48 business
-                hours.
+                {t("info.quickResponse.description")}
               </p>
             </div>
           </div>
@@ -541,12 +541,10 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-on-scroll slide-right stagger-1">
               <h2 className="text-2xl md:text-3xl tracking-tight font-semibold mb-4">
-                Our Headquarters
+                {t("headquarters.title")}
               </h2>
               <p className="text-neutral-600 mb-6">
-                Strategically located in Southern California, our headquarters
-                enables efficient distribution across North America with access
-                to major logistics corridors.
+                {t("headquarters.description")}
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
@@ -566,7 +564,7 @@ export default function ContactPage() {
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                   <div>
-                    <p className="font-medium text-neutral-900">Address</p>
+                    <p className="font-medium text-neutral-900">{t("headquarters.address")}</p>
                     <p className="text-neutral-600">2121 Maple Privado, Ontario, CA 91761, USA</p>
                   </div>
                 </div>
@@ -587,7 +585,7 @@ export default function ContactPage() {
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                   <div>
-                    <p className="font-medium text-neutral-900">Email</p>
+                    <p className="font-medium text-neutral-900">{t("info.email")}</p>
                     <a
                       href="mailto:info@omniingredients.com"
                       className="text-orange-600 hover:text-orange-700 transition"
@@ -622,11 +620,10 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center max-w-2xl mx-auto animate-on-scroll blur-slide">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight animate-on-scroll text-reveal stagger-1">
-              Ready to Partner?
+              {t("cta.title")}
             </h2>
             <p className="mt-4 text-lg text-neutral-300 animate-on-scroll text-reveal stagger-2">
-              Explore our extensive catalog of nutraceutical ingredients or
-              request a custom quote for your specific needs.
+              {t("cta.description")}
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll scale-in stagger-3">
@@ -634,18 +631,18 @@ export default function ContactPage() {
                 href="/#categories"
                 className="px-8 py-4 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition transform hover:scale-105"
               >
-                View Products
+                {t("cta.viewProducts")}
               </Link>
               <a
                 href={shopUrl}
                 className="px-8 py-4 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 backdrop-blur transition transform hover:scale-105"
               >
-                Visit Shop
+                {t("cta.visitShop")}
               </a>
             </div>
 
             <p className="mt-8 text-sm text-neutral-400 animate-on-scroll text-reveal stagger-4">
-              Serving North America since 2010 • 500+ Products • cGMP Compliant
+              {t("cta.tagline")}
             </p>
           </div>
         </div>

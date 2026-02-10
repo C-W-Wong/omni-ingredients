@@ -529,7 +529,8 @@
         "companyRequired": "El nombre de la empresa es requerido",
         "emailRequired": "El correo es requerido",
         "emailInvalid": "Por favor ingrese un correo válido",
-        "messageRequired": "El mensaje es requerido"
+        "messageRequired": "El mensaje es requerido",
+        "submitFailed": "Algo salió mal. Por favor, inténtelo de nuevo."
       }
     },
     "info": {

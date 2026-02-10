@@ -529,7 +529,8 @@
         "companyRequired": "Company name is required",
         "emailRequired": "Email is required",
         "emailInvalid": "Please enter a valid email",
-        "messageRequired": "Message is required"
+        "messageRequired": "Message is required",
+        "submitFailed": "Something went wrong. Please try again."
       }
     },
     "info": {

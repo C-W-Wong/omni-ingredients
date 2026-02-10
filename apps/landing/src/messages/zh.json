@@ -529,7 +529,8 @@
         "companyRequired": "请输入公司名称",
         "emailRequired": "请输入邮箱",
         "emailInvalid": "请输入有效的邮箱地址",
-        "messageRequired": "请输入留言内容"
+        "messageRequired": "请输入留言内容",
+        "submitFailed": "出了点问题。请重试。"
       }
     },
     "info": {
