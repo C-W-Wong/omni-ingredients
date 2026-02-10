@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Header } from "@omm/ui/Header";
+import type { QuoteModalTranslations } from "@omm/ui/QuoteModal";
 import { Footer } from "@omm/ui/Footer";
 import { routing, type Locale } from "@/i18n/routing";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -68,6 +69,7 @@ export default async function LocaleLayout({
   const navMessages = commonMessages?.navigation as Record<string, string> | undefined;
   const footerMessages = commonMessages?.footer as Record<string, unknown> | undefined;
   const announcementMessages = commonMessages?.announcement as Record<string, string> | undefined;
+  const quoteModalMessages = commonMessages?.quoteModal as Record<string, unknown> | undefined;
 
   const headerTranslations = {
     navigation: {
@@ -83,6 +85,7 @@ export default async function LocaleLayout({
       line1: announcementMessages?.landing,
       line2: announcementMessages?.servingSince,
     },
+    quoteModal: quoteModalMessages as unknown as QuoteModalTranslations,
   };
 
   const footerTranslations = {
@@ -95,6 +98,7 @@ export default async function LocaleLayout({
     supportLinks: footerMessages?.supportLinks as Record<string, string> | undefined,
     companyLinks: footerMessages?.companyLinks as Record<string, string> | undefined,
     legalLinks: footerMessages?.legalLinks as Record<string, string> | undefined,
+    quoteModal: quoteModalMessages as unknown as QuoteModalTranslations,
   };
 
   return (

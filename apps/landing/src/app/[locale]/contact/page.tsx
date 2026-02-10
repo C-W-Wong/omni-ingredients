@@ -15,6 +15,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitError, setSubmitError] = useState("");
 
   const shopUrl = process.env.NEXT_PUBLIC_SHOP_URL || "http://localhost:3001";
 
@@ -69,12 +70,36 @@ export default function ContactPage() {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setSubmitError("");
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.name,
+          companyName: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          inquiryType: formData.inquiryType,
+          message: formData.message,
+        }),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        setSubmitError(data.error || "Something went wrong. Please try again.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+    } catch {
+      setSubmitError("Something went wrong. Please try again.");
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -101,6 +126,7 @@ export default function ContactPage() {
     });
     setIsSubmitted(false);
     setErrors({});
+    setSubmitError("");
   };
 
   const inquiryTypes = [
@@ -183,6 +209,11 @@ export default function ContactPage() {
               ) : (
                 /* Form */
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {submitError && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm">
+                      {submitError}
+                    </div>
+                  )}
                   <div className="grid md:grid-cols-2 gap-6">
                     {/* Name */}
                     <div>
@@ -447,8 +478,8 @@ export default function ContactPage() {
                 </svg>
               </div>
               <h3 className="font-semibold text-neutral-900 mb-1">Location</h3>
-              <p className="text-neutral-600">Ontario, CA 91761</p>
-              <p className="text-neutral-600">United States</p>
+              <p className="text-neutral-600">2121 Maple Privado</p>
+              <p className="text-neutral-600">Ontario, CA 91761, USA</p>
             </div>
 
             {/* Hours Card */}
@@ -536,7 +567,7 @@ export default function ContactPage() {
                   </svg>
                   <div>
                     <p className="font-medium text-neutral-900">Address</p>
-                    <p className="text-neutral-600">Ontario, CA 91761, USA</p>
+                    <p className="text-neutral-600">2121 Maple Privado, Ontario, CA 91761, USA</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -568,54 +599,18 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
             <div className="animate-on-scroll scale-in stagger-2">
-              <div className="aspect-[4/3] bg-neutral-200 rounded-2xl overflow-hidden relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="48"
-                      height="48"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-neutral-400 mx-auto mb-3"
-                    >
-                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                    <p className="text-neutral-500 font-medium">
-                      Ontario, California
-                    </p>
-                    <p className="text-neutral-400 text-sm">
-                      Southern California Distribution Hub
-                    </p>
-                  </div>
-                </div>
-                {/* Background pattern */}
-                <div className="absolute inset-0 opacity-30">
-                  <svg width="100%" height="100%">
-                    <pattern
-                      id="grid"
-                      width="40"
-                      height="40"
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <path
-                        d="M 40 0 L 0 0 0 40"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="0.5"
-                        className="text-neutral-300"
-                      />
-                    </pattern>
-                    <rect width="100%" height="100%" fill="url(#grid)" />
-                  </svg>
-                </div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm border border-neutral-200">
+                <iframe
+                  title="Omni Ingredients Headquarters"
+                  src="https://maps.google.com/maps?q=2121+Maple+Privado,+Ontario,+CA+91761&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </div>

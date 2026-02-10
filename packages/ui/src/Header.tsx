@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { QuoteModal } from "./QuoteModal";
+import type { QuoteModalTranslations } from "./QuoteModal";
 
 // Collection data for dropdown
 const collections = [
@@ -51,6 +53,7 @@ export interface HeaderProps {
       line1?: string;
       line2?: string;
     };
+    quoteModal?: QuoteModalTranslations;
   };
 }
 
@@ -70,6 +73,7 @@ export function Header({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [collectionsOpen, setCollectionsOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
+  const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const accountRef = useRef<HTMLDivElement>(null);
 
   const isLanding = variant === "landing";
@@ -301,12 +305,12 @@ export function Header({
 
             {/* Contact CTA button for landing variant */}
             {isLanding && (
-              <a
-                href="mailto:info@omniingredients.com"
+              <button
+                onClick={() => setQuoteModalOpen(true)}
                 className="px-4 py-2 bg-[#df7a4c] text-white rounded-full font-medium hover:bg-[#c86a3f] transition"
               >
                 {t?.getQuote || "Get a Quote"}
-              </a>
+              </button>
             )}
 
             {/* Language Switcher */}
@@ -567,13 +571,15 @@ export function Header({
 
                   {/* Contact CTA for landing mobile */}
                   {isLanding && (
-                    <a
-                      href="mailto:info@omniingredients.com"
+                    <button
                       className="py-3 px-4 rounded-lg bg-[#df7a4c] text-white font-medium text-center mt-2"
-                      onClick={() => setMobileMenuOpen(false)}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setTimeout(() => setQuoteModalOpen(true), 300);
+                      }}
                     >
                       {t?.getQuote || "Get a Quote"}
-                    </a>
+                    </button>
                   )}
 
                   {/* Mobile Account Section - Shop only */}
@@ -679,6 +685,14 @@ export function Header({
             </aside>
           </div>
         )}
+
+      {isLanding && (
+        <QuoteModal
+          isOpen={quoteModalOpen}
+          onClose={() => setQuoteModalOpen(false)}
+          translations={translations?.quoteModal}
+        />
+      )}
     </>
   );
 }

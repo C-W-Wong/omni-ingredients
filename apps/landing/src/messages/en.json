@@ -2,7 +2,7 @@
   "common": {
     "companyName": "Omni Ingredients",
     "email": "info@omniingredients.com",
-    "location": "Ontario, CA 91761, USA",
+    "location": "2121 Maple Privado, Ontario, CA 91761, USA",
     "businessHours": "Monday – Friday, 08:30 am – 05:00 pm PST",
     "navigation": {
       "home": "Home",
@@ -58,6 +58,35 @@
       "en": "English",
       "es": "Español",
       "zh": "中文"
+    },
+    "quoteModal": {
+      "title": "Request a Quote",
+      "subtitle": "Tell us about your ingredient needs and we'll respond within 24 hours.",
+      "fields": {
+        "fullName": "Full Name",
+        "companyName": "Company Name",
+        "businessEmail": "Business Email",
+        "phoneNumber": "Phone Number",
+        "phoneExt": "Ext.",
+        "optional": "(Optional)",
+        "message": "Message",
+        "messagePlaceholder": "Tell us about the products you're interested in, expected monthly quantities, timeline, and any specific requirements..."
+      },
+      "submit": "Submit Request",
+      "sending": "Submitting...",
+      "success": {
+        "title": "Quote Request Submitted!",
+        "description": "Thank you! Our team will review your request and get back to you within 24 hours.",
+        "close": "Close"
+      },
+      "errors": {
+        "nameRequired": "Full name is required",
+        "companyRequired": "Company name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "messageRequired": "Please include details about your needs",
+        "submitFailed": "Failed to submit. Please try again or email us at info@omniingredients.com"
+      }
     }
   },
   "home": {
@@ -254,7 +283,7 @@
         "hoursLabel": "Hours:",
         "hours": "Monday – Friday, 08:30 am – 05:00 pm PST",
         "locationLabel": "Location:",
-        "location": "Ontario, CA 91761, USA"
+        "location": "2121 Maple Privado, Ontario, CA 91761, USA"
       }
     }
   },

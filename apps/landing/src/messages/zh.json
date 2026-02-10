@@ -2,7 +2,7 @@
   "common": {
     "companyName": "Omni Ingredients",
     "email": "info@omniingredients.com",
-    "location": "美国加利福尼亚州安大略市 91761",
+    "location": "2121 Maple Privado, 美国加利福尼亚州安大略市 91761",
     "businessHours": "周一至周五，上午 08:30 - 下午 05:00（太平洋时间）",
     "navigation": {
       "home": "首页",
@@ -58,6 +58,35 @@
       "en": "English",
       "es": "Español",
       "zh": "中文"
+    },
+    "quoteModal": {
+      "title": "请求报价",
+      "subtitle": "告诉我们您的原料需求，我们将在24小时内回复。",
+      "fields": {
+        "fullName": "姓名",
+        "companyName": "公司名称",
+        "businessEmail": "商务邮箱",
+        "phoneNumber": "电话号码",
+        "phoneExt": "分机",
+        "optional": "（可选）",
+        "message": "留言",
+        "messagePlaceholder": "告诉我们您感兴趣的产品、预期月度数量、时间要求和任何特定需求..."
+      },
+      "submit": "提交请求",
+      "sending": "提交中...",
+      "success": {
+        "title": "报价请求已提交！",
+        "description": "谢谢！我们的团队将审核您的请求并在24小时内与您联系。",
+        "close": "关闭"
+      },
+      "errors": {
+        "nameRequired": "请输入姓名",
+        "companyRequired": "请输入公司名称",
+        "emailRequired": "请输入邮箱",
+        "emailInvalid": "请输入有效的邮箱地址",
+        "messageRequired": "请包含您需求的详细信息",
+        "submitFailed": "提交失败。请重试或发送邮件至 info@omniingredients.com"
+      }
     }
   },
   "home": {
@@ -254,7 +283,7 @@
         "hoursLabel": "营业时间：",
         "hours": "周一至周五，上午8:30 - 下午5:00 太平洋时间",
         "locationLabel": "地址：",
-        "location": "美国加利福尼亚州安大略市 91761"
+        "location": "2121 Maple Privado, 美国加利福尼亚州安大略市 91761"
       }
     }
   },

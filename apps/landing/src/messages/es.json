@@ -2,7 +2,7 @@
   "common": {
     "companyName": "Omni Ingredients",
     "email": "info@omniingredients.com",
-    "location": "Ontario, CA 91761, EE.UU.",
+    "location": "2121 Maple Privado, Ontario, CA 91761, EE.UU.",
     "businessHours": "Lunes – Viernes, 08:30 am – 05:00 pm PST",
     "navigation": {
       "home": "Inicio",
@@ -58,6 +58,35 @@
       "en": "English",
       "es": "Español",
       "zh": "中文"
+    },
+    "quoteModal": {
+      "title": "Solicitar Cotización",
+      "subtitle": "Cuéntenos sobre sus necesidades de ingredientes y le responderemos en 24 horas.",
+      "fields": {
+        "fullName": "Nombre Completo",
+        "companyName": "Nombre de la Empresa",
+        "businessEmail": "Correo Empresarial",
+        "phoneNumber": "Número de Teléfono",
+        "phoneExt": "Ext.",
+        "optional": "(Opcional)",
+        "message": "Mensaje",
+        "messagePlaceholder": "Cuéntenos sobre los productos que le interesan, cantidades mensuales esperadas, plazos y requisitos específicos..."
+      },
+      "submit": "Enviar Solicitud",
+      "sending": "Enviando...",
+      "success": {
+        "title": "¡Solicitud de Cotización Enviada!",
+        "description": "¡Gracias! Nuestro equipo revisará su solicitud y se comunicará con usted en 24 horas.",
+        "close": "Cerrar"
+      },
+      "errors": {
+        "nameRequired": "El nombre completo es requerido",
+        "companyRequired": "El nombre de la empresa es requerido",
+        "emailRequired": "El correo es requerido",
+        "emailInvalid": "Por favor ingrese un correo electrónico válido",
+        "messageRequired": "Por favor incluya detalles sobre sus necesidades",
+        "submitFailed": "Error al enviar. Intente de nuevo o envíenos un correo a info@omniingredients.com"
+      }
     }
   },
   "home": {
@@ -254,7 +283,7 @@
         "hoursLabel": "Horario:",
         "hours": "Lunes – Viernes, 08:30 am – 05:00 pm PST",
         "locationLabel": "Ubicación:",
-        "location": "Ontario, CA 91761, EE.UU."
+        "location": "2121 Maple Privado, Ontario, CA 91761, EE.UU."
       }
     }
   },

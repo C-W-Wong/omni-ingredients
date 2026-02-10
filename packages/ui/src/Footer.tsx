@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
+import { QuoteModal } from "./QuoteModal";
+import type { QuoteModalTranslations } from "./QuoteModal";
 
 // Shop (B2C) footer links
 const shopLinks = [
@@ -119,6 +122,7 @@ export interface FooterProps {
       termsOfService?: string;
       cookiePolicy?: string;
     };
+    quoteModal?: QuoteModalTranslations;
   };
 }
 
@@ -129,6 +133,7 @@ export function Footer({
   locale,
   translations,
 }: FooterProps) {
+  const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const currentYear = new Date().getFullYear();
   const isLanding = variant === "landing";
   const t = translations;
@@ -145,7 +150,7 @@ export function Footer({
   ];
 
   const translatedLandingSupportLinks = [
-    { href: "mailto:info@omniingredients.com", label: t?.supportLinks?.requestQuote || "Request Quote" },
+    { href: "#quote", label: t?.supportLinks?.requestQuote || "Request Quote", isQuote: true },
     { href: localePath("/about"), label: t?.supportLinks?.aboutUs || "About Us" },
     { href: localePath("/journal"), label: t?.supportLinks?.industryInsights || "Industry Insights" },
     { href: localePath("/contact"), label: t?.supportLinks?.contact || "Contact" },
@@ -162,6 +167,7 @@ export function Footer({
   const currentCompanyLinks = isLanding ? translatedCompanyLinks : companyLinks;
 
   return (
+    <>
     <footer className="bg-white border-t border-neutral-200 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
@@ -229,7 +235,14 @@ export function Footer({
             <ul className="space-y-2.5 text-sm">
               {supportLinks.map((link) => (
                 <li key={link.label}>
-                  {link.href.startsWith("mailto:") || link.href.startsWith("#") ? (
+                  {"isQuote" in link && link.isQuote ? (
+                    <button
+                      onClick={() => setQuoteModalOpen(true)}
+                      className="text-neutral-600 hover:text-neutral-900 transition"
+                    >
+                      {link.label}
+                    </button>
+                  ) : link.href.startsWith("mailto:") || link.href.startsWith("#") ? (
                     <a
                       href={link.href}
                       className="text-neutral-600 hover:text-neutral-900 transition"
@@ -295,6 +308,14 @@ export function Footer({
         </div>
       </div>
     </footer>
+    {isLanding && (
+      <QuoteModal
+        isOpen={quoteModalOpen}
+        onClose={() => setQuoteModalOpen(false)}
+        translations={t?.quoteModal}
+      />
+    )}
+    </>
   );
 }
 

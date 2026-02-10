@@ -7,6 +7,8 @@ const navigation = [
   { name: "Dashboard", href: "/", icon: DashboardIcon },
   { name: "Products", href: "/products", icon: ProductIcon },
   { name: "Categories", href: "/categories", icon: CategoryIcon },
+  { name: "Quotes", href: "/quotes", icon: QuoteIcon },
+  { name: "Contacts", href: "/contacts", icon: ContactIcon },
   { name: "Blog Posts", href: "/blog", icon: BlogIcon },
   { name: "Blog Categories", href: "/blog-categories", icon: TagIcon },
   { name: "Authors", href: "/authors", icon: AuthorIcon },
@@ -103,6 +105,22 @@ function TagIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+    </svg>
+  );
+}
+
+function QuoteIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+  );
+}
+
+function ContactIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
     </svg>
   );
 }

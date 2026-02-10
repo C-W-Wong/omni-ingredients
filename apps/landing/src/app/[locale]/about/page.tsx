@@ -313,7 +313,7 @@ export default function AboutPage() {
               <strong className="text-white">{t("cta.businessHours")}</strong> Monday – Friday, 08:30 am – 05:00 pm PST
             </p>
             <p className="text-sm opacity-80 mt-2 animate-on-scroll text-reveal stagger-5">
-              <strong className="text-white">{t("cta.location")}</strong> Ontario, CA 91761, USA
+              <strong className="text-white">{t("cta.location")}</strong> 2121 Maple Privado, Ontario, CA 91761, USA
             </p>
             <p className="text-sm opacity-80 mt-2 animate-on-scroll text-reveal stagger-6">
               <strong className="text-white">{t("cta.email")}</strong>{" "}

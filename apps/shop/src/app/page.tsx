@@ -282,7 +282,7 @@ export default function Home() {
                 <strong>Business Hours (EST):</strong> Monday – Friday, 08:30 am – 05:00 pm
               </p>
               <p className="text-sm opacity-80 mt-2 animate-on-scroll text-reveal stagger-7">
-                <strong>Location:</strong> Ontario, CA 91761, USA
+                <strong>Location:</strong> 2121 Maple Privado, Ontario, CA 91761, USA
               </p>
               <p className="text-sm opacity-80 mt-2 animate-on-scroll text-reveal stagger-8">
                 <strong>Email:</strong> <a href="mailto:info@omniingredients.com" className="hover:opacity-100 underline">info@omniingredients.com</a>

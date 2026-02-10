@@ -403,4 +403,25 @@ body {
   .cart-animate {
     animation: cartBounce 0.3s ease-in-out;
   }
+
+  /* Modal animations */
+  .modal-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal-overlay.show {
+    opacity: 1;
+  }
+
+  .modal-content {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .modal-content.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
