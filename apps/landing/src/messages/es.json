@@ -2,6 +2,7 @@
   "common": {
     "companyName": "Omni Ingredients",
     "email": "info@omniingredients.com",
+    "phone": "(938) 666-9996",
     "location": "2121 Maple Privado, Ontario, CA 91761, EE.UU.",
     "businessHours": "Lunes – Viernes, 08:30 am – 05:00 pm PST",
     "navigation": {
@@ -535,6 +536,7 @@
     },
     "info": {
       "email": "Correo",
+      "phone": "Teléfono",
       "location": "Ubicación",
       "businessHours": "Horario Comercial",
       "quickResponse": {
